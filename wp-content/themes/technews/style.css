@@ -4,3 +4,7 @@ Theme Name: Technews thème
 
 
 */
+
+#actupage > h1{
+    color: blue;
+}

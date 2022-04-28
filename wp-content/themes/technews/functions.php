@@ -4,33 +4,41 @@
 register_nav_menu( 'menuheader', 'Menu du Header' );
 register_nav_menu( 'menufooter', 'Menu du Footer' );
 
+if ( !is_admin() ) {
+    
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/app.js', array ( 'jquery' ), 1.1, true);
 
-function header_widgets_init() {
- 
-register_sidebar( array(
+}
 
- 'name' => 'Ma zone que je viens de créer',
- 'id' => 'nouvelle-zone',
- 'before_widget' => '<div class="mettez-ce-que-vous-voulez">',
- 'after_widget' => '</div>',
- 'before_title' => '<h2 class="mettez-ce-que-vous-voulez">',
- 'after_title' => '</h2>',
- ) );
- 
- 
-register_sidebar( array(
+function actu_register_post_types() {
+    // La déclaration de nos Custom Post Types et Taxonomies ira ici
+    // CPT Realisation
+    $labels = array(
+        'name' => 'Actualité',
+        'all_items' => 'Toutes les Actualités',  // affiché dans le sous menu
+        'singular_name' => 'Actualité',
+        'add_new_item' => 'Ajouter une Actualité',
+        'edit_item' => 'Modifier l\'Actualité',
+        'menu_name' => 'Actualité'
+    );
 
- 'name' => 'Ma zone que je viens de créer 2',
- 'id' => 'nouvelle-zone-2',
- 'before_widget' => '<div class="mettez-ce-que-vous-voulez">',
- 'after_widget' => '</div>',
- 'before_title' => '<h2 class="mettez-ce-que-vous-voulez">',
- 'after_title' => '</h2>',
- ) );
- 
- }
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-portfolio',
+	);
 
-add_action( 'widgets_init', 'header_widgets_init' );
+	register_post_type( 'actualite', $args );
+}
+
+add_action( 'init', 'actu_register_post_types' );
+
+
 
 
 //‘name’ = nom de la “widget area” qui apparaîtra dans votre administration WordPress

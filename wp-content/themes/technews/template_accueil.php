@@ -2,19 +2,10 @@
 
 <?php get_header(); ?>
 
+<div id="main">
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
+  <h1><?= get_the_title() ?></h1>
+  <?= the_content() ?>
 </div>
 
 <?php get_footer(); ?>
