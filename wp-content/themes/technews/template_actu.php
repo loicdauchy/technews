@@ -29,6 +29,7 @@
                   }
                 ?>
                 <p><?= the_excerpt(); ?></p>
+                <a href="<?= get_permalink(get_the_ID()) ?>">voir plus</a>
                       
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>

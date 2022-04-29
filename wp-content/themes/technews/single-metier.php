@@ -1,4 +1,3 @@
-<?php /* Template Name: page d'actu solo */ ?>
 
 <?php get_header(); ?>
 

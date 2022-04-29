@@ -1,4 +1,4 @@
-<?php /* Template Name: page métier solo */ ?>
+
 
 <?php get_header(); ?>
 
