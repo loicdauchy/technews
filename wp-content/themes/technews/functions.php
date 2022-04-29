@@ -10,6 +10,9 @@ if ( !is_admin() ) {
     wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/app.js', array ( 'jquery' ), 1.1, true);
 
 }
+if (function_exists( 'add_theme_support' )) {
+    add_theme_support( 'post-thumbnails' );
+}
 
 function actu_register_post_types() {
     // La déclaration de nos Custom Post Types et Taxonomies ira ici

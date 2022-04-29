@@ -23,11 +23,12 @@
 		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
             
                 <h2><?php the_title(); ?></h2>
-                <p><?= the_content(); ?></p>
-
-                <?php /*if (get_field('video')) {?>
-                  <p><?= get_field('video')?></p>
-                <?php }else{echo "pas de video";} */?>
+                <?php
+                  if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
+                    the_post_thumbnail();
+                  }
+                ?>
+                <p><?= the_excerpt(); ?></p>
                       
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
