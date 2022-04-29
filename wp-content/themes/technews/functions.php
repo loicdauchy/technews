@@ -36,7 +36,60 @@ function actu_register_post_types() {
 	register_post_type( 'actualite', $args );
 }
 
+function job_register_post_types() {
+    // La déclaration de nos Custom Post Types et Taxonomies ira ici
+    // CPT Realisation
+    $labels = array(
+        'name' => 'Métiers',
+        'all_items' => 'Tout les Métiers',  // affiché dans le sous menu
+        'singular_name' => 'Métier',
+        'add_new_item' => 'Ajouter une Métier',
+        'edit_item' => 'Modifier le Métier',
+        'menu_name' => 'Métier'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-portfolio',
+	);
+
+	register_post_type( 'metier', $args );
+}
+
+function testimony_register_post_types() {
+    // La déclaration de nos Custom Post Types et Taxonomies ira ici
+    // CPT Realisation
+    $labels = array(
+        'name' => 'Témoignage',
+        'all_items' => 'Tout les Témoignages',  // affiché dans le sous menu
+        'singular_name' => 'Témoignage',
+        'add_new_item' => 'Ajouter un Témoignage',
+        'edit_item' => 'Modifier le Témoignage',
+        'menu_name' => 'Témoignage'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-portfolio',
+	);
+
+	register_post_type( 'temoignage', $args );
+}
+
 add_action( 'init', 'actu_register_post_types' );
+add_action( 'init', 'job_register_post_types' );
+add_action( 'init', 'testimony_register_post_types' );
+
 
 
 
