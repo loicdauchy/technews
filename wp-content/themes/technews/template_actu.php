@@ -24,6 +24,10 @@
             
                 <h2><?php the_title(); ?></h2>
                 <p><?= the_content(); ?></p>
+
+                <?php /*if (get_field('video')) {?>
+                  <p><?= get_field('video')?></p>
+                <?php }else{echo "pas de video";} */?>
                       
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
