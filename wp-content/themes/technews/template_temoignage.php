@@ -21,16 +21,28 @@
 
   <?php if ($the_query->have_posts()) : ?>
 		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
-            
-                <h2><?php the_title(); ?></h2>
-                <?php
-                  if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
-                    the_post_thumbnail();
-                  }
-                ?>
-                <p><?= the_excerpt(); ?></p>
-                <a href="<?= get_permalink(get_the_ID()) ?>">voir plus</a>
+                <div class="temoin">
+                  <?php
+                    if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
+                      the_post_thumbnail();
+                    }
+                  ?>
+                  <div>
+                    <h2><?php the_title(); ?></h2>
+                    <p><?= the_excerpt(); ?></p>
+                    <div>
+                    <?php
+                    if ( is_null(get_field('lien_temoignage_video'))==false ) { // Vérifies qu'une miniature est associée à l'article.
+                        ?>
+                      <a href="<?= the_field('lien_temoignage_video') ?>" target='_blank' class='temoinOrange'>Témoignage Vidéo</a>
+                    <?php
+                      }
+                    ?>
                       
+                      <a href="../metier/<?php the_field('metier_liee') ?>" class='temoinWhite'> Métier associé</a>
+                    </div>
+                  </div>
+                </div>
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
     <?php endif; ?>
