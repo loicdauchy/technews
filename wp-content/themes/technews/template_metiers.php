@@ -7,7 +7,7 @@
   $args = array(
     'paged'		=> $paged,
     'post_type' => 'metier',
-    'posts_per_page' => 3
+    'posts_per_page' => 8
     );
 
   $the_query = new WP_Query($args);
@@ -40,7 +40,7 @@
     
       $GLOBALS['wp_query']->max_num_pages = $the_query->max_num_pages;
       the_posts_pagination( array(
-        'mid_size' => 3,
+        'mid_size' => 8,
         'prev_text' => '<',
         'next_text' => '>'
       ));              
