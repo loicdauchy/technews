@@ -34,6 +34,8 @@
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
     <?php endif; ?>
+    <?php the_posts_pagination() ?>
+
 </div>
 
 <?php get_footer(); ?>

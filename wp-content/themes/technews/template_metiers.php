@@ -7,7 +7,7 @@
   $args = array(
     'paged'		=> $paged,
     'post_type' => 'metier',
-    'posts_per_page' => 8
+    'posts_per_page' => 3
     );
 
   $the_query = new WP_Query($args);
@@ -35,8 +35,11 @@
               </div>
                       
 	<?php endwhile; ?>
+    <?php the_posts_pagination() ?>
+
     <?php wp_reset_postdata(); ?>
   <?php endif; ?>
+  
 
 </div>
 <?php get_footer(); ?>
