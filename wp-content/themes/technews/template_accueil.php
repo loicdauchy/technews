@@ -55,53 +55,57 @@
 
       <div class = <?php if ( $actudiv == 0 ) {?> leftAlign <?php $actudiv = 1; } else {?> rightAlign" <?php $actudiv = 0; } ?>>
 
-        <div class="thumbActu">
         <?php 
           if ( has_post_thumbnail() ) {
             the_post_thumbnail('thumbnail');
-        }?>
-        </div>
 
-          <h2><?php the_title(); ?></h2>
-      
-          <p><?= the_excerpt(); ?></p>
+        }?>
+        
+
+          <div>
+            <h2><?php the_title(); ?></h2>
+            
+            <p><?= the_excerpt(); ?></p>
+          </div>
 
       </div>
-
-
-      
-                
-                      
+                                
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
     <?php endif; ?>
+
+    <a href="<?php echo get_permalink(12) ; ?>">
+      Voir plus d'actualités
+    </a>
 
   </section>
   
   <section id="metier">
   <?php if ($the_query->have_posts()) : ?>
 		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
-       
-      <div class=''>
-        <h2><?php the_title(); ?></h2>
-      </div>
 
-      <div class=''>
-        <p><?= the_excerpt(); ?></p>
-      </div>
-          
-      <div class=''>
+
+    <div class=''>
       <?php 
         if ( has_post_thumbnail() ) {
           the_post_thumbnail('thumbnail');
+          
       }?>
-      </div>
-                
-                      
+    </div>
+       
+    <div class=''>
+      <h3><?php the_title(); ?></h3>
+    </div>
+                        
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
     <?php endif; ?>
 
+
+    <a href="<?php echo get_permalink(16) ; ?>">
+      Voir plus de métiers
+    </a>
+    
   </section>
 
   <section id="">
@@ -119,24 +123,24 @@
               if ( has_post_thumbnail() ) {
                 the_post_thumbnail('thumbnail');
             }?>
+
           <div>
             <p><?= the_excerpt(); ?></p>
-            <div>
-              <a href="#">
-              </a>
-              <a href="#
-              "></a>
-            </div>
+            
           </div>
           
         </div>
      
 
-                
+              
                       
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
     <?php endif; ?>
+
+    <a href="<?php echo get_permalink(9) ; ?>">
+      Voir plus de témoignages
+    </a>
   
   </section>
   
