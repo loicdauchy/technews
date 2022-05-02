@@ -1,5 +1,4 @@
 <?php /* Template Name: page d'accueil */ ?>
-
 <?php get_header(); ?>
 
 <div id="main">

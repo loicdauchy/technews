@@ -6,7 +6,8 @@
 
   $args = array(
     'paged'		=> $paged,
-    'post_type' => 'metier'
+    'post_type' => 'metier',
+    'posts_per_page' => 8
     );
 
   $the_query = new WP_Query($args);
@@ -21,7 +22,7 @@
 
   <?php if ($the_query->have_posts()) : ?>
 		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
-            
+              <div>
                 <h2><?php the_title(); ?></h2>
                 <?php
                   if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
@@ -30,10 +31,12 @@
                 ?>
                 <p><?= the_excerpt(); ?></p>
                 <a href="<?= get_permalink(get_the_ID()) ?>">voir plus</a>
+                <br><br>
+              </div>
                       
-		<?php endwhile; ?>
-	    <?php wp_reset_postdata(); ?>
-    <?php endif; ?>
-</div>
+	<?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
+  <?php endif; ?>
 
+</div>
 <?php get_footer(); ?>
