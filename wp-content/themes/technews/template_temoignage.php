@@ -34,7 +34,7 @@
                     <?php
                     if ( is_null(get_field('lien_temoignage_video'))==false ) { // Vérifies qu'une miniature est associée à l'article.
                         ?>
-                      <a href="<?= the_field('lien_temoignage_video') ?>" target='_blank' class='temoinOrange'>Témoignage Vidéo</a>
+                      <a href="<?php the_field('lien_temoignage_video') ?>" target='_blank' class='temoinOrange'>Témoignage Vidéo</a>
                     <?php
                       }
                     ?>
