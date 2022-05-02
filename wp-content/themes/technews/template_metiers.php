@@ -35,7 +35,18 @@
               </div>
                       
 	<?php endwhile; ?>
-    <?php the_posts_pagination() ?>
+  <div id="navigation">
+    <?php 
+    
+      $GLOBALS['wp_query']->max_num_pages = $the_query->max_num_pages;
+      the_posts_pagination( array(
+        'mid_size' => 3,
+        'prev_text' => '<',
+        'next_text' => '>'
+      ));              
+
+    ?>
+  </div>
 
     <?php wp_reset_postdata(); ?>
   <?php endif; ?>
