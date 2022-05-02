@@ -22,20 +22,19 @@
 
   <?php if ($the_query->have_posts()) : ?>
 		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
-              <div>
               <a href="<?= get_permalink(get_the_ID()) ?>">
-                <?php
-                  if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
-                    the_post_thumbnail('thumbnail', array('class' => 'test'));
-                  }
-                  else{?>
-                  <a href="<?= get_permalink(get_the_ID()) ?>">voir plus</a>
-                  <?php }?>
-                
-                  </a>
-                <h2><?php the_title(); ?></h2>
-                <br><br>
-              </div>
+                <div>
+                  <?php
+                    if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
+                      the_post_thumbnail('thumbnail', array('class' => 'test'));
+                    }
+                    else{?>
+                    <a href="<?= get_permalink(get_the_ID()) ?>">voir plus</a>
+                    <?php }?>
+                  <h2><?php the_title(); ?></h2>
+                  <br><br>
+                </div>
+              </a>
                       
 	  <?php endwhile; ?>
       <div id="navigation">
