@@ -21,9 +21,19 @@
 
   <?php if ($the_query->have_posts()) : ?>
 		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
-            
-                <h2><?php the_title(); ?></h2>
-                <p><?= the_content(); ?></p>
+
+
+
+    <h2><?php the_title(); ?></h2>
+    <p><?= the_excerpt(); ?></p>
+    <a href="<?= get_permalink(get_the_ID()) ?>">voir plus</a>
+
+    <div>
+      <?php 
+        if ( has_post_thumbnail() ) {
+          the_post_thumbnail('thumbnail');
+      }?>
+    </div>
                       
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
