@@ -24,7 +24,5 @@
 
       ?>
     </nav>
-    
-    header
   </header>
 </nav>

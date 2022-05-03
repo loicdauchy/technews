@@ -61,9 +61,15 @@
                 <a class="politique" href="">Politique de Confidentialité</a>
             </div>
 		</div>
-		<div id="SecondBlock">
-
-		</div>
+		<div class="mentionFooter">
+            <div class="boxDesigne">
+                <p class="designe">Designed with</p>
+                <img src="./assets/img/coeur.png" alt="photo d'un coeur">
+                <p>by FuturDev</p>
+            </div>
+            <h4>Copyright &copy 2022 TechNews</h4>
+            <a href="">Mentions Légales</a>
+        </div>
 	<?php endwhile ?>
 </footer>
 </div>
