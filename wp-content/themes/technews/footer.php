@@ -12,7 +12,7 @@
 ?>
 
 <footer id="footer">
-	<nav id="navFooter"><?php 
+	<nav class="navFooter"><?php 
       
       wp_nav_menu ( array (
         'theme_location' => 'menufooter' ,
@@ -22,10 +22,10 @@
       ?>
 	</nav>
 	<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
-		<div id="firstBlock">
-			<div id="firstBlockLeft">
+		<div id="boxtechNews">
+			<div id="techTitle">
 				<h2>Technews</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 				<div id="mailDiv">
 					<i class="fa-solid fa-envelope"></i>
 					<a href="<?php the_field('mail') ?>"><?php the_field('mail') ?></a>
