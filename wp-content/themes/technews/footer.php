@@ -62,13 +62,14 @@
             </div>
 		</div>
 		<div class="mentionFooter">
-            <div class="boxDesigne">
-                <p class="designe">Designed with</p>
-                <img src="./assets/img/coeur.png" alt="photo d'un coeur">
-                <p>by FuturDev</p>
+                <div class="boxDesigne">
+                    <p class="designe">Designed with <i class="fa-solid fa-heart"></i>
+
+                        by FuturDev</p>
+                </div>
+                <h4>Copyright &copy 2022 TechNews</h4>
+                <a href="">Mentions Légales</a>
             </div>
-            <h4>Copyright &copy 2022 TechNews</h4>
-            <a href="">Mentions Légales</a>
         </div>
 	<?php endwhile ?>
 </footer>
