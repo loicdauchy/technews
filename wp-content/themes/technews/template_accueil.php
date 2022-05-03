@@ -6,9 +6,10 @@
 
   $args = array(
     'paged'		=> $paged,
-    'post_type' => array('metier'),
+    'post_type' => 'metier',
+    
     'posts_per_page' => 3,
-    'orderby' => 'parent'
+    'orderby' => 'rand'
     );
 
   $the_query = new WP_Query($args);
@@ -27,9 +28,9 @@
 
   $args3 = array(
     'paged'		=> $paged,
-    'post_type' => array('Temoignage'),
+    'post_type' => 'Temoignage',
     'posts_per_page' => 3,
-    'orderby' => 'parent'
+    'orderby' => 'rand'
     );
 
   $the_query3 = new WP_Query($args3);
@@ -44,8 +45,24 @@
 <div id="main">
 
 
-  <h1><?= get_the_title() ?></h1>
-  <?= the_content() ?>
+  <div id= 'boxHeader'>
+    <div class='boxTitleH'>
+      <h1><?= get_the_title() ?></h1>
+      <p>Click (Generate) to create a new font pairing, (Lock) to lock fonts that you want to keep,
+                  and (Edit) to choose a font manually.The text is editable, try replacing it with your company name
+                  or other copy.</p>
+      <?= the_content() ?>
+    </div>
+
+    <div class="decoHeader"></div>
+
+    <div id="boxButton">
+            <button class="metier" onclick="window.location.href='#metier'">Les métiers</button>
+            <button class="temoin" onclick="window.location.href='#temoignages'">Les témoignages</button>
+    </div>
+
+
+  </div>
 
   <section id="boxActuality">
   <?php $actudiv = 0; ?>
@@ -57,7 +74,7 @@
     
 
 
-      <div class = <?php if ( $actudiv == 0 ) {?> leftAlign <?php $actudiv = 1; } else {?> rightAlign" <?php $actudiv = 0; } ?>>
+      <div class = <?php if ( $actudiv == 0 ) {?> leftAlign <?php $actudiv = 1; } else {?> rightAlign <?php $actudiv = 0; } ?>>
 
         <?php 
           if ( has_post_thumbnail() ) {
@@ -67,8 +84,9 @@
         
 
           <div>
-            <h2><?php the_title(); ?></h2>
             
+            <h3><?php the_title(); ?></h3>
+            <p>Le <?= get_the_date(); ?> à <?= get_the_time(); ?></p>
             <p><?= the_excerpt(); ?></p>
             <a href="<?= get_permalink(get_the_ID()) ?>">voir plus</a>
           </div>
@@ -78,49 +96,59 @@
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
     <?php endif; ?>
-
-    <a href="<?php echo get_permalink(12) ; ?>">
+   
+    
+    <button class='buttonActu'  onclick="window.location.href='<?php echo get_permalink(12) ; ?>'"> 
       Voir plus d'actualités
-    </a>
+    </button>
 
   </section>
 
   
-  <section id="metier">
+  <section id="boxMetiers">
 
-  <h2><?= get_the_title(16); ?></h2>
+  <div class="metiers">
+    <h2><?= get_the_title(16); ?></h2>
+    <div class="decoMetier"></div>
+  </div>
 
-    <?php if ($the_query->have_posts()) : ?>
-      <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
+    <div class='boxCardMetier'>
+      <?php if ($the_query->have_posts()) : ?>
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
+      
+        <a href="<?php echo get_permalink($post) ; ?>">
+      
+          
+        <div class='metier1'>
+          <?php 
+            if ( has_post_thumbnail() ) {
+              the_post_thumbnail('large');
+              
+          }?>
+          <div class="decoBox">
+            <h3><?php the_title(); ?></h3>
+          </div>
+        </div>
+      
+        </a>                        
+        <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
+    </div>
 
-      <a href="<?php echo get_permalink($post) ; ?>">
-      <div class=''>
-        <?php 
-          if ( has_post_thumbnail() ) {
-            the_post_thumbnail('thumbnail');
-            
-        }?>
-      </div>
-        
-      <div class=''>
-        <h3><?php the_title(); ?></h3>
-      </div>
 
-      </a>                        
-      <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-      <?php endif; ?>
-
-
-    <a href="<?php echo get_permalink(16) ; ?>">
-      Voir plus de métiers
-    </a>
+    <button class='buttonMetier'  onclick="window.location.href='<?php echo get_permalink(12) ; ?>'"> 
+      Voir plus des métiers
+    </button>
     
   </section>
 
-  <section id="">
+  <section id="boxTemoin">
     
   <h2><?= get_the_title(9); ?></h2>
+
+  <div class="decoTemoin"></div>
+
     <?php if ($the_query3->have_posts()) : ?>
 		<?php while ($the_query3->have_posts()) : $the_query3->the_post(); ?>  
     
@@ -128,29 +156,26 @@
 
 
     
-        <div class ="temoin">
+        <div class ="temoins">
             <?php 
               if ( has_post_thumbnail() ) {
                 the_post_thumbnail('thumbnail');
             }?>
 
-          <div>
-            <p><?= the_excerpt(); ?></p>
-            
-          </div>
-          
+          <div class="contenair1">
+            <p><?= the_excerpt(); ?></p>     
+          </div>       
         </div>
-     
-
-              
+      
                       
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
     <?php endif; ?>
 
-    <a href="<?php echo get_permalink(9) ; ?>">
+
+    <button class='buttonTemoin'  onclick="window.location.href='<?php echo get_permalink(9) ; ?>'"> 
       Voir plus de témoignages
-    </a>
+    </button>
   
   </section>
   
