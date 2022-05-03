@@ -4,6 +4,9 @@
 register_nav_menu( 'menuheader', 'Menu du Header' );
 register_nav_menu( 'menufooter', 'Menu du Footer' );
 
+remove_filter('the_excerpt', 'wpautop');
+remove_filter('the_content', 'wpautop');
+
 if ( !is_admin() ) {
     
     wp_enqueue_style( 'style', get_stylesheet_uri() );

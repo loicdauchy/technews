@@ -29,7 +29,7 @@
                   ?>
                   <div>
                     <h2><?php the_title(); ?></h2>
-                    <p><?= the_excerpt(); ?></p>
+                    <p><?= the_content(); ?></p>
                     <div>
                     <?php
                     if ( is_null(get_field('lien_temoignage_video'))==false ) { // Vérifies qu'une miniature est associée à l'article.
