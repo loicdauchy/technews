@@ -35,7 +35,7 @@ function actu_register_post_types() {
         'show_in_rest' => true,
         'has_archive' => true,
         'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
-        'menu_position' => 5, 
+        'menu_position' => 4, 
         'menu_icon' => 'dashicons-portfolio',
 	);
 
@@ -85,16 +85,42 @@ function testimony_register_post_types() {
         'show_in_rest' => true,
         'has_archive' => true,
         'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
-        'menu_position' => 5, 
+        'menu_position' => 6, 
         'menu_icon' => 'dashicons-portfolio',
 	);
 
 	register_post_type( 'temoignage', $args );
 }
 
+function contact_register_post_types() {
+    // La déclaration de nos Custom Post Types et Taxonomies ira ici
+    // CPT Realisation
+    $labels = array(
+        'name' => 'Contact',
+        'all_items' => 'Tout les contacts',  // affiché dans le sous menu
+        'singular_name' => 'Contact',
+        'add_new_item' => 'Ajouter un contact',
+        'edit_item' => 'Modifier le contact',
+        'menu_name' => 'Contact'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'custom-fields'),
+        'menu_position' => 7, 
+        'menu_icon' => 'dashicons-portfolio',
+	);
+
+	register_post_type( 'contact', $args );
+}
+
 add_action( 'init', 'actu_register_post_types' );
 add_action( 'init', 'job_register_post_types' );
 add_action( 'init', 'testimony_register_post_types' );
+add_action( 'init', 'contact_register_post_types' );
 
 
 
