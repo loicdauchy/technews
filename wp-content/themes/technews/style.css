@@ -13,23 +13,8 @@ Theme Name: Technews thème
 } 
 @font-face {
     font-family: Prompt;
-      src: url(./assets/font/Prompt-Black.ttf),
-         url(./assets/font/Prompt-BlackItalic.ttf),
-         url(./assets/font/Prompt-Bold.ttf),
-         url(./assets/font/Prompt-BoldItalic.ttf),
-         url(./assets/font/Prompt-ExtraLight.ttf),
-         url(./assets/font/Prompt-ExtraLightItalic.ttf),
-         url(./assets/font/Prompt-Italic.ttf),
-         url(./assets/font/Prompt-Light.ttf),
-         url(./assets/font/Prompt-LightItalic.ttf),
-         url(./assets/font/Prompt-Medium.ttf),
-         url(./assets/font/Prompt-MediumItalic.ttf),
-         url(./assets/font/Prompt-Regular.ttf),
-         url(./assets/font/Prompt-SemiBold.ttf),
-         url(./assets/font/Prompt-SemiBoldItalic.ttf),
-         url(./assets/font/Prompt-Thin.ttf),
-         url(./assets/font/Prompt-ThinItalic.ttf);
-}
+      src: url(./assets/font/Prompt-Bold.ttf);
+}      
 body{
     padding: 0;
     margin: 0;
@@ -41,7 +26,7 @@ a{
     font-family: "Prompt";
 }
 h1{
-    font-size: 7.5em;
+    font-size: 6em;
     color: #291D11;
     font-family: "AverageSans";
 }
@@ -53,7 +38,6 @@ h2{
 h3{
     color: white;
     font-family: "AverageSans";
-    font-size: 2em;
 }
 p{
     font-size: 1em;
@@ -95,13 +79,16 @@ p{
     margin-left: 30px;
     text-decoration: none;
 }
+.burger{
+    display: none;
+}
 /*-********************************Partie Header pc ************************************-*/
 #boxHeader{
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     position: relative;
     padding: 10px 50px;
@@ -112,29 +99,27 @@ p{
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    margin-top: 185px;
-}
-.boxTitleH > h1{
-    height: 11% ;
+    margin-bottom: 100px;
 }
 .boxTitleH> p{
     width: 45%;
     color: black;
-    margin-top: -80px;
+    margin: 0px 0px;
+}
+.boxTitleH> h1{
+    margin: 0px 0px;
 }
 #boxButton{
     width: 100%;
-    height: 30vh;
     display: flex;
     align-items:flex-start;
     justify-content: flex-start;
-    padding-top: 80px;
 }
 #boxButton >.metier,.temoin{
     font-family: "Prompt";
     font-weight: 100;
     width: 300px;
-    height: 9vh;
+    height: 100px;
     font-size: 1em;
     border-radius: 5px;
     z-index: 1;
@@ -144,13 +129,12 @@ p{
     background-color: #E49449;
     color: white;
     border: 2px solid  #E49449;
-    margin: -80px 0px 0px 0px;
 }
 .temoin{
     background-color: transparent;
     color: #E49449;
     border: 2px solid  #E49449;
-    margin: -80px 0px 0px 20px;
+    margin-left: 20px;
 }
 .decoHeader{
     position: absolute;
@@ -162,7 +146,7 @@ p{
     top: 0px;
     z-index: -1;
 }
-/*-********************************Section actualité ******************-*/
+/*-********************************Section actualité pc******************-*/
 #boxActuality{
     width: 100%;
     min-height: 100vh;
@@ -170,8 +154,7 @@ p{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column; 
-    background-color: #15100b;
-    opacity: 80%;
+    background: radial-gradient(55.65% 55.65% at 50% 44.35%, rgba(21, 16, 11, 0.85) 0%, #15100B 100%);
     padding: 20px 50px;
 }
 #boxActuality> h2{
@@ -191,6 +174,7 @@ p{
 .boxActu1>.actu1> h3{
    margin-top: -30px;
    padding-left: 20px;
+   font-size: 2em;
 }
 .boxActu1>.actu1>p{
     font-size: 0.8em;
@@ -223,6 +207,7 @@ p{
    text-align: right;
     margin-top: 0px;
     padding-right: 20px;
+    font-size: 2em;
 }
 .boxActu2>.actu2 > p{
     font-size: 0.8em;
@@ -262,7 +247,7 @@ p{
     cursor: pointer;
     margin-top:-50px;
 }
-/*-***************************Section Les métiers *****************************-*/
+/*-***************************Section Les métiers pc*****************************-*/
 #boxMetiers {
     width: 100%;
     min-height: 100vh;
@@ -279,11 +264,10 @@ p{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
 }
 .boxCardMetier>.metier1{
-    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -298,16 +282,18 @@ p{
     margin-top: 32px;
     font-weight: 100;
     z-index: 222;
+    font-size: 2em;
 }
-.boxCardMetier>.metier1>h3::before{
-    position: absolute;
-    content:'';
-    width: 217%;
-    height: 9vh;
+.decoBox{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     background-color: #291D11;
-    left: -58.5%;
-    top: -78%;
-    z-index: -1;
+    height: 100px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .buttonMetier{
     background-color: #E49449;
@@ -320,7 +306,7 @@ p{
     font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 118px;
 }
 .decoMetier{
     position: absolute;
@@ -335,7 +321,7 @@ p{
     bottom: 0%;
     z-index: -1;
 }
-/*-****************************Section Témoignages***************************-*/
+/*-****************************Section Témoignages pc***************************-*/
 #boxTemoin{
     width: 100%;
     min-height: 100vh;
@@ -442,7 +428,7 @@ p{
     clip-path: inset(0 80% 0 0);
     z-index: -500;
 }
-/*-*******************************Footer************************************-*/
+/*-*******************************Footer pc************************************-*/
 footer{
     width: 100%;
     display: flex;
@@ -497,14 +483,12 @@ footer>.navFooter>a:nth-child(1){
     font-size: 1em;
     color: white;
     text-decoration: none;
-    padding-left: 30px;
+    padding-left: 3px;
     font-family: 'AverageSans';
-    margin: -25px 0px 0px 20px
+     margin: 85px 0px 0px 0px;
 }
-.contactTech>img{
-   width: 2vw;
-   height: 3vh;
-   margin: 20px 0px 0px 0px;
+.contactTech>a>i{
+    color: #E49449;
 }
 /*partie Suivez-nous*/
 .suivezFooter{
@@ -518,13 +502,11 @@ footer>.navFooter>a:nth-child(1){
 .suivezFooter>h3{
     font-size: 1.5em;
     font-weight: 300;
-    margin-left: 40px;
-}
+}  
 .politique{
     color: white;
     text-decoration: none;
     font-family: 'AverageSans';
-    margin-left: 25px;
     margin-top: 20px;
    
 }
@@ -532,9 +514,9 @@ footer>.navFooter>a:nth-child(1){
     width: 60%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction:row;
-    padding: 20px 0px;
+    padding: 20px 40px;
 }
 .reseauFooter>.roundFooter{
     height: 50px;
@@ -542,7 +524,6 @@ footer>.navFooter>a:nth-child(1){
     background-color: black;
     border: 1px solid #E49449;
     border-radius: 50%;
-    margin-left: 25px;
     padding-left: 10px;   
 }
 .roundFooter{
@@ -593,6 +574,9 @@ footer>.navFooter>a:nth-child(1){
     display: flex;
     justify-content: space-around;
 }
+.boxDesigne>p>i{
+    color: #E49449;
+}
 /* .boxDesigne>.designe{
     margin-left: 50px;
 } */
@@ -615,10 +599,18 @@ footer>.navFooter>a:nth-child(1){
 .reseauNav>a{
     display: none;
 }
+.burger{
+    display: block;
+}
+.fa-3x {
+    font-size: 2.5em;
+}
+.fa-bars{
+    color:#996533;
+}
 /*-******************************partie Header tablette ***************-*/
 .boxTitleH>h1{
-    font-size: 6.25em;
-    margin-top: -50px;
+    font-size: 6em;
 }
 .boxTitleH> p{
     width: 60%;
@@ -637,58 +629,52 @@ footer>.navFooter>a:nth-child(1){
 /*-***********************************partie Actualité tablette*****************-*/
 .boxActu1>.actu1> h3 {
     margin-top: -15px;
+    font-size: 2em;
 }
 .boxActu2>.actu2 > h3 {
     margin-top: -5px;
+    font-size: 2em;
 }
 .boxActu2>.actu2 > a {
     margin-left: 30vw;
 }
 /*-***********************************partie Metier tablette *****************-*/
 .boxCardMetier {
-    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+.decoBox{
+    display: flex;
+    width: 54%;
+    justify-content: center;
+    align-items: center;
+    background-color: #291D11;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.boxCardMetier>.metier1{
+    width: 40%;
 }
 .boxCardMetier> .metier1 > img{
-    width: 198px;
+    width: 200px;
     height: auto;
 }
-.boxCardMetier>.metier1>h3::before{
-    position: absolute;
-    content:'';
-    width: 155%;
-    height: 6vh;
-    background-color: #291D11;
-    left: -28%;
-    top: -75%;
-    z-index: -1;
-}
-.metier1>h3{
-    font-size: 1.3em;
-}
-#boxMetiers {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column; 
-    padding: 20px 50px;   
-}
-#boxMetiers > .metiers > h2 {
-        color: #291D11;
+.boxCardMetier>.metier1 >h3{
+    font-size: 1em;
 }
 .boxButMetier{
     width: 100%;
-    height: 50vh;
     display: flex;
-    justify-content: CENTER;
+    justify-content: center;
     align-items: center;
    
 }
 .buttonMetier {
     width: 198px;
-    height: 7vh;
+    height: 50px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -747,10 +733,6 @@ footer>.navFooter>a:nth-child(1){
     width: 160%;
     font-size: 1em;
 }
-.contactTech>img {
-    width: 2vw;
-    height: 2vh;
-}
 .contactTech>a {
     margin: -21px 0px 0px 0px;
 }
@@ -760,7 +742,5 @@ footer>.navFooter>a:nth-child(1){
 .suivezFooter>h3 {
     font-size: 1.3em;
 }
-.mentionFooter>h4 {
-        padding-left: 17vw;
-}
+
 }
