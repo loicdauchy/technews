@@ -24,7 +24,7 @@
       <div class="<?php if ( $actudiv == 0 )  {?>leftAlign<?php $actudiv = 1; }else{?>rightAlign<?php $actudiv = 0; } ?>">
         <?php
             if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
-            the_post_thumbnail('thumbnail', array('class' => 'test'));
+            the_post_thumbnail('thumbnail', array('class' => 'thumbnailActu'));
             }
         ?>
         <div>

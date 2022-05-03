@@ -24,7 +24,7 @@
                 <div class="temoin">
                   <?php
                     if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
-                      the_post_thumbnail();
+                      the_post_thumbnail('thumbnail', array('class' => 'thumbnailTemoin'));
                     }
                   ?>
                   <div>
@@ -38,8 +38,14 @@
                     <?php
                       }
                     ?>
-                      
                       <a href="../metier/<?php the_field('metier_liee') ?>" class='temoinWhite'> Métier associé</a>
+                    <?php
+                    if ( is_null(get_field('metier_liee_bis'))==false ) { // Vérifies qu'une miniature est associée à l'article.
+                    ?>
+                      <a href="../metier/<?php the_field('metier_liee_bis') ?>" target='_blank' class='temoinWhite'>Second métier associé</a>
+                    <?php
+                      }
+                    ?>
                     </div>
                   </div>
                 </div>
