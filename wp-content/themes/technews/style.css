@@ -46,7 +46,7 @@ p{
 }
 /*-***********************************Barre de Navigation version pc *******************-*/
 #boxNav{
-    height: 100px;
+    height: 70px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -56,6 +56,8 @@ p{
     left: 0;
     padding: 10px 50px;
     z-index: 1;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1000;
 }
 #boxNav>.nav>a{
     margin-left: 25px;
@@ -73,7 +75,7 @@ p{
     justify-content: flex-end;
 }
 .reseauNav>a{
-    font-size: 30px;
+    font-size: 20px;
     color:#291D11;
     margin-left: 30px;
     text-decoration: none;
@@ -117,8 +119,8 @@ p{
 #boxButton >.metier,.temoin{
     font-family: "Prompt";
     font-weight: 100;
-    width: 300px;
-    height: 100px;
+    width: 275px;
+    height: 80px;
     font-size: 1em;
     border-radius: 5px;
     z-index: 1;
@@ -255,6 +257,7 @@ p{
     justify-content: center;
     flex-direction: column; 
     padding: 20px 50px;   
+    position: relative;
 }
 #boxMetiers > .metiers > h2{
     color: #291D11;
@@ -316,7 +319,7 @@ p{
     opacity: 8%;
     right:0%;
     left: 0%;
-    top: 200%;
+    top: 0%;
     bottom: 0%;
     z-index: -1;
 }
@@ -328,12 +331,13 @@ p{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    position: relative;
 }
-.temoins>h2{
+#boxTemoin>h2{
     padding: 0px 50px 0px 50px;
     color: #291D11;
     text-align: right;
+    width: 100%;
 }
 .temoin1,.temoin2,.temoin3{
     display: flex;
@@ -411,7 +415,7 @@ p{
     font-size: 1em;
     cursor: pointer;
     margin-right: 50px;
-    margin-top: 45px;
+    margin-bottom: 45px;
 
 }
 .decoTemoin{ 
@@ -433,12 +437,11 @@ footer{
 /*Nav footer*/
 footer>.navFooter{
     width: 100%;
-    min-height: 7vh;
+    height: 60px;
     background-color: #291D11;
-    margin-top: -35px;
     display: flex;
     align-items: center;
-    padding: 20px 50px;
+    padding: 0px 50px;
 }
 footer>.navFooter>a{
     margin-left: 25px;
@@ -601,6 +604,12 @@ footer>.navFooter>a:nth-child(1){
 .fa-bars{
     color:#996533;
 }
+#boxNav{
+    background: #fff;
+    padding: 5px 50px;
+    height: 70px;
+    z-index: 1000;
+}
 /*-**************************************partie Header tablette ********************************-*/
 .boxTitleH>h1{
     font-size: 6em;
@@ -675,15 +684,14 @@ footer>.navFooter>a:nth-child(1){
 }
 /*-***********************************partie témoignage Tablette********************************-*/
 .decoTemoin{ 
-    clip-path: inset(0 80% 0 0);
-}
-#boxTemoin{
-   margin-top: -80px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    z-index: -500;
 }
 .temoins>h2{
-    color: #291D11;
-    text-align: right;
-    padding-left: 20px;
+    margin-top: 0px;
 }
 .temoin1>img {
     min-width: 110px;
@@ -711,6 +719,12 @@ footer>.navFooter>a:nth-child(1){
 .contenair3>p{
     display: none;
 }
+.temoin1{
+    margin-bottom:25px;
+}
+.temoin2{
+    margin-top:25px;
+}
 .buttonTemoin{
     background: #E49449;
     margin-top: 100px;
@@ -736,6 +750,9 @@ footer>.navFooter>a:nth-child(1){
 }
 .reseauFooter{
     width: 325px;
+}
+.navFooter>a{
+    display: none;
 }
 }
 @media screen and (max-width: 500px){
@@ -782,35 +799,35 @@ footer>.navFooter>a:nth-child(1){
     z-index: -1;
 }
 /*-********************************Section actualité mobile*******************************************-*/
- #boxActuality>.boxActu1>img:nth-child(1){
-    padding: 0;
-}
-}
-.boxActu1 {
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
-    
-}
 .boxActu> div> img {
-    width: 200px;
-    height: 200px;
-   
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
 }
-.boxActu2 {
+.boxActu {
     width:100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse;
-    
+    flex-direction: column;
 }
-
-
+.reverse{
+    flex-direction: column-reverse;
+}
+.boxActu > div{
+    width: 100%;
+}
+.boxActu>.actu> h3, .boxActu>.actu>p, .boxActu>.actu >a{
+    padding-left: inherit;
+}
+.boxActu>.actu >a{
+    margin-left: inherit;
+}
+.notReverse > div > *{
+    text-align: left !important;
+}
 /*-***************************Section Les métiers mobile************************************************-*/
-/*.decoMetier{
+.decoMetier{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -819,51 +836,108 @@ footer>.navFooter>a:nth-child(1){
     opacity: 8%;
     right:0%;
     left: 0%;
-    top: 200%;
+    top: 0%;
     bottom: 0%;
     z-index: -1;
-}*/
+}
+#boxMetiers{
+    padding: 0px;
+    position: relative;
+    padding-bottom: 50px;
+}
+.boxCardMetier{
+    flex-direction: column;
+    align-items: center;
+}
+.decoBox{
+    width: 100%;
+}
+.boxCardMetier>.metier1{
+    width: 300px;
+}
+.boxCardMetier> .metier1 > img{
+    width: 100%;
+    height: auto;
+}
 /*-****************************Section Témoignages mobile***************************-*/
-/*.decoTemoin{ 
+.decoTemoin{ 
     position: absolute;
     height: 100%;
-    width: 868px;
+    width: 100%;
     left: 0px;
     background: #E49449;
-    clip-path: inset(0 80% 0 0);
+    clip-path: inset(0 70% 0 0);
     z-index: -500;
-}*/
-/*-*******************************Footer mobile************************************-*/
-
-    /*.reseauFooter{
-        width: 75%;
-    }*/
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.temoins{
+    position: relative;
+    padding-bottom: 50px;
+}
+.temoinpart > img{
+    margin-left: inherit;
+}
+#boxTemoin{
+    margin-top: inherit;
+}
+.temoinpart{
+    flex-direction: column;
+}
+.contenair1>p, .contenair2>p{
+    width: 80%;
+    text-align: center;
+}
+.contenair1, .contenair2{
+    justify-content: center;
+    align-items: center;
+}
+.buttonTemoin{
+    margin-right: inherit;
+    margin-top: 50px;
+}
+#buttonT{
+    justify-content: center;
+}
+/*-*******************************Footer mobile************************************-*/
+footer>.navFooter{
+    display: none;
+}
+#boxtechNews {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.reseauFooter>.roundFooter{
+    margin: 10px 0px;
+}
+.contactTech>a{
+    text-align: center;
+}
+.mentionFooter{
+    flex-direction: column;
+}
+#boxtechNews>.techTitle>h2{
+    text-align: center;
+}
+.contactTech>p{
+    text-align: center;
+}
+.reseauFooter{
+    width: 200px;
+    flex-wrap: wrap;
+}
+.ligneFooter{
+    display: none;
+}
+.suivezFooter{
+    width: 100%;
+}
+.contactTech>p{
+    width: 100%;
+}
 
 
 
