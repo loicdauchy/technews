@@ -8,3 +8,16 @@ window.onscroll = () => {
 		document.getElementById('boxNav').style.boxShadow = 'inherit';
 	}
 };
+
+document.getElementById('burger').addEventListener('click', function () {
+	document.getElementById('menuMobile').classList.add('openMobileMenu');
+	setTimeout(() => {
+		document.getElementById('menuMobile').classList.add('showContent');
+	}, 300);
+});
+document.getElementById('closeMenu').addEventListener('click', function () {
+	document.getElementById('menuMobile').classList.remove('showContent');
+	setTimeout(() => {
+		document.getElementById('menuMobile').classList.remove('openMobileMenu');
+	}, 200);
+});
