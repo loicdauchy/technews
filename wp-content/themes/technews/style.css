@@ -103,10 +103,7 @@ header > nav > div > ul{
     padding: 0px;
 }
 
-.backgroundBlur{
-    background: rgba(255, 255, 255, 0.5);
-    
-}
+
 
 #boxHeader{
     width: 100%;
@@ -461,3 +458,79 @@ header > nav > div > ul{
         display: flex;
         justify-content: flex-end;
 }
+
+
+/* PAGE ACTUALITE*/
+
+#actuality{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0px 145px;
+}
+
+.actuTitle{
+    width: 100%;
+    background: #291D11;
+    margin: 55px 0px 50px 0px;
+
+}
+
+.actuTitle > h1{
+    text-align: center;
+    color: white;
+
+}
+
+.article{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+.articleTitle{
+    width: 80%;
+}
+
+
+.articleButton{
+    
+    width: 200px;
+    height: 60px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #E49449;
+    border: 2px solid  #E49449;
+    margin-left: 20px;
+    margin-top: 50px;
+   
+}
+
+.articleDate{
+    width: 80%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.articleContent{
+    margin-top: 50px;
+    width: 70%;
+}
+
+.articleTitle > h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.articleContent > p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
