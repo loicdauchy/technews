@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /*
 Theme Name: Technews thème
-
 */
 @font-face {
     font-family:AverageSans;
@@ -332,7 +331,7 @@ p{
 
 }
 .temoins>h2{
-    padding: 20px 50px;
+    padding: 0px 50px 0px 50px;
     color: #291D11;
     text-align: right;
 }
@@ -399,7 +398,6 @@ p{
 #buttonT{
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 50px;
 }
 .buttonTemoin{
     border:none;
@@ -418,12 +416,9 @@ p{
 }
 .decoTemoin{ 
     position: absolute;
-    width: 100%;
     height: 100%;
     width: 868px;
-    height: 901px;
-    left: -5px;
-    top: 300vh;
+    left: 0px;
     background: #E49449;
     clip-path: inset(0 80% 0 0);
     z-index: -500;
@@ -449,9 +444,7 @@ footer>.navFooter>a{
     margin-left: 25px;
     text-decoration: none;
     color: white;
-    font-size: 1em ;
-    font-weight: 100;
-    font-family: 'Prompt';
+  
 }
 footer>.navFooter>a:nth-child(1){
     margin-left: 0px;
@@ -485,7 +478,7 @@ footer>.navFooter>a:nth-child(1){
     text-decoration: none;
     padding-left: 3px;
     font-family: 'AverageSans';
-     margin: 85px 0px 0px 0px;
+     margin: 80px 0px 0px 0px;
 }
 .contactTech>a>i{
     color: #E49449;
@@ -508,7 +501,6 @@ footer>.navFooter>a:nth-child(1){
     text-decoration: none;
     font-family: 'AverageSans';
     margin-top: 20px;
-   
 }
 .reseauFooter{
     width: 60%;
@@ -591,8 +583,9 @@ footer>.navFooter>a:nth-child(1){
     height: 2vh;
     margin: 17px 0px 0px 10px;
 }
-/*-***************************Media query  chris***********************-*/
+/*-***************************************Media query  chris*************************************-*/
 @media screen and (max-width: 1024px){
+/*-*****************************************partie Navigateur tablette***************************-*/
 .nav{
     display: none;
 }
@@ -608,7 +601,7 @@ footer>.navFooter>a:nth-child(1){
 .fa-bars{
     color:#996533;
 }
-/*-******************************partie Header tablette ***************-*/
+/*-**************************************partie Header tablette ********************************-*/
 .boxTitleH>h1{
     font-size: 6em;
 }
@@ -626,7 +619,7 @@ footer>.navFooter>a:nth-child(1){
     margin-top: 20px;
     margin-right: 30px;
 }
-/*-***********************************partie Actualité tablette*****************-*/
+/*-******************************************partie Actualité tablette**************************-*/
 .boxActu1>.actu1> h3 {
     margin-top: -15px;
     font-size: 2em;
@@ -638,11 +631,12 @@ footer>.navFooter>a:nth-child(1){
 .boxActu2>.actu2 > a {
     margin-left: 30vw;
 }
-/*-***********************************partie Metier tablette *****************-*/
+/*-*****************************************partie Métier tablette ******************************-*/
 .boxCardMetier {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .decoBox{
     display: flex;
@@ -657,39 +651,34 @@ footer>.navFooter>a:nth-child(1){
 }
 .boxCardMetier>.metier1{
     width: 40%;
+    margin-top: 50px;
 }
 .boxCardMetier> .metier1 > img{
     width: 200px;
     height: auto;
 }
-.boxCardMetier>.metier1 >h3{
+.boxCardMetier> div>.metier1 >h3{
     font-size: 1em;
 }
 .boxButMetier{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-   
+    align-items:center;
 }
 .buttonMetier {
     width: 198px;
     height: 50px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 50px;
 }
-/*-***********************************partie témoignage Tablette*******************-*/
+/*-***********************************partie témoignage Tablette********************************-*/
 .decoTemoin{ 
     clip-path: inset(0 80% 0 0);
 }
 #boxTemoin{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-top: -80px; 
+   margin-top: -80px;
 }
 .temoins>h2{
     color: #291D11;
@@ -697,15 +686,24 @@ footer>.navFooter>a:nth-child(1){
     padding-left: 20px;
 }
 .temoin1>img {
-    min-width: 130px;
-    height: 130px;
+    min-width: 110px;
+    height: 110px;
     margin-left: 11%;
     margin-top: 50px;
 }
 .temoin2>img {
-    min-width: 130px;
-    height: 130px;
+    min-width: 110px;
+    height: 110px;
     margin-left: 11%;
+}
+.contenair1>p{
+ margin-top: 59px;
+ width: 94%;
+ font-size: 0.8em ; 
+}
+.contenair2>p {
+    font-size: 0.8em ;  
+    width: 94%; 
 }
 .temoin3>img {
     display: none;
@@ -713,17 +711,11 @@ footer>.navFooter>a:nth-child(1){
 .contenair3>p{
     display: none;
 }
-.contenair1>p{
- margin-top: 59px;
-}
-.contenair1, .contenair2>p {
-    font-size: 0.8em ;   
-}
 .buttonTemoin{
     background: #E49449;
     margin-top: 100px;
     width: 250px;
-    height: 6vh;
+    height: 50px;
 }
 /*-**************************************partie Footer tablette******************************-*/
 .techTitle>div>p>br{
@@ -734,7 +726,7 @@ footer>.navFooter>a:nth-child(1){
     font-size: 1em;
 }
 .contactTech>a {
-    margin: -21px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
 }
 .suivezFooter{
     width: 200%;
@@ -742,5 +734,140 @@ footer>.navFooter>a:nth-child(1){
 .suivezFooter>h3 {
     font-size: 1.3em;
 }
+.reseauFooter{
+    width: 325px;
+}
+}
+@media screen and (max-width: 500px){
+    /*-**************************barre de navigation mobile*************************************-*/
+.burger{
+    display: block;
+}
+#boxNav>.reseauNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*-**********************************partie Header mobile********************************************-*/
+.boxTitleH>h1 {
+   font-size: 3em;
+   margin-left: -20px;
+}
+.boxTitleH>p{
+    width:75%;
+    font-size: 0.75em;
+    margin-left: -20px;
+}
+#boxButton {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+#boxButton> .metier, .temoin{
+    margin-left: -20px;
+    width: 200px;
+    height: 60px;
+    font-size: 1em;
+}
+.decoHeader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(78% 0, 100% 0, 100% 100%, 47% 100%);
+    background: rgba(228, 148, 73, 0.6);
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+}
+/*-********************************Section actualité mobile*******************************************-*/
+ #boxActuality>.boxActu1>img:nth-child(1){
+    padding: 0;
+}
+}
+.boxActu1 {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    
+}
+.boxActu> div> img {
+    width: 200px;
+    height: 200px;
+   
+}
+.boxActu2 {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    
+}
+
+
+/*-***************************Section Les métiers mobile************************************************-*/
+/*.decoMetier{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    background: #E49449;
+    opacity: 8%;
+    right:0%;
+    left: 0%;
+    top: 200%;
+    bottom: 0%;
+    z-index: -1;
+}*/
+/*-****************************Section Témoignages mobile***************************-*/
+/*.decoTemoin{ 
+    position: absolute;
+    height: 100%;
+    width: 868px;
+    left: 0px;
+    background: #E49449;
+    clip-path: inset(0 80% 0 0);
+    z-index: -500;
+}*/
+/*-*******************************Footer mobile************************************-*/
+
+    /*.reseauFooter{
+        width: 75%;
+    }*/
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
