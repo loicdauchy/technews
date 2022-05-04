@@ -397,6 +397,11 @@ ul{
     background: #291D11;
 }
 
+.pmetier{
+    display: flex;
+    flex-direction: column;
+}
+
 /*-****************************Section Témoignages pc***************************-*/
 #boxTemoin {
     width: 100%;
