@@ -241,8 +241,8 @@ p {
 .Nsectiontem::after {
     content: '';
     background: #E49449;
-    clip-path: inset(0 92% 0 0);
-    width: 100%;
+    /* clip-path: inset(0 92% 0 0); */
+    width: 10%;
     min-height: 170%;
     position: absolute;
     left: 0;
