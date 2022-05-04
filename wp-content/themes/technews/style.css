@@ -565,7 +565,7 @@ footer>.navFooter>a:nth-child(1){
     font-family: 'AverageSans';
     font-weight: 300;
 }
-#test{
+#footerContent{
     width: 100%;
     padding-left: 50px;
     padding-right: 50px;
