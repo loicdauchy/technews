@@ -444,8 +444,16 @@ footer>.navFooter{
     align-items: center;
     padding: 20px 50px;
 }
+.menu-menu-footer-container{
+    width: 100%;
+}
 .menuFooter{
+    width: 60%;
     display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
 }
 footer>.navFooter>div>ul>li,
 footer>.navFooter>div>ul>li>a{
@@ -456,9 +464,6 @@ footer>.navFooter>div>ul>li>a{
     font-size: 1em ;
     font-weight: bold;
     font-family: 'Prompt';
-}
-footer>.navFooter>a:nth-child(1){
-    margin-left: 0px;
 }
 /*partie TechNews-contact*/
 #boxtechNews{
@@ -595,6 +600,15 @@ footer>.navFooter>a:nth-child(1){
     height: 2vh;
     margin: 17px 0px 0px 10px;
 }
+
+
+
+
+/*------------- Css page métier solo ---------------  */
+#h2metier, #main>p{
+    color: #291D11;
+}
+
 /*-***************************Media query  chris***********************-*/
 @media screen and (max-width: 1024px){
 .nav{
