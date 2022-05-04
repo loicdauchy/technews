@@ -11,6 +11,7 @@ button.addEventListener('click', function (e) {
     e.preventDefault();
 
     this.parentNode.classList.add(activatedClass);
+    sidebarBody.classList.remove('none');
 });
 
 buttonclose.addEventListener('click', function (e) {
@@ -18,4 +19,5 @@ buttonclose.addEventListener('click', function (e) {
 
     // this.parentNode.classList.remove(activatedClass);
     document.getElementById('Nhamburger').classList.remove(activatedClass);
+    sidebarBody.classList.add('none');
 });
