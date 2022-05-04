@@ -1,52 +1,63 @@
 @charset "UTF-8";
+
 /*
 Theme Name: Technews thème
 
 */
 @font-face {
-    font-family:AverageSans;
+    font-family: AverageSans;
     src: url(./assets/font/AverageSans-Regular.ttf);
 }
+
 @font-face {
-    font-family:Carme;
+    font-family: Carme;
     src: url(./assets/font/Carme-Regular.ttf);
-} 
+}
+
 @font-face {
     font-family: Prompt;
-      src: url(./assets/font/Prompt-Bold.ttf);
-}      
-body{
+    src: url(./assets/font/Prompt-Bold.ttf);
+}
+
+body {
     padding: 0;
     margin: 0;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-a{
+
+a {
     font-family: "Prompt";
 }
-h1{
+
+h1 {
     font-size: 6em;
     color: #291D11;
     font-family: "AverageSans";
 }
-h2{
+
+h2 {
     font-size: 3em;
     font-family: "AverageSans";
     color: white;
 }
-h3{
+
+h3 {
     color: white;
     font-family: "AverageSans";
 }
-p{
+
+p {
     font-size: 1em;
     font-family: "Carme";
     font-weight: regular;
     color: white;
 }
+
 /*-***********************************Barre de Navigation version pc *******************-*/
-#boxNav{
+#boxNav {
     height: 100px;
     width: 100%;
     display: flex;
@@ -58,32 +69,38 @@ p{
     padding: 10px 50px;
     z-index: 1;
 }
-#boxNav>.nav>a{
+
+#boxNav>.nav>a {
     margin-left: 25px;
     text-decoration: none;
-    color: black; 
-    font-size: 1em ;
+    color: black;
+    font-size: 1em;
     font-weight: 100;
 }
-#boxNav>.nav>a:nth-child(1){
+
+#boxNav>.nav>a:nth-child(1) {
     margin-left: 0px;
 }
-#boxNav>.reseauNav{
+
+#boxNav>.reseauNav {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
-.reseauNav>a{
+
+.reseauNav>a {
     font-size: 30px;
-    color:#291D11;
+    color: #291D11;
     margin-left: 30px;
     text-decoration: none;
 }
-.burger{
+
+.burger {
     display: none;
 }
+
 /*-********************************Partie Header pc ************************************-*/
-#boxHeader{
+#boxHeader {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -93,7 +110,8 @@ p{
     position: relative;
     padding: 10px 50px;
 }
-.boxTitleH{
+
+.boxTitleH {
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -101,21 +119,26 @@ p{
     flex-direction: column;
     margin-bottom: 100px;
 }
-.boxTitleH> p{
+
+.boxTitleH>p {
     width: 45%;
     color: black;
     margin: 0px 0px;
 }
-.boxTitleH> h1{
+
+.boxTitleH>h1 {
     margin: 0px 0px;
 }
-#boxButton{
+
+#boxButton {
     width: 100%;
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: flex-start;
 }
-#boxButton >.metier,.temoin{
+
+#boxButton>.metier,
+.temoin {
     font-family: "Prompt";
     font-weight: 100;
     width: 300px;
@@ -125,62 +148,72 @@ p{
     z-index: 1;
     cursor: pointer;
 }
-.metier{
+
+.metier {
     background-color: #E49449;
     color: white;
-    border: 2px solid  #E49449;
+    border: 2px solid #E49449;
 }
-.temoin{
+
+.temoin {
     background-color: transparent;
     color: #E49449;
-    border: 2px solid  #E49449;
+    border: 2px solid #E49449;
     margin-left: 20px;
 }
-.decoHeader{
+
+.decoHeader {
     position: absolute;
     width: 100%;
     height: 100%;
     clip-path: polygon(78% 0, 100% 0, 100% 100%, 47% 100%);
     background: rgba(228, 148, 73, 0.6);
-    right:0px;
+    right: 0px;
     top: 0px;
     z-index: -1;
 }
+
 /*-********************************Section actualité pc******************-*/
-#boxActuality{
+#boxActuality {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
     background: radial-gradient(55.65% 55.65% at 50% 44.35%, rgba(21, 16, 11, 0.85) 0%, #15100B 100%);
     padding: 20px 50px;
 }
-#boxActuality> h2{
+
+#boxActuality>h2 {
     margin-top: 50px;
 }
-.boxActu1{
+
+.boxActu1 {
     width: 67%;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
 }
-.boxActu> div> img{
+
+.boxActu>div>img {
     width: 200px;
     height: 200px;
 }
-.boxActu1>.actu1> h3{
-   margin-top: -30px;
-   padding-left: 20px;
-   font-size: 2em;
+
+.boxActu1>.actu1>h3 {
+    margin-top: -30px;
+    padding-left: 20px;
+    font-size: 2em;
 }
-.boxActu1>.actu1>p{
+
+.boxActu1>.actu1>p {
     font-size: 0.8em;
     padding-left: 20px;
 }
-.boxActu1>.actu1 >a{
+
+.boxActu1>.actu1>a {
     position: relative;
     font-weight: 500;
     font-size: 1.2em;
@@ -188,55 +221,63 @@ p{
     text-decoration: none;
     margin-left: 20px;
 }
-.boxActu1>.actu1>a::before{
+
+.boxActu1>.actu1>a::before {
     position: absolute;
     content: '';
     width: 70px;
     border: 1px solid #E49449;
     margin-left: 10px;
-    margin-top:30px;
+    margin-top: 30px;
 }
-.boxActu2{
+
+.boxActu2 {
     width: 67%;
     display: flex;
     align-self: flex-end;
     justify-content: flex-end;
     margin: 90px 0px;
 }
-.boxActu2>.actu2 > h3{
-   text-align: right;
+
+.boxActu2>.actu2>h3 {
+    text-align: right;
     margin-top: 0px;
     padding-right: 20px;
     font-size: 2em;
 }
-.boxActu2>.actu2 > p{
+
+.boxActu2>.actu2>p {
     font-size: 0.8em;
     text-align: right;
     padding-right: 20px;
 }
-.boxActu2>.actu2 > a{
+
+.boxActu2>.actu2>a {
     position: relative;
     font-size: 1.2em;
     color: white;
     text-decoration: none;
-    margin-left: 40vw; 
+    margin-left: 40vw;
     text-align: justify;
 }
-.boxActu2>.actu2>a::before{
+
+.boxActu2>.actu2>a::before {
     position: absolute;
     content: '';
     width: 70px;
     border: 1px solid #E49449;
     margin: 30px 0px 0px 10px;
 }
-.boxButActu{
+
+.boxButActu {
     display: flex;
     height: 6vh;
 }
-.buttonActu{ 
+
+.buttonActu {
     background-color: #E49449;
     color: white;
-    border: 2px solid  #E49449;
+    border: 2px solid #E49449;
     font-family: "Prompt";
     font-weight: 100;
     width: 300px;
@@ -245,8 +286,9 @@ p{
     border-radius: 5px;
     z-index: 1;
     cursor: pointer;
-    margin-top:-50px;
+    margin-top: -50px;
 }
+
 /*-***************************Section Les métiers pc*****************************-*/
 #boxMetiers {
     width: 100%;
@@ -254,12 +296,14 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; 
-    padding: 20px 50px;   
+    flex-direction: column;
+    padding: 20px 50px;
 }
-#boxMetiers > .metiers > h2{
+
+#boxMetiers>.metiers>h2 {
     color: #291D11;
 }
+
 .boxCardMetier {
     width: 100%;
     display: flex;
@@ -267,24 +311,28 @@ p{
     justify-content: space-around;
     flex-direction: row;
 }
-.boxCardMetier>.metier1{
+
+.boxCardMetier>.metier1 {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.boxCardMetier>.metier1>img{
+
+.boxCardMetier>.metier1>img {
     width: 423px;
     height: auto;
 }
-.boxCardMetier>.metier1>h3{
+
+.boxCardMetier>.metier1>h3 {
     position: relative;
-    color:white;
+    color: white;
     margin-top: 32px;
     font-weight: 100;
     z-index: 222;
     font-size: 2em;
 }
-.decoBox{
+
+.decoBox {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -295,10 +343,11 @@ p{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.buttonMetier{
+
+.buttonMetier {
     background-color: #E49449;
     color: white;
-    border: 2px solid  #E49449;
+    border: 2px solid #E49449;
     font-family: "Prompt";
     font-weight: 100;
     width: 300px;
@@ -308,21 +357,23 @@ p{
     cursor: pointer;
     margin-top: 118px;
 }
-.decoMetier{
+
+.decoMetier {
     position: absolute;
     width: 100%;
     height: 100%;
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     background: #E49449;
     opacity: 8%;
-    right:0%;
+    right: 0%;
     left: 0%;
     top: 200%;
     bottom: 0%;
     z-index: -1;
 }
+
 /*-****************************Section Témoignages pc***************************-*/
-#boxTemoin{
+#boxTemoin {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -331,78 +382,96 @@ p{
     flex-direction: column;
 
 }
-.temoins>h2{
+
+.temoins>h2 {
     padding: 20px 50px;
     color: #291D11;
     text-align: right;
 }
-.temoin1,.temoin2,.temoin3{
+
+.temoin1,
+.temoin2,
+.temoin3 {
     display: flex;
     align-items: center;
     flex-direction: row;
 }
-.temoin1>img{
+
+.temoin1>img {
     min-width: 130px;
-    height : 130px;
+    height: 130px;
     border-radius: 50%;
     margin-left: 7%;
     margin-top: 50px;
 }
-.contenair1>p{
+
+.contenair1>p {
     width: 71%;
     color: black;
     text-align: justify;
     padding-left: 10px;
     margin-top: 60px;
 }
-.contenair1 >a{
+
+.contenair1>a {
     color: #E49449;
 }
-.contenair1, .contenair2, .contenair3{
+
+.contenair1,
+.contenair2,
+.contenair3 {
     display: flex;
     flex-direction: column;
 }
-.contenair2>p{
+
+.contenair2>p {
     width: 71%;
     color: black;
     text-align: justify;
     padding-left: 10px;
     margin-top: 60px;
 }
-.temoin2>img{
+
+.temoin2>img {
     min-width: 130px;
-    height : 130px;
+    height: 130px;
     border-radius: 50%;
     margin-left: 7%;
     margin-top: 50px;
 }
-.contenair2>a{
+
+.contenair2>a {
     color: #E49449;
 }
-.contenair3>p{ 
+
+.contenair3>p {
     width: 71%;
     color: black;
     text-align: justify;
     padding-left: 10px;
     margin-top: 60px
 }
-.temoin3>img{
+
+.temoin3>img {
     min-width: 130px;
-    height : 130px;
+    height: 130px;
     border-radius: 50%;
     margin-left: 7%;
     margin-top: 50px;
 }
-.contenair3>a{
+
+.contenair3>a {
     color: #E49449;
 }
-#buttonT{
+
+#buttonT {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 50px;
 }
-.buttonTemoin{
-    border:none;
+
+.buttonTemoin {
+    border: none;
     background: #291D11;
     border-radius: 5px;
     color: white;
@@ -416,7 +485,8 @@ p{
     margin-top: 45px;
 
 }
-.decoTemoin{ 
+
+.decoTemoin {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -428,15 +498,17 @@ p{
     clip-path: inset(0 80% 0 0);
     z-index: -500;
 }
+
 /*-*******************************Footer pc************************************-*/
-footer{
+footer {
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 0);
 }
+
 /*Nav footer*/
-footer>.navFooter{
+footer>.navFooter {
     width: 100%;
     min-height: 7vh;
     background-color: #291D11;
@@ -444,10 +516,12 @@ footer>.navFooter{
     align-items: center;
     padding: 20px 50px;
 }
-.menu-menu-footer-container{
+
+.menu-menu-footer-container {
     width: 100%;
 }
-.menuFooter{
+
+.menuFooter {
     width: 60%;
     display: flex;
     flex-wrap: wrap;
@@ -455,18 +529,20 @@ footer>.navFooter{
     margin: 0;
     justify-content: space-between;
 }
+
 footer>.navFooter>div>ul>li,
-footer>.navFooter>div>ul>li>a{
+footer>.navFooter>div>ul>li>a {
     text-decoration: none;
     letter-spacing: 0.08em;
-    list-style:none;
+    list-style: none;
     color: white;
-    font-size: 1em ;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Prompt';
 }
+
 /*partie TechNews-contact*/
-#boxtechNews{
+#boxtechNews {
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -475,288 +551,346 @@ footer>.navFooter>div>ul>li>a{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#boxtechNews>.techTitle>h2{
+
+#boxtechNews>.techTitle>h2 {
     color: white;
     margin-top: 0px;
 }
-.contactTech{
+
+.contactTech {
     width: 100%;
     height: 20vh;
     display: flex;
     flex-direction: column;
-} 
-.contactTech>p{
+}
+
+.contactTech>p {
     width: 132%;
 }
-.contactTech>a{
+
+.contactTech>a {
     font-size: 1em;
     color: white;
     text-decoration: none;
     padding-left: 3px;
     font-family: 'AverageSans';
-     margin: 85px 0px 0px 0px;
+    margin: 85px 0px 0px 0px;
 }
-.contactTech>a>i{
+
+.contactTech>a>i {
     color: #E49449;
 }
+
 /*partie Suivez-nous*/
-.suivezFooter{
+.suivezFooter {
     width: 60%;
     height: 37vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction:column;
+    flex-direction: column;
 }
-.suivezFooter>h3{
+
+.suivezFooter>h3 {
     font-size: 1.5em;
     font-weight: 300;
-}  
-.politique{
+}
+
+.politique {
     color: white;
     text-decoration: none;
     font-family: 'AverageSans';
     margin-top: 20px;
-   
+
 }
-.reseauFooter{
+
+.reseauFooter {
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction:row;
+    flex-direction: row;
     padding: 20px 40px;
 }
-.reseauFooter>.roundFooter{
+
+.reseauFooter>.roundFooter {
     height: 50px;
     width: 50px;
     background-color: transparent;
     border: 1px solid #E49449;
     border-radius: 50%;
-    padding-left: 10px;   
+    padding-left: 10px;
 }
-.roundFooter{
+
+.roundFooter {
     display: flex;
     justify-content: center;
 }
-.roundFooter>a{
+
+.roundFooter>a {
     color: #E49449;
     text-decoration: none;
     font-size: 25px;
     margin-top: 11px;
     margin-left: -12px;
 }
+
 .roundHeader>a {
     color: #291D11;
     text-decoration: none;
     font-size: 25px;
     margin-top: 11px;
 }
-.ligneFooter{
+
+.ligneFooter {
     border: 1px solid white;
     height: 22vh;
     margin-top: 10vh;
     margin-left: 22vw;
     opacity: 45%;
 }
+
 /*partie base footer mention*/
-.mentionFooter{
+.mentionFooter {
     min-height: 6vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
 }
-.mentionFooter>h4{
+
+.mentionFooter>h4 {
     /* padding-left: 30vw; */
-    color:white;
+    color: white;
     font-family: 'AverageSans';
     font-weight: 300;
 }
-.mentionFooter>a{
+
+.mentionFooter>a {
     /* padding-left: 27.5vw; */
     color: white;
     text-decoration: none;
     font-family: 'AverageSans';
     font-weight: 300;
 }
-#footerContent{
+
+#footerContent {
     width: 100%;
     padding-left: 50px;
     padding-right: 50px;
 }
-.boxDesigne{
+
+.boxDesigne {
     display: flex;
     justify-content: space-around;
 }
-.boxDesigne>p>i{
+
+.boxDesigne>p>i {
     color: #E49449;
 }
+
 /* .boxDesigne>.designe{
     margin-left: 50px;
 } */
-.boxDesigne>p{
-    color:white;
+.boxDesigne>p {
+    color: white;
     font-family: 'AverageSans';
     font-weight: 300;
     /* margin-left: 10px; */
-}   
-.boxDesigne>img{
+}
+
+.boxDesigne>img {
     width: 1vw;
     height: 2vh;
     margin: 17px 0px 0px 10px;
 }
 
 /*-***************************Media query  chris***********************-*/
-@media screen and (max-width: 1024px){
-.nav{
-    display: none;
-}
-.reseauNav>a{
-    display: none;
-}
-.burger{
-    display: block;
-}
-.fa-3x {
-    font-size: 2.5em;
-}
-.fa-bars{
-    color:#996533;
-}
-/*-******************************partie Header tablette ***************-*/
-.boxTitleH>h1{
-    font-size: 6em;
-}
-.boxTitleH> p{
-    width: 60%;
-    padding-top: 60px;
-}
-#boxButton >.metier,.temoin{
-    width:200px;
-    height: 9vh;
-    font-size: 1.3em;
-    font-weight: 100;
-}
-#boxButton>.metier, .temoin{
-    margin-top: 20px;
-    margin-right: 30px;
-}
-/*-***********************************partie Actualité tablette*****************-*/
-.boxActu1>.actu1> h3 {
-    margin-top: -15px;
-    font-size: 2em;
-}
-.boxActu2>.actu2 > h3 {
-    margin-top: -5px;
-    font-size: 2em;
-}
-.boxActu2>.actu2 > a {
-    margin-left: 30vw;
-}
-/*-***********************************partie Metier tablette *****************-*/
-.boxCardMetier {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.decoBox{
-    display: flex;
-    width: 54%;
-    justify-content: center;
-    align-items: center;
-    background-color: #291D11;
-    height: 50px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.boxCardMetier>.metier1{
-    width: 40%;
-}
-.boxCardMetier> .metier1 > img{
-    width: 200px;
-    height: auto;
-}
-.boxCardMetier>.metier1 >h3{
-    font-size: 1em;
-}
-.boxButMetier{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
-.buttonMetier {
-    width: 198px;
-    height: 50px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-/*-***********************************partie témoignage Tablette*******************-*/
-.decoTemoin{ 
-    clip-path: inset(0 80% 0 0);
-}
-#boxTemoin{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-top: -80px; 
-}
-.temoins>h2{
-    color: #291D11;
-    text-align: right;
-    padding-left: 20px;
-}
-.temoin1>img {
-    min-width: 130px;
-    height: 130px;
-    margin-left: 11%;
-    margin-top: 50px;
-}
-.temoin2>img {
-    min-width: 130px;
-    height: 130px;
-    margin-left: 11%;
-}
-.temoin3>img {
-    display: none;
-}
-.contenair3>p{
-    display: none;
-}
-.contenair1>p{
- margin-top: 59px;
-}
-.contenair1, .contenair2>p {
-    font-size: 0.8em ;   
-}
-.buttonTemoin{
-    background: #E49449;
-    margin-top: 100px;
-    width: 250px;
-    height: 6vh;
-}
-/*-**************************************partie Footer tablette******************************-*/
-.techTitle>div>p>br{
-    display: none;
-}
-.contactTech>p {
-    width: 160%;
-    font-size: 1em;
-}
-.contactTech>a {
-    margin: -21px 0px 0px 0px;
-}
-.suivezFooter{
-    width: 200%;
-}
-.suivezFooter>h3 {
-    font-size: 1.3em;
-}
+@media screen and (max-width: 1024px) {
+    .nav {
+        display: none;
+    }
+
+    .reseauNav>a {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .fa-3x {
+        font-size: 2.5em;
+    }
+
+    .fa-bars {
+        color: #996533;
+    }
+
+    /*-******************************partie Header tablette ***************-*/
+    .boxTitleH>h1 {
+        font-size: 6em;
+    }
+
+    .boxTitleH>p {
+        width: 60%;
+        padding-top: 60px;
+    }
+
+    #boxButton>.metier,
+    .temoin {
+        width: 200px;
+        height: 9vh;
+        font-size: 1.3em;
+        font-weight: 100;
+    }
+
+    #boxButton>.metier,
+    .temoin {
+        margin-top: 20px;
+        margin-right: 30px;
+    }
+
+    /*-***********************************partie Actualité tablette*****************-*/
+    .boxActu1>.actu1>h3 {
+        margin-top: -15px;
+        font-size: 2em;
+    }
+
+    .boxActu2>.actu2>h3 {
+        margin-top: -5px;
+        font-size: 2em;
+    }
+
+    .boxActu2>.actu2>a {
+        margin-left: 30vw;
+    }
+
+    /*-***********************************partie Metier tablette *****************-*/
+    .boxCardMetier {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .decoBox {
+        display: flex;
+        width: 54%;
+        justify-content: center;
+        align-items: center;
+        background-color: #291D11;
+        height: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .boxCardMetier>.metier1 {
+        width: 40%;
+    }
+
+    .boxCardMetier>.metier1>img {
+        width: 200px;
+        height: auto;
+    }
+
+    .boxCardMetier>.metier1>h3 {
+        font-size: 1em;
+    }
+
+    .boxButMetier {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .buttonMetier {
+        width: 198px;
+        height: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /*-***********************************partie témoignage Tablette*******************-*/
+    .decoTemoin {
+        clip-path: inset(0 80% 0 0);
+    }
+
+    #boxTemoin {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: -80px;
+    }
+
+    .temoins>h2 {
+        color: #291D11;
+        text-align: right;
+        padding-left: 20px;
+    }
+
+    .temoin1>img {
+        min-width: 130px;
+        height: 130px;
+        margin-left: 11%;
+        margin-top: 50px;
+    }
+
+    .temoin2>img {
+        min-width: 130px;
+        height: 130px;
+        margin-left: 11%;
+    }
+
+    .temoin3>img {
+        display: none;
+    }
+
+    .contenair3>p {
+        display: none;
+    }
+
+    .contenair1>p {
+        margin-top: 59px;
+    }
+
+    .contenair1,
+    .contenair2>p {
+        font-size: 0.8em;
+    }
+
+    .buttonTemoin {
+        background: #E49449;
+        margin-top: 100px;
+        width: 250px;
+        height: 6vh;
+    }
+
+    /*-**************************************partie Footer tablette******************************-*/
+    .techTitle>div>p>br {
+        display: none;
+    }
+
+    .contactTech>p {
+        width: 160%;
+        font-size: 1em;
+    }
+
+    .contactTech>a {
+        margin: -21px 0px 0px 0px;
+    }
+
+    .suivezFooter {
+        width: 200%;
+    }
+
+    .suivezFooter>h3 {
+        font-size: 1.3em;
+    }
 
 }
