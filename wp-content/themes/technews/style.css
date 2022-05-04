@@ -19,6 +19,8 @@ Theme Name: Technews thème
     src:  url(assets/font/Prompt-Bold.ttf);
          
 }
+
+/* GLOBAL*/
 body{
     padding: 0;
     margin: 0;
@@ -63,6 +65,7 @@ p{
    
 }
 
+/*HEADER NAV*/
 header > nav{
     height: 55px;
     width: 100%;
@@ -103,56 +106,56 @@ header > nav > div > ul{
     padding: 0px;
 }
 
+/* FIN HEADER NAV*/
 
+/*                     ACCUEIL                       */
 
 #boxHeader{
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     position: relative;
     padding: 10px 50px;
 }
 .boxTitleH{
     width: 100%;
-    min-height: 60vh;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .boxTitleH > h1{
-    height: 11% ;
+    margin: 0px 0px;
 }
 .boxTitleH> p{
     width: 45%;
     color: black;
+    margin: 0px 0px;
 }
 #boxButton{
     width: 100%;
-    height: 10vh;
     display: flex;
-    align-items: flex-start;
+    align-items:flex-start;
     justify-content: flex-start;
 }
 #boxButton >.metier,.temoin{
     font-family: "Prompt";
     font-weight: 100;
-    width: 300px;
-    height: 9vh;
+    width: 275px;
+    height: 80px;
     font-size: 1em;
     border-radius: 5px;
-    
+    z-index: 1;
     cursor: pointer;
 }
 .metier{
     background-color: #E49449;
     color: white;
     border: 2px solid  #E49449;
-    margin-top: -50px;
 }
 
 
@@ -161,7 +164,6 @@ header > nav > div > ul{
     color: #E49449;
     border: 2px solid  #E49449;
     margin-left: 20px;
-    margin-top: -50px;
 }
 .decoHeader{
     position: absolute;
@@ -459,6 +461,8 @@ header > nav > div > ul{
         justify-content: flex-end;
 }
 
+/*                            FIN ACCUEIL                                  */
+
 
 /* PAGE ACTUALITE*/
 
@@ -534,3 +538,73 @@ header > nav > div > ul{
     text-align: center;
 }
 
+
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 1024px){
+   
+    .boxTitleH>h1{
+        font-size: 5em;
+    }
+    .boxTitleH> p{
+        width: 60%;
+        padding-top: 60px;
+        font-size: 0.75em;
+        
+    }
+    #boxButton>.metier,.temoin{
+        margin-top: 20px;
+        margin-right: 0px;
+        height: 60px;
+        font-size: 0.8em ;
+        width: 170px;
+    }
+
+    .leftAlign> div > h3 {
+        margin-top: -15px;
+        width: 70%;
+        font-size: 1.5em;
+    }
+
+    .leftAlign> div > p{
+        width: 80%;
+    }
+
+    .rightAlign> div > p{
+        width: 80%;
+    }
+    .rightAlign > div > h3 {
+        margin-top: -5px;
+        font-size: 1.5em;
+        width: 70%;
+    }
+    .rightAlign > a {
+        margin-left: 30vw;
+    }
+
+    .rightAlign{
+        margin-left: -50px;
+    }
+
+
+    .metier1 > img{
+        width: 30vw;
+        height: 200px;
+        margin: 0px 10px;
+    }
+
+    .decoBox{
+        
+        width: 30vw;
+        height: 50px;
+        margin: 0px 10px;
+        
+    
+    }
+
+    .decoBox > h3{
+        font-size: 1rem;
+    }
+}
