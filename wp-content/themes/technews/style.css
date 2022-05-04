@@ -530,7 +530,7 @@ footer>.navFooter>div>ul>li>a{
 .reseauFooter>.roundFooter{
     height: 50px;
     width: 50px;
-    background-color: black;
+    background-color: transparent;
     border: 1px solid #E49449;
     border-radius: 50%;
     padding-left: 10px;   
@@ -545,6 +545,12 @@ footer>.navFooter>div>ul>li>a{
     font-size: 25px;
     margin-top: 11px;
     margin-left: -12px;
+}
+.roundHeader>a {
+    color: #291D11;
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 11px;
 }
 .ligneFooter{
     border: 1px solid white;

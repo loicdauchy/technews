@@ -72,7 +72,7 @@
                     <a href="">Mentions Légales</a>
                 </div>
             </div>
-        <?php endwhile ?>
+            <?php endwhile ?>
     </div>
 </footer>
 </div>

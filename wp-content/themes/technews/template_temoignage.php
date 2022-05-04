@@ -1,4 +1,6 @@
+<?php get_header(); ?>
 <?php /* Template Name: page témoignage */ ?>
+
 
 <?php 
 
@@ -12,11 +14,8 @@
   $the_query = new WP_Query($args);
 
 ?>
-
-<?php get_header(); ?>
-
 <div id="main">
-<h1><?= get_the_title() ?></h1>
+<h1>Les témoignages</h1>
   <?= the_content() ?>
 
   <?php if ($the_query->have_posts()) : ?>
