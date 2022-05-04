@@ -64,14 +64,14 @@ p{
 }
 
 header > nav{
-    height: 100px;
+    height: 55px;
     width: 100%;
     align-items: center;
     justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 10px 50px;
+    padding: 15px 50px;
     z-index: 1;
     list-style-type: none;
 
@@ -86,14 +86,27 @@ header > nav > div{
     display: flex;
 }
 header > nav > div > ul > li > a{
-    margin-left: 25px;
+    margin-right: 25px;
     text-decoration: none;
     color: black; 
     font-size: 1em ;
+    
 
 }
 
+header > nav > div > ul > li > a:hover{
+    color: #E49449;
 
+}
+
+header > nav > div > ul{
+    padding: 0px;
+}
+
+.backgroundBlur{
+    background: rgba(255, 255, 255, 0.5);
+    
+}
 
 #boxHeader{
     width: 100%;
@@ -135,7 +148,7 @@ header > nav > div > ul > li > a{
     height: 9vh;
     font-size: 1em;
     border-radius: 5px;
-    z-index: 1;
+    
     cursor: pointer;
 }
 .metier{
@@ -179,6 +192,7 @@ header > nav > div > ul > li > a{
 
 #boxActuality> h2{
     color: white;
+    margin: 50px;
 }
 
 
@@ -189,7 +203,8 @@ header > nav > div > ul > li > a{
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    margin-left: 50px;
+
+    margin: 10px 0px 50px 50px;
 }
 
 .leftAlign > div > h3{
@@ -227,11 +242,16 @@ header > nav > div > ul > li > a{
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    margin: 90px 0px 0px -100px;
+    margin: 50px 0px 0px -100px;
 }
 
 .rightAlign > div{
     text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
+    
 }
 
 .rightAlign > div > h3{
@@ -239,6 +259,7 @@ header > nav > div > ul > li > a{
     margin-top: 0px;
     color: white;
     padding-right: 20px;
+    width: 50%;
  }
 
  .rightAlign > div > p{
@@ -246,6 +267,8 @@ header > nav > div > ul > li > a{
     font-size: 0.8em;
     text-align: right;
     padding-right: 20px;
+    width: 50%;
+    
  }
 
  .rightAlign > div > a{
@@ -253,7 +276,7 @@ header > nav > div > ul > li > a{
     font-size: 1.2em;
     color: white;
     text-decoration: none;
-    
+    padding-right: 20px;
     text-align: end;
  }
 
@@ -274,6 +297,7 @@ header > nav > div > ul > li > a{
     height: 90px;
     font-size: 1em;
     border-radius: 5px;
+    margin: 50px;
     
 }
 
@@ -282,6 +306,7 @@ header > nav > div > ul > li > a{
 /*METIER*/
 
 #boxMetiers {
+    position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -292,7 +317,7 @@ header > nav > div > ul > li > a{
 }
 
 #boxMetiers > .metiers > h2{
-
+    margin: 50px;
     color: #291D11;
 }
 .boxCardMetier {
@@ -330,15 +355,15 @@ header > nav > div > ul > li > a{
     color: white;
     border: 2px solid  #E49449;
     font-family: "Prompt";
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 70px;
     font-size: 1em;
     border-radius: 5px;
     margin-top: 50px;
 }
 
 .metier1 > img{
-    width: 400px;
+    width: 350px;
     height: 300px;
 }
 .decoMetier{
@@ -347,10 +372,9 @@ header > nav > div > ul > li > a{
     height: 100%;
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     background: #E49449;
-    opacity: 8%;
+    opacity: 10%;
     right:0%;
     left: 0%;
-    top: 200%;
     bottom: 0%;
     z-index: -1;
 }
@@ -366,6 +390,12 @@ header > nav > div > ul > li > a{
     justify-content: center;
     flex-direction: column;
 
+}
+
+#boxTemoin > h2{
+    text-align: right;
+    width: 100%;
+    margin: 0px 120px 50px 0px;
 }
 
 
@@ -424,4 +454,10 @@ header > nav > div > ul > li > a{
     clip-path: inset(0 80% 0 0);
     z-index: -500;
 
+}
+
+.boxBT{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
 }

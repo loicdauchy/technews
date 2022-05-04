@@ -13,13 +13,15 @@
   <body>
   <header>
 
-    <nav>
+    <nav id='boxNav'>
       <?php 
       
       wp_nav_menu ( array (
         'theme_location' => 'menuheader' ,
         'menu_class' => 'menuheader', // classe CSS pour customiser mon menu
         ) ); 
+
+      
 
       ?>
     </nav>

@@ -89,6 +89,7 @@ function testimony_register_post_types() {
 }
 
 
+
 add_theme_support('post-thumbnails');
 add_action( 'init', 'actu_register_post_types' );
 add_action( 'init', 'job_register_post_types' );

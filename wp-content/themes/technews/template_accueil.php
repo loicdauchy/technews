@@ -57,8 +57,8 @@
     <div class="decoHeader"></div>
 
     <div id="boxButton">
-            <button class="metier" onclick="window.location.href='#metier'">Les métiers</button>
-            <button class="temoin" onclick="window.location.href='#temoignages'">Les témoignages</button>
+            <button class="metier" onclick="window.location.href='#boxMetiers'">Les métiers</button>
+            <button class="temoin" onclick="window.location.href='#boxTemoin'">Les témoignages</button>
     </div>
 
 
@@ -93,8 +93,8 @@
 
       </div>
                                 
-		<?php endwhile; ?>
-	    <?php wp_reset_postdata(); ?>
+    <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
     <?php endif; ?>
    
     
@@ -106,19 +106,18 @@
 
   
   <section id="boxMetiers">
-
+  <div class="decoMetier"></div>
   <div class="metiers">
+
     <h2><?= get_the_title(16); ?></h2>
-    <div class="decoMetier"></div>
   </div>
 
     <div class='boxCardMetier'>
       <?php if ($the_query->have_posts()) : ?>
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
       
-        <a href="<?php echo get_permalink($post) ; ?>">
-      
-          
+      <a href="<?php echo get_permalink($post) ; ?>">
+              
         <div class='metier1'>
           <?php 
             if ( has_post_thumbnail() ) {
@@ -130,17 +129,21 @@
           </div>
         </div>
       
-        </a>                        
+      </a>                        
         <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>
         <?php endif; ?>
     </div>
 
 
-    <button class='buttonMetier'  onclick="window.location.href='<?php echo get_permalink(12) ; ?>'"> 
-      Voir plus des métiers
-    </button>
+  
+     <div class=''></div>
+        <button class='buttonMetier'  onclick="window.location.href='<?php echo get_permalink(12) ; ?>'"> 
+          Voir plus des métiers
+        </button>
+     
     
+
   </section>
 
   <section id="boxTemoin">
@@ -173,9 +176,11 @@
     <?php endif; ?>
 
 
-    <button class='buttonTemoin'  onclick="window.location.href='<?php echo get_permalink(9) ; ?>'"> 
-      Voir plus de témoignages
-    </button>
+    <div class='boxBT'>
+      <button class='buttonTemoin'  onclick="window.location.href='<?php echo get_permalink(9) ; ?>'"> 
+        Voir plus de témoignages
+      </button>
+    </div>
   
   </section>
   
