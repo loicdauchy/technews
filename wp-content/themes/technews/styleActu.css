@@ -14,6 +14,7 @@
 body{
     padding: 0;
     margin: 0;
+    background-color:yellowgreen;
 }
 *{
     box-sizing: border-box;
@@ -39,7 +40,7 @@ h3{
 /*-***********************************Barre de Navigation version page Actualité *******************-*/
 #boxNav{
     width: 100%;
-    height: 8vh;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,17 +48,21 @@ h3{
     left: 0;
     padding: 10px 30px;
     z-index: 1;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1000;
 }
-#boxNav>.nav>a{
+#boxNav> nav >a{
     margin-left: 25px;
     text-decoration: none;
     color: black; 
     font-size: 1em ;
     font-weight: 100;
 }
-/*-*******************************barre reseau sociaux ***********************-*/
-.reseauNav{
-    width: 25%;
+#boxNav>a:nth-child(1){
+    margin-left: 0px;
+}
+/*-*******************************barre reseau sociaux page actualité pc************************-*/
+#boxNav>.reseauNav{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -71,7 +76,7 @@ h3{
 .burger{
     display: none;
 }
-/*-*********************partie nav barre **************************************-*/
+/*-*********************partie nav barre page actualité pc**************************************-*/
 .none{
     display: none !important;
 }
@@ -146,26 +151,30 @@ header{
     width: 100%;
     background-color: #291D11;
     display: flex;
-    justify-content: flex-start;
-    padding: 0px 145px;
+    padding: 0px 50px;
 }
 #actuality{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    padding: 0px 145px;
+    padding: 0px 50px;
+}
+.boxActu>img{
+    width: 400px;
+    height: auto;
+}
+.size{
+    font-size: 1.1em; 
+    font-family: 'Carme';
 }
 .article1{
-    width: 100%;
-    font-size: 1.1em;
     text-align: justify;
 }
 .para1{
     font-weight: 900;
-    font-size: 1.3em;
     padding-top: 45px;
+    font-size: 1.3em;
 }
 .para2{
     padding-top: 20px;
@@ -174,18 +183,15 @@ header{
     color:#996533;
     font-weight: 900;
     padding: 20px 0px 30px 0px;
-    font-size: 1.3em;
 }
 pre{
     color:#996533;
-    font-size:1.3em;
     font-weight: 700;
 }
 .para6{
     padding-top: 20px;
      color: #996533;
      font-weight: 700;
-     font-size: 1.2em;
 }
 span{
     color:#996533;
@@ -195,62 +201,59 @@ span{
 }
 .para10{
     padding-top: 50px;
-    font-size: 1em;
 }
 .boxLire{
     display: flex;
-    flex-direction: row;
 }
 .ligne{
     position: relative;
     border: 3px solid #E49449;
-    height: 4vh;
-    margin: 50px 0px 0px 0px;
+    height: 40px;
+    margin: 55px 0px 0px 0px;
 }
 .lire{
-    font-family: "Prompt";
+    font-family: "AverageSans";
     font-weight: 700;
     font-size: 1.5em;
     margin: 60px 0px 0px 20px;
 }
 .article2{
-    height: 40vh;
     display: flex;
-    align-items: flex-start;
-    flex-direction: row;
+    font-family: 'Carme';
+    margin-top: 20px;
 }
 .article2>img{
-    width: 40vw;
-    height: 25vh;
-    margin-top: 35px;
+    width: 400px;
+    height: auto;
+    margin-bottom: 80px;
 }
 .boxNews{
-    height: 30vh;
     display: flex;
     flex-direction: column;
 }
 .boxNews>p{
-    padding: 0px 0px 0px 50px;
+    padding: 0px 0px 0px 25px;
     font-size: 2em ;
     font-weight: 800;
-    font-family: "Prompt";
+    font-family: 'AverageSans';
 }
 .boxNews>h3{
-    width: 60%;
-    font-family: "Prompt";
+    width: 45%;
+    font-family: "Carme";
     font-size: 1.3em ;
-    padding: 25px 0px 0px 50px;
+    padding-left: 25px;
     text-align: justify;
+    margin-top: 0;
 }
 .boxNews>h4{
-    width: 60%;
+    width: 45%;
     text-align: justify;
-    font-family: "Prompt";
+    font-family: 'Carme';
     font-weight: 100;
     font-size: 1em ;
-    padding: 0px 0px 0px 50px;
+    padding-left: 25px;
 }
-/*-*******************************Footer pc************************************-*/
+/*-*******************************Footer page actualité pc************************************-*/
 footer{
     width: 100%;
     display: flex;
@@ -397,9 +400,6 @@ footer>.navFooter>a:nth-child(1){
 .boxDesigne>p>i{
     color: #E49449;
 }
-/* .boxDesigne>.designe{
-    margin-left: 50px;
-} */
 .boxDesigne>p{
     color:white;
     font-family: 'AverageSans';
@@ -413,34 +413,56 @@ footer>.navFooter>a:nth-child(1){
 }
 /*-***************************************Media query  chris*************************************-*/
 @media screen and (max-width: 1024px){
-    /*-*****************************************partie Navigateur tablette***************************-*/
-    .nav{
-        display: none;
-    }
-    .reseauNav>a{
-        display: none;
-    }
-    .burger{
-        display: block;
-    }
-    .fa-3x {
-        font-size: 2.5em;
-    }
-    .fa-bars{
-        color:#996533;
-    }
-
-/*-**************************************partie Footer tablette******************************-*/
+    /*-*****************************************partie Navigateur page actualité tablette 1024***************************-*/
+.nav{
+    display: none;
+}
+.reseauNav>a{
+    display: none;
+}
+.burger{
+    display: block;
+}
+.fa-3x {
+    font-size: 2.5em;
+}
+.fa-bars{
+    color:#996533;
+}
+/*-************************************partie section page actualité tablette 1024************************************-*/
+.size{
+    font-size: 1em;
+}
+.article2>img{
+    width: 400px;
+    height: auto;
+}
+.boxNews>p{
+    padding: 0px 0px 0px 25px;
+    font-size: 2em ;
+}
+.boxNews>h3{
+    width: 97%;
+    font-size: 1.1em ;
+    padding-left: 25px;
+    text-align: justify;
+    margin-top: 0;
+}
+.boxNews>h4{
+    width: 97%;
+    font-size: 1em;
+    margin-bottom: 100px;
+}
+/*-**************************************partie Footer page actualité tablette 1024******************************-*/
 .techTitle>div>p>br{
     display: none;
 }
 .contactTech>p {
-    width: 160%;
+    width: 141%;
     font-size: 1em;
-    
 }
 .contactTech>a {
-    margin: 50px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 .suivezFooter{
     width: 100%;
@@ -457,10 +479,82 @@ footer>.navFooter>a:nth-child(1){
 }
 }
 @media screen and (max-width: 500px){
-    /*-*****************************************partie Navigateur mobile***************************-*/
-
-
-/*-****************************************partie Footer mobile************************************-*/
+/*-*****************************************partie Navigateur mobile 500 ***************************-*/
+header{
+    padding: 0px 10px ;
+}
+header > h1{
+    font-size: 2em;
+    padding: 0px 10px ;
+    
+}
+/*-*******************************************partie section page actualité mobile 500***************-*/
+#actuality{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+    width: 100%;
+    
+}
+.boxActu{
+    font-size: 1em;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+.boxActu>h2{
+    font-size: 1.6em;
+}
+.boxActu>img{
+    width: 250px;
+    height: auto;
+}
+.article1{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+.para1, .para2, .para4, .para5, .para6, .para7, .para9, .para10{
+    font-size: 1em ;
+    width: 80%;
+    padding-left: 0px;
+}
+.size{
+    font-size: 0.8em;
+    padding: 0px 10px 0px 0px;
+}
+.article2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.article2 > img {
+    width: 325px;
+    height: auto;
+}
+.lire{
+    font-size: 1.2em;
+}
+.boxNews{
+    height: 180px;
+}
+.boxNews> p{
+    margin-top: -40px;
+    font-size: 1.6em;
+}
+.boxNews> h3{
+        font-size: 1.1em;
+        width: 95%;
+}
+.boxNews> h4{
+    font-size: 0.8em;
+    width: 95%;
+}
+/*-****************************************partie Footer mobile 500************************************-*/
 footer>.navFooter{
     display: none;
 }
