@@ -4,7 +4,6 @@ var button = document.querySelector('#Nhamburger-button');
 var buttonclose = document.querySelector('#Nhamburger-button-close');
 var overlay = document.querySelector('#Nhamburger-overlay');
 var activatedClass = 'Nhamburger-activated'
-
 sidebarBody.innerHTML = content.innerHTML
 
 button.addEventListener('click', function (e) {
