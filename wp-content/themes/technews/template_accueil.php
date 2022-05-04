@@ -3,7 +3,7 @@
 
 <div id="main">
 
-  <h1><?= get_the_title() ?></h1>
+  <h1>Technews</h1>
   <?= the_content() ?>
 </div>
 
