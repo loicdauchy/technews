@@ -27,6 +27,9 @@ body {
 * {
     box-sizing: border-box;
 }
+.none {
+    display: none !important;
+}
 
 a {
     font-family: "Prompt";
@@ -57,45 +60,160 @@ p {
 }
 
 /*-***********************************Barre de Navigation version pc *******************-*/
-#boxNav {
-    height: 100px;
+#Nhamburger,
+#Nhamburger-content {
+    display: inline;
+}
+
+#Nhamburger-content {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: #fff;
+    padding-right: 50px;
+}
+
+#Nhamburger-content ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+}
+
+#Nhamburger-content ul a {
+    text-decoration: none;
+    list-style: none;
+    color: #291D11;
+    font-family: 'Prompt';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#Nhamburger-content ul a:hover {
+    color: #E49449;
+}
+
+#Nhamburger-content li {
+    list-style: none;
+}
+
+#Nhamburger-content nav {
+    width: 40%;
+}
+
+#Nhamburger-content nav {
+    margin: 0 40px 0 40px;
+}
+
+.NreseauNav1 a {
+    font-size: 20px;
+    padding: 6px;
+    text-decoration: none;
+    color: #291D11;
+    text-align: center;
+}
+
+.NreseauNav1 a:hover {
+    color: #E49449;
+}
+
+#Nhamburger-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #996533;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+#Nhamburger-button-close {
+    display: none;
     position: fixed;
     top: 0;
-    left: 0;
-    padding: 10px 50px;
-    z-index: 1;
-}
-
-#boxNav>.nav>a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: black;
-    font-size: 1em;
-    font-weight: 100;
-}
-
-#boxNav>.nav>a:nth-child(1) {
-    margin-left: 0px;
-}
-
-#boxNav>.reseauNav {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-.reseauNav>a {
+    right: 0;
+    z-index: 10000000000;
+    color: #996533;
+    cursor: pointer;
+    background: none;
+    border: none;
     font-size: 30px;
-    color: #291D11;
-    margin-left: 30px;
-    text-decoration: none;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
 }
 
-.burger {
+#Nhamburger-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#Nhamburger-sidebar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 200000000000000000000000;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+}
+
+#Nhamburger-sidebar-body span {
+    padding: 0 0 0 100%;
+    border-bottom: 2px solid #291D11;
+}
+
+#Nhamburger-sidebar li {
+    display: block;
+    font-family: 'Prompt';
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#Nhamburger-sidebar ul {
+    margin-bottom: 20%;
+    padding: 0;
+}
+
+#Nhamburger-sidebar ul a {
+    color: #291D11;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+#Nhamburger-sidebar-body {
+    padding: 16px 8px;
+}
+
+.NreseauNav {
     display: none;
 }
 
