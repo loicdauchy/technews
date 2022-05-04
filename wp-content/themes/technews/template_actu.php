@@ -6,7 +6,8 @@
 
   $args = array(
     'paged'		=> $paged,
-    'post_type' => 'actualite'
+    'post_type' => 'actualite',
+    'posts_per_page' => 6
     );
 
   $the_query = new WP_Query($args);
@@ -23,7 +24,7 @@
 		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
       <div class="<?php if ( $actudiv == 0 )  {?>leftAlign<?php $actudiv = 1; }else{?>rightAlign<?php $actudiv = 0; } ?>">
         <?php
-            if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
+            if ( has_post_thumbnail() ) {
             the_post_thumbnail('thumbnail', array('class' => 'thumbnailActu'));
             }
         ?>
@@ -37,8 +38,19 @@
       </div>                
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
+      <div id="navigation">
+      <?php 
+      
+        $GLOBALS['wp_query']->max_num_pages = $the_query->max_num_pages;
+        the_posts_pagination( array(
+          'mid_size' => 8,
+          'prev_text' => '<',
+          'next_text' => '>'
+        ));              
+
+      ?>
+    </div>
     <?php endif; ?>
-    <?php the_posts_pagination() ?>
 
 </div>
 

@@ -8,7 +8,8 @@
 
   $args = array(
     'paged'		=> $paged,
-    'post_type' => 'temoignage'
+    'post_type' => 'temoignage',
+    'posts_per_page' => 5
     );
 
   $the_query = new WP_Query($args);
@@ -49,6 +50,18 @@
                   </div>
                 </div>
 		<?php endwhile; ?>
+    <div id="navigation">
+      <?php 
+      
+        $GLOBALS['wp_query']->max_num_pages = $the_query->max_num_pages;
+        the_posts_pagination( array(
+          'mid_size' => 8,
+          'prev_text' => '<',
+          'next_text' => '>'
+        ));              
+
+      ?>
+    </div>
 	    <?php wp_reset_postdata(); ?>
     <?php endif; ?>
 </div>

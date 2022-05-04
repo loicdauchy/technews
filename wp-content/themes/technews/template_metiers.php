@@ -7,7 +7,7 @@
   $args = array(
     'paged'		=> $paged,
     'post_type' => 'metier',
-    'posts_per_page' => 8
+    'posts_per_page' => 5
     );
 
   $the_query = new WP_Query($args);
@@ -25,7 +25,7 @@
               <a href="<?= get_permalink(get_the_ID()) ?>">
                 <div>
                   <?php
-                    if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
+                    if ( has_post_thumbnail() ) {
                       the_post_thumbnail('thumbnail', array('class' => 'test'));
                     }
                     else{?>
