@@ -11,7 +11,7 @@
 @font-face {
     font-family: Prompt;
     src: url(./assets/fonts/Prompt/Prompt-Bold.ttf);
-        
+
 }
 
 
@@ -24,7 +24,8 @@ body {
 * {
     box-sizing: border-box;
 }
-.none{
+
+.none {
     display: none !important;
 }
 
@@ -32,7 +33,8 @@ body {
 #Nhamburger-content {
     display: inline;
 }
-#Nhamburger-content{
+
+#Nhamburger-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -41,7 +43,8 @@ body {
     background: #fff;
     padding-right: 50px;
 }
-#Nhamburger-content ul{
+
+#Nhamburger-content ul {
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -49,7 +52,8 @@ body {
     flex-direction: row;
     padding: 0;
 }
-#Nhamburger-content ul a{
+
+#Nhamburger-content ul a {
     text-decoration: none;
     list-style: none;
     color: #291D11;
@@ -57,27 +61,32 @@ body {
     font-size: 14px;
     font-weight: bold;
 }
-#Nhamburger-content ul a:hover{
+
+#Nhamburger-content ul a:hover {
     color: #E49449;
 }
-#Nhamburger-content li{
+
+#Nhamburger-content li {
     list-style: none;
 }
-#Nhamburger-content nav{
+
+#Nhamburger-content nav {
     width: 40%;
 }
-#Nhamburger-content nav{
+
+#Nhamburger-content nav {
     margin: 0 40px 0 40px;
 }
 
-.NreseauNav1 a{
+.NreseauNav1 a {
     font-size: 20px;
     padding: 6px;
     text-decoration: none;
     color: #291D11;
     text-align: center;
 }
-.NreseauNav1 a:hover{
+
+.NreseauNav1 a:hover {
     color: #E49449;
 }
 
@@ -99,6 +108,7 @@ body {
     margin-right: 25px;
     font-weight: bold;
 }
+
 #Nhamburger-button-close {
     display: none;
     position: fixed;
@@ -155,20 +165,24 @@ body {
     font-size: 20px;
     text-align: center;
 }
+
 #Nhamburger-sidebar ul {
     margin-bottom: 20%;
     padding: 0;
 }
+
 #Nhamburger-sidebar ul a {
     color: #291D11;
     text-decoration: none;
     letter-spacing: 1px;
     margin: 10px;
 }
+
 #Nhamburger-sidebar-body {
     padding: 16px 8px;
 }
-.NreseauNav{
+
+.NreseauNav {
     display: none;
 }
 
@@ -187,14 +201,16 @@ body {
     margin-left: 7.5%;
     letter-spacing: 2px;
 }
-.Nsectiontem{
+
+.Nsectiontem {
     width: 100%;
     min-height: 150%;
     display: flex;
     flex-direction: column;
     margin-top: 7%;
 }
-.Nsectiontem::after{
+
+.Nsectiontem::after {
     content: '';
     background: #E49449;
     clip-path: inset(0 92% 0 0);
@@ -204,41 +220,47 @@ body {
     left: 0;
     z-index: -1;
 }
-.Ntemcontainer p{
+
+.Ntemcontainer p {
     font-family: 'Carme';
     margin: 0;
     font-size: 16px;
 }
-.Ntemcontainer h2{
+
+.Ntemcontainer h2 {
     font-family: 'Prompt';
     margin: 0;
     font-size: 40px;
 }
-.Ntemcontainer button{
+
+.Ntemcontainer button {
     font-family: 'Prompt';
 }
-.Ndivtem{
+
+.Ndivtem {
     width: 90%;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-left: 5%;
+    margin-left: 4.5%;
     margin-top: 50px;
 }
-.Ndivtem img{
+
+.Ndivtem img {
     width: 130px;
     height: 130px;
     margin-right: 2%;
 }
 
-.Nbutton{
+.Nbutton {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     margin: 5%;
 }
-.Nbutemoin{
+
+.Nbutemoin {
     font-family: 'Prompt';
     font-weight: lighter;
     letter-spacing: 2px;
@@ -249,10 +271,12 @@ body {
     padding: 8px 40px 8px 40px;
     border: none;
 }
-.Nbutemoin:hover{
+
+.Nbutemoin:hover {
     background: #291D11;
 }
-.Nbutmetier{
+
+.Nbutmetier {
     font-family: 'Prompt';
     font-weight: lighter;
     letter-spacing: 2px;
@@ -263,18 +287,21 @@ body {
     border-radius: 10px;
     padding: 8px 40px 8px 40px;
 }
-.Nbutmetier:hover{
+
+.Nbutmetier:hover {
     color: #fff;
     background: #291D11;
     border: 1px solid #291D11;
 }
-.Nbutton1{
+
+.Nbutton1 {
     width: 80%;
     display: flex;
     justify-content: end;
     margin: 5%;
 }
-.Nbutton1 .Nbutmetier{
+
+.Nbutton1 .Nbutmetier {
     padding: 8px 80px 8px 80px;
 }
 
@@ -284,19 +311,23 @@ body {
     #Nhamburger-content {
         display: none;
     }
+
     #Nhamburger-button,
     #Nhamburger-sidebar,
     #Nhamburger-button-close,
     .Nhamburger-activated #Nhamburger-overlay {
         display: block;
     }
+
     #Nhamburger-button,
     #Nhamburger-sidebar,
     #Nhamburger-button-close,
-    .Nhamburger-activated, #Nhamburger-overlay > i {
+    .Nhamburger-activated,
+    #Nhamburger-overlay>i {
         display: block;
     }
-    #Nhamburger-button > i {
+
+    #Nhamburger-button>i {
         position: relative;
         display: block;
         height: 30px;
@@ -309,17 +340,25 @@ body {
         justify-content: center;
         align-items: center;
     }
-    #Nhamburger-sidebar-body{
+
+    #Nhamburger-sidebar-body {
         width: 60%;
     }
-    .NreseauNav1{
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       margin-top: 20%;
+
+    #Nhamburger-button {
+        margin: 10px;
+        margin-right: 15px;
     }
-    .NreseauNav1 a{
-        width:50px;
+
+    .NreseauNav1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+    }
+
+    .NreseauNav1 a {
+        width: 50px;
         height: 50px;
         font-size: 30px;
         text-decoration: none;
@@ -328,34 +367,44 @@ body {
 
     .Ntemoin {
         background: #291D11;
+        padding-top: 0;
     }
+
     .Ntemoin h1 {
         color: #fff;
         font-family: 'AverageSans';
         font-weight: 600;
         margin-left: 15%;
         letter-spacing: 2px;
+        margin-top: 0;
+        padding-top: 10px;
     }
-    .Ntemcontainer p{
+
+    .Ntemcontainer p {
         font-family: 'Carme';
         font-size: 14px;
     }
-    .Ntemcontainer h2{
+
+    .Ntemcontainer h2 {
         font-family: 'Prompt';
         font-size: 20px;
     }
-    .Nsectiontem::after{
+
+    .Nsectiontem::after {
         clip-path: inset(0 85% 0 0);
         height: 160%;
     }
+
     .Ndivtem {
         width: 80%;
         margin-left: 7%;
         margin-top: 20%;
     }
+
     .Ndivtem:first-child {
-       display: none;
+        display: none;
     }
+
     .Nbutemoin {
         font-family: 'Prompt';
         font-weight: lighter;
@@ -367,6 +416,7 @@ body {
         padding: 8px 20px 8px 20px;
         border: none;
     }
+
     .Nsectiontem {
         width: 100%;
         min-height: 100%;
@@ -377,3 +427,78 @@ body {
 }
 
 
+@media screen and (max-width: 500px) {
+    #Nhamburger-button {
+        z-index: 5;
+        position: fixed;
+    }
+
+    .Ntemoin {
+        height: 8%;
+        position: fixed;
+    }
+
+    .Ndivtem {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 50px;
+        padding-top: 90px;
+    }
+    .Ndivtem img {
+        width: 120px;
+        height: 120px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .Nsectiontem::after {
+        display: none;
+    }
+
+    .Nbutton {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .Nbutemoin {
+        font-family: 'Prompt';
+        font-weight: lighter;
+        letter-spacing: 2px;
+        font-size: 14px;
+        color: #fff;
+        background: #E49449;
+        border-radius: 10px;
+        padding: 8px 10px 8px 10px;
+        border: none;
+    }
+
+    .Nbutmetier {
+        font-family: 'Prompt';
+        font-weight: lighter;
+        letter-spacing: 2px;
+        font-size: 14px;
+        color: #E49449;
+        background: #fff;
+        border: 1px solid #E49449;
+        border-radius: 10px;
+        padding: 8px 5px 8px 5px;
+    }
+
+    .Ntemcontainer p {
+        letter-spacing: 2px;
+        padding: 5px;
+        width: 90%;
+        align-items: center;
+        margin: 5%;
+    }
+}
