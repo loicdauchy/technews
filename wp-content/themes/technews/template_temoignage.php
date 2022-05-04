@@ -21,7 +21,7 @@
 
   <?php if ($the_query->have_posts()) : ?>
 		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
-                <div class="temoin">
+                <div class="temoingnage">
                   <?php
                     if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
                       the_post_thumbnail('thumbnail', array('class' => 'thumbnailTemoin'));
@@ -32,7 +32,7 @@
                     <p><?= the_content(); ?></p>
                     <div>
                     <?php
-                    if ( is_null(get_field('lien_temoignage_video'))==false ) { // Vérifies qu'une miniature est associée à l'article.
+                    if ( get_field('lien_temoignage_video')!= '' ) { // Vérifies qu'une miniature est associée à l'article.
                         ?>
                       <a href="<?php the_field('lien_temoignage_video') ?>" target='_blank' class='temoinOrange'>Témoignage Vidéo</a>
                     <?php
@@ -40,7 +40,7 @@
                     ?>
                       <a href="../metier/<?php the_field('metier_liee') ?>" class='temoinWhite'> Métier associé</a>
                     <?php
-                    if ( is_null(get_field('metier_liee_bis'))==false ) { // Vérifies qu'une miniature est associée à l'article.
+                    if ( get_field('metier_liee_bis')!='' ) { // Vérifies qu'une miniature est associée à l'article.
                     ?>
                       <a href="../metier/<?php the_field('metier_liee_bis') ?>" target='_blank' class='temoinWhite'>Second métier associé</a>
                     <?php

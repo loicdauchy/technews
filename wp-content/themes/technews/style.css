@@ -33,6 +33,7 @@ h1{
 h2{
     font-size: 3em;
     font-family: "AverageSans";
+    color: white;
 }
 h3{
     color: white;
@@ -600,16 +601,6 @@ footer>.navFooter>div>ul>li>a{
     margin: 17px 0px 0px 10px;
 }
 
-
-
-
-/*------------- Css page métier solo ---------------  */
-#h2metier, #main>p{
-    color: #291D11;
-}
-#main{
-    padding: 0 50px 20px 50px;
-}
 
 /*-***************************Media query  chris***********************-*/
 @media screen and (max-width: 1024px){

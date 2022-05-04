@@ -38,22 +38,22 @@
                 <div class="suivezFooter">
                     <h3>Suivez-nous sur les réseaux !</h3>
                     <div class="reseauFooter">
-                        <?php if(is_null(get_field('facebook'))==false) {?>
+                        <?php if(get_field('facebook')!='') {?>
                             <div class="roundFooter">
                                 <a href="<?php the_field('facebook') ?>" class="fa-brands fa-facebook-f" target="_blank"></a>
                             </div>
                         <?php }
-                        if(is_null(get_field('twitter'))==false) {?>
-                        <div class="roundFooter">
-                            <a href="<?php the_field('twitter') ?>" class="fa-brands fa-twitter" target="_blank"></a>
-                        </div>
+                        if(get_field('twitter')!='') {?>
+                            <div class="roundFooter">
+                                <a href="<?php the_field('twitter') ?>" class="fa-brands fa-twitter" target="_blank"></a>
+                            </div>
                         <?php }
-                        if(is_null(get_field('linkedin'))==false) {?>
+                        if(get_field('linkedin')!='') {?>
                         <div class="roundFooter">
                             <a href="<?php the_field('linkedin') ?>" class="fa-brands fa-linkedin" target="_blank"></a>
                         </div>
                         <?php } 
-                        if(is_null(get_field('instagram'))==false) {?>
+                        if(get_field('instagram')!='') {?>
                         <div class="roundFooter">
                             <a href="<?php the_field('instagram') ?>" class="fa-brands fa-instagram" target="_blank"></a>
                         </div>
