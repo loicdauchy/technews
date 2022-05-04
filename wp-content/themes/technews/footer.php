@@ -27,7 +27,7 @@
                 <div id="techTitle">
                     <h2>Technews</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                    <div id="contactTech">
+                    <div class="contactTech">
                         <a href="mailto:<?php the_field('mail') ?>"><i class="fa-solid fa-envelope"></i><?php the_field('mail') ?></a>
                     </div>
                 </div>
