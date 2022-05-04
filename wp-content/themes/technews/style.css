@@ -23,6 +23,10 @@ body {
     margin: 0;
 }
 
+#main {
+    color: black;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -52,7 +56,12 @@ p {
     font-size: 1em;
     font-family: "Carme";
     font-weight: regular;
-    color: white;
+    /* color: white; */
+
+}
+
+ul{
+    color: #996533;
 }
 
 /*-***********************************Barre de Navigation version pc *******************-*/
@@ -369,6 +378,23 @@ p {
     top: 200%;
     bottom: 0%;
     z-index: -1;
+}
+
+/* ------------------ ajouts Bernard */
+.wp-block-image {
+
+    display: flex;
+    justify-content: center;
+}
+
+.wp-image-33 {
+    padding: 3%;
+    width: 80%;
+    height: auto;
+}
+
+.h2metier{
+    background: #291D11;
 }
 
 /*-****************************Section Témoignages pc***************************-*/
