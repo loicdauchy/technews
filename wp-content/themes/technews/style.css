@@ -608,6 +608,9 @@ footer>.navFooter>div>ul>li>a{
 #h2metier, #main>p{
     color: #291D11;
 }
+#main{
+    padding: 0 50px;
+}
 
 /*-***************************Media query  chris***********************-*/
 @media screen and (max-width: 1024px){
