@@ -1,3 +1,44 @@
+<?php 
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $optArgs = array(
+      'paged' => 1,
+      'post_type' => 'contact'
+    );
+    $opt_query = new WP_Query($optArgs);
+
+    $GLOBALS['templateUrl'] = get_template_directory_uri();
+    $GLOBALS['siteUrl'] = get_site_url();
+    $GLOBALS['mail'] = null;
+    $GLOBALS['facebook'] = null;
+    $GLOBALS['instagram'] = null;
+    $GLOBALS['twitter'] = null;
+    $GLOBALS['linkedin'] = null;
+
+    if ($opt_query->have_posts()) :
+      while ($opt_query->have_posts()) : $opt_query->the_post();
+
+        if(get_field("mail")) {
+          $GLOBALS['mail'] = get_field("mail");
+        }
+        if(get_field("facebook")) {
+          $GLOBALS['facebook'] = get_field("facebook");
+        }
+        if(get_field("instagram")) {
+          $GLOBALS['instagram'] = get_field("instagram");
+        }
+        if(get_field("twitter")) {
+          $GLOBALS['twitter'] = get_field("twitter");
+        }
+        if(get_field("linkedin")) {
+          $GLOBALS['linkedin'] = get_field("linkedin");
+        }
+        break;
+      endwhile; 
+      wp_reset_postdata();
+    endif;
+
+?>
+
 <!doctype html>
 <html lang="fr">
 
@@ -13,7 +54,7 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-  <title>Technews</title>
+  <title><?php bloginfo('name'); ?></title>
 </head>
 
 <body>
@@ -27,35 +68,22 @@
             'menu_class' => 'menuheader', // classe CSS pour customiser mon menu
             ) ); 
           ?>
-        <?php 
-
-          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-          $args = array(
-            'paged'		=> $paged,
-            'post_type' => 'contact'
-            );
-
-          $the_query = new WP_Query($args);
-
-        ?>
-        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+      
         <span></span>
         <div class="NreseauNav1">
-          <?php if(get_field('facebook')!='') {?>
-          <a href="<?php the_field('facebook') ?>" class="fa-brands fa-facebook-f" target="_blank"></a>
+          <?php if($GLOBALS['facebook'] !== null) {?>
+          <a href="<?= $GLOBALS['facebook'] ?>" class="fa-brands fa-facebook-f" target="_blank"></a>
           <?php }
-              if(get_field('twitter')!='') {?>
-          <a href="<?php the_field('twitter') ?>" class="fa-brands fa-twitter" target="_blank"></a>
+              if($GLOBALS['twitter'] !== null) {?>
+          <a href="<?= $GLOBALS['twitter'] ?>" class="fa-brands fa-twitter" target="_blank"></a>
           <?php }
-              if(get_field('linkedin')!='') {?>
-          <a href="<?php the_field('linkedin') ?>" class="fa-brands fa-linkedin" target="_blank"></a>
+              if($GLOBALS['linkedin'] !== null) {?>
+          <a href="<?= $GLOBALS['linkedin'] ?>" class="fa-brands fa-linkedin" target="_blank"></a>
           <?php } 
-              if(get_field('instagram')!='') {?>
-          <a href="<?php the_field('instagram') ?>" class="fa-brands fa-instagram" target="_blank"></a>
+              if($GLOBALS['instagram'] !== null) {?>
+          <a href="<?= $GLOBALS['instagram'] ?>" class="fa-brands fa-instagram" target="_blank"></a>
           <?php } ?>
         </div>
-        <?php endwhile ?>
       </div>
       <button id="Nhamburger-button" class="fa-solid fa-bars"></button>
       <div id="Nhamburger-sidebar">
@@ -67,36 +95,22 @@
             'menu_class' => 'menuheader', // classe CSS pour customiser mon menu
             ) ); 
           ?>
-        <?php 
-
-          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-          $args = array(
-            'paged'		=> $paged,
-            'post_type' => 'contact'
-            );
-
-          $the_query = new WP_Query($args);
-
-        ?>
-        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+      
         <span></span>
         <div class="NreseauNav1">
-          <?php if(get_field('facebook')!='') {?>
-          <a href="<?php the_field('facebook') ?>" class="fa-brands fa-facebook-f" target="_blank"></a>
+          <?php if($GLOBALS['facebook'] !== null) {?>
+          <a href="<?= $GLOBALS['facebook'] ?>" class="fa-brands fa-facebook-f" target="_blank"></a>
           <?php }
-              if(get_field('twitter')!='') {?>
-          <a href="<?php the_field('twitter') ?>" class="fa-brands fa-twitter" target="_blank"></a>
+              if($GLOBALS['twitter'] !== null) {?>
+          <a href="<?= $GLOBALS['twitter'] ?>" class="fa-brands fa-twitter" target="_blank"></a>
           <?php }
-              if(get_field('linkedin')!='') {?>
-          <a href="<?php the_field('linkedin') ?>" class="fa-brands fa-linkedin" target="_blank"></a>
+              if($GLOBALS['linkedin'] !== null) {?>
+          <a href="<?= $GLOBALS['linkedin'] ?>" class="fa-brands fa-linkedin" target="_blank"></a>
           <?php } 
-              if(get_field('instagram')!='') {?>
-          <a href="<?php the_field('instagram') ?>" class="fa-brands fa-instagram" target="_blank"></a>
+              if($GLOBALS['instagram'] !== null) {?>
+          <a href="<?= $GLOBALS['instagram'] ?>" class="fa-brands fa-instagram" target="_blank"></a>
           <?php } ?>
         </div>
-        <?php endwhile ?>
-        <?php wp_reset_postdata(); ?>
         </div>
         <button id="Nhamburger-button-close" class="fa-solid fa-xmark"></button>
       </div>

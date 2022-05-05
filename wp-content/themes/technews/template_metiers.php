@@ -17,6 +17,7 @@
 <?php get_header(); ?>
 
 <div id="main">
+  <p>test</p>
   <h1><?= get_the_title() ?></h1>
   <?= the_content() ?>
 

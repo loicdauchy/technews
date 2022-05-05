@@ -122,14 +122,3 @@ add_action( 'init', 'actu_register_post_types' );
 add_action( 'init', 'job_register_post_types' );
 add_action( 'init', 'testimony_register_post_types' );
 add_action( 'init', 'contact_register_post_types' );
-
-
-
-
-
-//‘name’ = nom de la “widget area” qui apparaîtra dans votre administration WordPress
-//‘id’ = identifiant unique de votre “widget area”
-//‘before_widget’ = choisir une balise HTML à ouvrir avant votre widget (<div>, <li> etc…) et profitez-en pour y ajouter une classe qui pourra vous aider lors de la customisation CSS (étape 5)
-//‘after_widget’ = fermer la balise (</div>, </li> etc…)
-//‘before_title’ = choisir une balise pour le titre du widget (<h2>, <h3>, <h4> etc…) et, comme pour le ‘before_widget’, ajoutez une classe pour agir en CSS ultérieurement
-//‘after_title’ = fermer la balise du titre (</h2>, </h3>, </h4> etc…)

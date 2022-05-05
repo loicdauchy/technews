@@ -1,16 +1,3 @@
-<?php 
-
-  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-  $args = array(
-    'paged'		=> $paged,
-    'post_type' => 'contact'
-    );
-
-  $the_query = new WP_Query($args);
-
-?>
-
 <footer>
     <nav class="navFooter"><?php 
       
@@ -22,7 +9,6 @@
       ?>
     </nav>
     <div id="footerContent">
-        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <div id="boxtechNews">
             <div class="techTitle">
                 <h2>Technews</h2>
@@ -30,8 +16,8 @@
                 <div class="contactTech">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been
                     the industry's standard dummy text ever since the 1500s</p>
-                    <a href="mailto:<?php the_field('mail') ?>"><i
-                            class="fa-solid fa-envelope"></i><?php the_field('mail') ?></a>
+                    <a href="mailto:<?= $GLOBALS['mail'] ?>"><i
+                            class="fa-solid fa-envelope"></i><?= $GLOBALS['mail'] ?></a>
                 </div>
             </div>
             <div>
@@ -41,25 +27,26 @@
             <div class="suivezFooter">
                 <h3>Suivez-nous sur les réseaux !</h3>
                 <div class="reseauFooter">
-                    <?php if(get_field('facebook')!='') {?>
-                    <div class="roundFooter">
-                        <a href="<?php the_field('facebook') ?>" class="fa-brands fa-facebook-f" target="_blank"></a>
-                    </div>
+
+                    <?php if($GLOBALS['facebook'] !== null) {?>
+                        <div class="roundFooter">
+                            <a href="<?= $GLOBALS['facebook'] ?>" class="fa-brands fa-facebook-f" target="_blank"></a>
+                        </div>
                     <?php }
-                        if(get_field('twitter')!='') {?>
-                    <div class="roundFooter">
-                        <a href="<?php the_field('twitter') ?>" class="fa-brands fa-twitter" target="_blank"></a>
-                    </div>
+                    if($GLOBALS['twitter'] !== null) {?>
+                        <div class="roundFooter">
+                            <a href="<?= $GLOBALS['twitter'] ?>" class="fa-brands fa-twitter" target="_blank"></a>
+                        </div>
                     <?php }
-                        if(get_field('linkedin')!='') {?>
-                    <div class="roundFooter">
-                        <a href="<?php the_field('linkedin') ?>" class="fa-brands fa-linkedin" target="_blank"></a>
-                    </div>
+                    if($GLOBALS['linkedin'] !== null) {?>
+                        <div class="roundFooter">
+                            <a href="<?= $GLOBALS['linkedin'] ?>" class="fa-brands fa-linkedin" target="_blank"></a>
+                        </div>
                     <?php } 
-                        if(get_field('instagram')!='') {?>
-                    <div class="roundFooter">
-                        <a href="<?php the_field('instagram') ?>" class="fa-brands fa-instagram" target="_blank"></a>
-                    </div>
+                    if($GLOBALS['instagram'] !== null) {?>
+                        <div class="roundFooter">
+                            <a href="<?= $GLOBALS['instagram'] ?>" class="fa-brands fa-instagram" target="_blank"></a>
+                        </div>
                     <?php } ?>
                 </div>
                 <a class="politique" href="">Politique de Confidentialité</a>
@@ -75,8 +62,6 @@
             <a href="">Mentions Légales</a>
         </div>
     </div>
-    <?php endwhile ?>
-    <?php wp_reset_postdata(); ?>
     </div>
 </footer>
 </div>
