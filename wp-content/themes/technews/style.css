@@ -608,6 +608,80 @@ footer>.navFooter>div>ul>li>a {
         color: #996533;
     }
 
+    /* ************************************** Témoignages Tablette */
+
+    .Ntemoin {
+        background: #291D11;
+        padding-top: 0;
+    }
+
+    .Ntemoin h1 {
+        font-size:2em;
+        color: #fff;
+        font-family: 'AverageSans';
+        font-weight: 600;
+        margin-left: 15%;
+        letter-spacing: 2px;
+        margin-top: 0;
+        padding-top: 10px;
+    }
+
+    .Ntemcontainer p {
+        font-family: 'Carme';
+        font-size: 14px;
+    }
+
+    .Ntemcontainer h2 {
+        font-family: 'AverageSans';
+        font-size: 20px;
+    }
+
+    .Ndivtem {
+        width: 80%;
+        margin-left: 7%;
+        margin-top: 20%;
+    }
+
+    .Ndivtem:first-child {
+        display: none;
+    }
+
+    .Nbutemoin {
+        font-family: 'Prompt';
+        font-weight: lighter;
+        letter-spacing: 2px;
+        font-size: 15px;
+        color: #fff;
+        background: #E49449;
+        border-radius: 10px;
+        padding: 8px 20px 8px 20px;
+        border: none;
+    }
+
+    .Nsectiontem {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .Nbutton {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Nbutmetier{
+        width: 50%;
+        font-size: 13px;
+        padding: 8px 30px 8px 30px;
+        margin: 10px 0 ;
+        text-align: center;
+    }
+    .Nbutemoin{
+        width: 50%;
+        font-size: 13px;
+        padding: 8px 30px 8px 30px;
+        text-align: center;
+    }
     /*-**************************************partie Footer tablette******************************-*/
     .techTitle>div>p>br{
         display: none;
