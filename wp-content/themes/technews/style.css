@@ -402,6 +402,7 @@ footer>.navFooter>div>ul>li>a {
 
 .contactTech>p {
     width: 132%;
+    color: white;
 }
 
 .contactTech>a {
@@ -430,6 +431,7 @@ footer>.navFooter>div>ul>li>a {
 .suivezFooter>h3 {
     font-size: 1.5em;
     font-weight: 300;
+    color: white;
 }
 
 .politique {
@@ -601,25 +603,28 @@ footer>.navFooter>div>ul>li>a {
     }
 
     /*-**************************************partie Footer tablette******************************-*/
-    .techTitle>div>p>br {
+    .techTitle>div>p>br{
         display: none;
     }
-
     .contactTech>p {
-        width: 160%;
+        width: 141%;
         font-size: 1em;
     }
-
     .contactTech>a {
-        margin: -21px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
     }
-
-    .suivezFooter {
-        width: 200%;
+    .suivezFooter{
+        width: 100%;
     }
-
     .suivezFooter>h3 {
         font-size: 1.3em;
+        color: white;
+    } 
+    .reseauFooter{
+        width: 325px;
+    }
+    .navFooter>a{
+        display: none;
     }
 
 }

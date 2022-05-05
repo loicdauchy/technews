@@ -24,11 +24,12 @@
     <div id="footerContent">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <div id="boxtechNews">
-            <div id="techTitle">
+            <div class="techTitle">
                 <h2>Technews</h2>
+                
+                <div class="contactTech">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been
                     the industry's standard dummy text ever since the 1500s</p>
-                <div class="contactTech">
                     <a href="mailto:<?php the_field('mail') ?>"><i
                             class="fa-solid fa-envelope"></i><?php the_field('mail') ?></a>
                 </div>
