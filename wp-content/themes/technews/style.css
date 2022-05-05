@@ -232,7 +232,7 @@ p {
 
 .Nsectiontem {
     width: 100%;
-    min-height: 10%;
+    min-height: 10vh;
     display: flex;
     flex-direction: column;
     margin-top: 7%;
@@ -243,7 +243,7 @@ p {
     background: #E49449;
     /* clip-path: inset(0 92% 0 0); */
     width: 10%;
-    min-height: 170%;
+    min-height: 190%;
     position: absolute;
     left: 0;
     z-index: -1;
