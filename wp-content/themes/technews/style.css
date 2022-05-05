@@ -402,7 +402,7 @@ ul{
 .h1metier{
     font-size: 3em;
     font-family: Prompt ;
-    padding: 2%;
+    padding: 2% 0 2% 10%;
     color: white;
     background: #E49449;  
 }
@@ -411,6 +411,7 @@ ul{
     
     background: #291D11;
     width: 50%;
+    border-radius: 10%;
 }
 
 .metierContent{
