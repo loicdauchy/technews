@@ -346,6 +346,9 @@ header > nav > div > ul{
     width: 100%;
     height: 100px;
     background-color: #291D11;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
 }
 .buttonMetier{
@@ -375,6 +378,7 @@ header > nav > div > ul{
     left: 0%;
     bottom: 0%;
     z-index: -1;
+    
 }
 
 
@@ -535,6 +539,119 @@ header > nav > div > ul{
     text-align: center;
 }
 
+/*PAGE SOLO ACTU*/
+
+#titleActuPage {
+    width: 100%;
+    padding: 30px 50px;
+    margin-top: 100px;
+    background-color: #15100B;
+}
+#titleActuPage > h2{
+    color: #fff;
+}
+#mainActuContent{
+    padding: 50px;
+}
+
+#mainActuContent li, #mainActuContent strong, #mainActuContent h6{
+    color: #E49449;
+    list-style-type: none;
+}
+#mainActuContent a{
+    color: #E49449;
+    text-decoration: underline;
+}
+#mainActuContent img{
+    max-width: 80%;
+    margin: 30px 0px;
+    margin-top: 5px;
+}
+#seeMore{
+    padding: 30px 50px;
+}
+#seeMore > h6{
+    padding-left: 20px;
+    border-left: 4px solid #E49449;
+    color: #15100B;
+    font-size: 30px;
+}
+#seeMore > div{
+    display: flex;
+    margin-top: 20px;
+}
+#seeMore > div > div{
+    padding-left: 20px;
+    width: 60%;
+}
+#seeMore > div > div > #tag{
+    font-size: 20px;
+    color: #15100B;
+}
+#mainActuContent > h1{
+    font-size: 60px;
+    width: 80%;
+}
+#mainActuContent p, #mainActuContent h1, #mainActuContent h2, #mainActuContent h3, #mainActuContent h4, #mainActuContent h5, #mainActuContent h6, #mainActuContent strong{
+   width: 80%;
+}
+#mainActuContent p{
+    margin-bottom: 30px;
+}
+#mainActuContent h4{
+    margin-bottom: 30px;
+}
+.actuHours{
+    margin-bottom: 0px;
+}
+
+/* PAGE METIER*/
+.metierPageTitle{
+    width: 100%;
+    background: #e4944972;
+    margin: 50px 0px;
+    
+}
+
+.metierPageTitle > h1{
+    margin-left: 50px;
+}
+#metierPage{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+}
+.Ndivmain{
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.Ndivmain > a > img{
+    width: 400px;
+    height: 300px;
+}
+.Ndivmain > a > h2{
+    font-family: 'AverageSans';
+    font-weight: lighter;
+    background: #291D11;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 
 /* RESPONSIVE */
@@ -608,11 +725,9 @@ header > nav > div > ul{
     }
 
     .decoBox{
-        
         width: 300px;
         height: 50px;
         margin: 0px 10px;
-        
     
     }
 
@@ -679,6 +794,36 @@ header > nav > div > ul{
 
     .articleButton{
         margin-top: 30px;
+    }
+
+    #mainActuContent > h1{
+        font-size: 30px;
+        width: 100%;
+    }
+    #mainActuContent p, #mainActuContent h1, #mainActuContent h2, #mainActuContent h3, #mainActuContent h4, #mainActuContent h5, #mainActuContent h6, #mainActuContent strong{
+       width: 100%;
+    }
+    #mainActuContent img{
+        max-width: 100%;
+        margin: 30px 0px;
+        margin-top: 5px;
+        height: auto;
+        width: 100%;
+    }
+    #randActu{
+        flex-direction: column;
+    }
+    #randActu > div{
+        padding-left: 0 !important;
+    }
+
+    /*PAGE METIER*/
+
+    .metierPageTitle > h1{
+        text-align: center;
+        margin: 0px;
+        font-size: 5em;
+
     }
 }
 
@@ -796,6 +941,22 @@ header > nav > div > ul{
 
     /*PAGE ACTUALITE*/
 
+    #titleActuPage {
+        padding: 30px 10px;
+    }
+    #mainActuContent{
+        padding: 10px;
+    }
+    #seeMore{
+        padding: 30px 10px;
+    }
+    #randActu > div{
+        width: 80% !important;
+    }
+    #randActu > img{
+        max-width: 100%;
+    }
+
     .actuTitle > h1{
         font-size: 3em;
     }
@@ -819,5 +980,26 @@ header > nav > div > ul{
 
     .articleButton{
         margin-top: 30px;
+    }
+
+    
+
+
+    /*PAGE METIER*/
+
+    .metierPageTitle > h1{
+        text-align: center;
+        margin: 0px;
+        font-size: 4em;
+
+    }
+
+    .Ndivmain > a > img{
+        width: 300px;
+        height: 250px;
+    }
+
+    .Ndivmain > a > h2{
+        padding: 15px;
     }
 }
