@@ -25,6 +25,7 @@ body {
 
 #main {
     color: black;
+
 }
 
 * {
@@ -398,13 +399,24 @@ ul{
     width: 80%;
     height: auto;
 }
+.h1metier{
+    font-size: 3em;
+    font-family: Prompt ;
+    padding: 15%;
+    color: white;
+    background: #E49449;  
+}
 
 .h2metier{
+    padding: 15%;
     background: #291D11;
+    width: 50%;
 }
 
 .metierContent{
     margin: 3%;
+    padding: 10%;
+
 }
 
 /*-****************************Section Témoignages pc***************************-*/
@@ -415,7 +427,6 @@ ul{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .temoins>h2 {

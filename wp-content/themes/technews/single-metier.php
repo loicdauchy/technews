@@ -2,10 +2,10 @@
 <?php get_header(); ?>
 
 <div id="main">
-  <div>
-  <h2 class="h2metier"><?= the_title() ?></h2>
-  </div>
 
+  <h1 class="h1metier">Les métiers</h1>
+  <h2 class="h2metier"><?= the_title() ?></h2>
+<h1></h1>
   <div class='metierContent'>
   <?= the_content() ?>
   </div>
