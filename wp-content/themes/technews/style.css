@@ -458,6 +458,7 @@ header > nav > div > ul{
         width: 100%;
         display: flex;
         justify-content: flex-end;
+        margin-bottom: 40px;
 }
 
 /*                            FIN ACCUEIL                                  */
@@ -465,13 +466,13 @@ header > nav > div > ul{
 
 /* PAGE ACTUALITE*/
 
-#actuality{
+#actualite{
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    padding: 0px 145px;
+    
 }
 
 .actuTitle{
@@ -488,7 +489,6 @@ header > nav > div > ul{
 }
 
 .article{
-    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -503,7 +503,6 @@ header > nav > div > ul{
 
 
 .articleButton{
-    
     width: 200px;
     height: 60px;
     font-size: 1.2em;
@@ -511,7 +510,6 @@ header > nav > div > ul{
     background-color: transparent;
     color: #E49449;
     border: 2px solid  #E49449;
-    margin-left: 20px;
     margin-top: 50px;
    
 }
@@ -661,6 +659,27 @@ header > nav > div > ul{
 
         
     }
+
+
+
+    /* PAGE ACTUALITE*/
+    
+    .actuTitle > h1{
+        font-size: 4em;
+    }
+
+    .articleTitle > h2{
+        font-size: 2em;
+    }
+
+    .articleImg > img{
+        width: 500px;
+        height: 250px;
+    }
+
+    .articleButton{
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 650px){
@@ -772,5 +791,33 @@ header > nav > div > ul{
         margin: 30px 0px 30px 0px;
         text-align: center;
         
+    }
+
+
+    /*PAGE ACTUALITE*/
+
+    .actuTitle > h1{
+        font-size: 3em;
+    }
+
+    .articleTitle > h2{
+        font-size: 1.5em;
+    }
+
+    .articleImg > img{
+        width: 300px;
+        height: 250px;
+    }
+
+    .articleDate > p{
+        font-size: 00.75em;
+    }
+
+    .articleContent > p{
+        font-size: 0.8em;
+    }
+
+    .articleButton{
+        margin-top: 30px;
     }
 }

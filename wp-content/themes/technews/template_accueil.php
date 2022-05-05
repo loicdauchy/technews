@@ -138,7 +138,7 @@
 
   
      <div class=''></div>
-        <button class='buttonMetier'  onclick="window.location.href='<?php echo get_permalink(12) ; ?>'"> 
+        <button class='buttonMetier'  onclick="window.location.href='<?php echo get_permalink(16) ; ?>'"> 
           Voir plus des métiers
         </button>
      
