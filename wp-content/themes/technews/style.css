@@ -613,7 +613,7 @@ footer>.navFooter>div>ul>li>a {
         display: none;
     }
     .contactTech>p {
-        width: 141%;
+        width: 100%;
         font-size: 1em;
     }
     .contactTech>a {
@@ -629,13 +629,20 @@ footer>.navFooter>div>ul>li>a {
     .reseauFooter{
         width: 325px;
     }
-    .navFooter>a{
+    .menu-menu-footer-container{
         display: none;
     }
 
 }
 
-
+@media screen and (max-width:750px){
+    #boxtechNews{
+        flex-direction:column;
+    }
+    .ligneFooter{
+        display: none;
+    }
+}
 
 
 
