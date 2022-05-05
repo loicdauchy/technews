@@ -5,7 +5,7 @@
 
   <h1 class="h1metier">Les métiers</h1>
   <!-- <img src="http://localhost/technews/wp-content\themes\technews\assets\images\icons8-informatics-64.png"> -->
-  <h2 class="h2metier"><img src="http://localhost/technews/wp-content\themes\technews\assets\images\icons8-informatics-64.png"><?= the_title() ?></h2>
+  <h2 class="h2metier"><img src="http://localhost/technews/wp-content\themes\technews\assets\images\icons8-informatics-64.png" alt="icon"><?= the_title() ?></h2>
   
 <h1></h1>
   <div class='metierContent'>
