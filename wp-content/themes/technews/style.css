@@ -23,7 +23,7 @@ body {
     margin: 0;
 }
 
-#main {
+#singleMetier {
     color: black;
 
 }
@@ -395,27 +395,27 @@ ul{
 }
 
 .wp-image-33 {
-    padding: 3%;
+    padding: 2%;
     width: 80%;
     height: auto;
 }
 .h1metier{
     font-size: 3em;
     font-family: Prompt ;
-    padding: 15%;
+   padding: 3% 3% ;
     color: white;
     background: #E49449;  
 }
 
 .h2metier{
-    padding: 15%;
+    
     background: #291D11;
     width: 50%;
 }
 
 .metierContent{
     margin: 3%;
-    padding: 10%;
+    /* padding: 10%; */
 
 }
 

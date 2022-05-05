@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
 
-<div id="main">
+<div id="singleMetier">
 
   <h1 class="h1metier">Les métiers</h1>
   <h2 class="h2metier"><?= the_title() ?></h2>
