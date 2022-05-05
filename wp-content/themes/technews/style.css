@@ -341,6 +341,15 @@ p {
     padding: 8px 80px 8px 80px;
 }
 
+.page-numbers {
+    display: none;
+}
+.next, .prev, .current{
+    display: block;
+}
+.nav-links {
+    display: flex;
+}
 /*-*******************************Footer pc************************************-*/
 footer {
     width: 100%;
