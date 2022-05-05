@@ -632,6 +632,9 @@ footer>.navFooter>div>ul>li>a {
     .menu-menu-footer-container{
         display: none;
     }
+    .mentionFooter>h4{
+        font-size:1em;
+    }
 
 }
 
@@ -641,6 +644,46 @@ footer>.navFooter>div>ul>li>a {
     }
     .ligneFooter{
         display: none;
+    }
+    footer>.navFooter{
+        display: none;
+    }
+    #boxtechNews {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .reseauFooter>.roundFooter{
+        margin: 10px 0px;
+    }
+    .contactTech>a{
+        text-align: center;
+    }
+    .mentionFooter{
+        flex-direction: column;
+    }
+    #boxtechNews>.techTitle>h2{
+        text-align: center;
+    }
+    .contactTech>p{
+        text-align: center;
+    }
+    .reseauFooter{
+        width: 200px;
+        flex-wrap: wrap;
+    }
+    .ligneFooter{
+        display: none;
+    }
+    .suivezFooter{
+        width: 100%;
+    }
+    .contactTech>p{
+        width: 100%;
     }
 }
 
