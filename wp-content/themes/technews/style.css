@@ -540,37 +540,39 @@ ul{
 }
 
 /*-*******************************Footer pc************************************-*/
-footer {
+footer{
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 0);
 }
-
 /*Nav footer*/
-footer>.navFooter {
+footer>.navFooter{
     width: 100%;
     min-height: 7vh;
     background-color: #291D11;
-    margin-top: -35px;
     display: flex;
     align-items: center;
     padding: 20px 50px;
 }
-
-footer>.navFooter>a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: white;
-
+.menuFooter{
+    display: flex;
 }
-
-footer>.navFooter>a:nth-child(1) {
+footer>.navFooter>div>ul>li,
+footer>.navFooter>div>ul>li>a{
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    list-style:none;
+    color: white;
+    font-size: 1em ;
+    font-weight: bold;
+    font-family: 'Prompt';
+}
+footer>.navFooter>a:nth-child(1){
     margin-left: 0px;
 }
-
 /*partie TechNews-contact*/
-#boxtechNews {
+#boxtechNews{
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -579,153 +581,136 @@ footer>.navFooter>a:nth-child(1) {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
-#boxtechNews>.techTitle>h2 {
+#boxtechNews>.techTitle>h2{
     color: white;
     margin-top: 0px;
 }
 
-.contactTech {
+#boxtechNews>#techTitle>p{ /* bb */
+    color: white;
+}
+.contactTech{
     width: 100%;
     height: 20vh;
     display: flex;
     flex-direction: column;
-}
-
-.contactTech>p {
+} 
+.contactTech>p{
     width: 132%;
 }
-
-.contactTech>a {
+.contactTech>a{
     font-size: 1em;
     color: white;
     text-decoration: none;
     padding-left: 3px;
     font-family: 'AverageSans';
-    margin: 80px 0px 0px 0px;
+     margin: 85px 0px 0px 0px;
 }
-
-.contactTech>a>i {
+.contactTech>a>i{
     color: #E49449;
 }
-
 /*partie Suivez-nous*/
-.suivezFooter {
+.suivezFooter{
     width: 60%;
     height: 37vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction:column;
 }
-
-.suivezFooter>h3 {
+.suivezFooter>h3{
     font-size: 1.5em;
     font-weight: 300;
-}
-
-.politique {
+}  
+.politique{
     color: white;
     text-decoration: none;
     font-family: 'AverageSans';
     margin-top: 20px;
+   
 }
-
-.reseauFooter {
+.reseauFooter{
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction:row;
     padding: 20px 40px;
 }
-
-.reseauFooter>.roundFooter {
+.reseauFooter>.roundFooter{
     height: 50px;
     width: 50px;
     background-color: black;
     border: 1px solid #E49449;
     border-radius: 50%;
-    padding-left: 10px;
+    padding-left: 10px;   
 }
-
-.roundFooter {
+.roundFooter{
     display: flex;
     justify-content: center;
 }
-
-.roundFooter>a {
+.roundFooter>a{
     color: #E49449;
     text-decoration: none;
     font-size: 25px;
     margin-top: 11px;
     margin-left: -12px;
 }
-
-.ligneFooter {
+.ligneFooter{
     border: 1px solid white;
     height: 22vh;
     margin-top: 10vh;
     margin-left: 22vw;
     opacity: 45%;
 }
-
 /*partie base footer mention*/
-.mentionFooter {
+.mentionFooter{
     min-height: 6vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
 }
-
-.mentionFooter>h4 {
+.mentionFooter>h4{
     /* padding-left: 30vw; */
-    color: white;
+    color:white;
     font-family: 'AverageSans';
     font-weight: 300;
 }
-
-.mentionFooter>a {
+.mentionFooter>a{
     /* padding-left: 27.5vw; */
     color: white;
     text-decoration: none;
     font-family: 'AverageSans';
     font-weight: 300;
 }
-
-#test {
+#footerContent{
     width: 100%;
     padding-left: 50px;
     padding-right: 50px;
 }
-
-.boxDesigne {
+.boxDesigne{
     display: flex;
     justify-content: space-around;
 }
-
-.boxDesigne>p>i {
+.boxDesigne>p>i{
     color: #E49449;
 }
-
 /* .boxDesigne>.designe{
     margin-left: 50px;
 } */
-.boxDesigne>p {
-    color: white;
+.boxDesigne>p{
+    color:white;
     font-family: 'AverageSans';
     font-weight: 300;
     /* margin-left: 10px; */
-}
-
-.boxDesigne>img {
+}   
+.boxDesigne>img{
     width: 1vw;
     height: 2vh;
     margin: 17px 0px 0px 10px;
 }
-
-/*-***************************************Media query  chris*************************************-*/
+/*-***************************Media query  chris***********************-*/
 @media screen and (max-width: 1024px) {
 
     /*-*****************************************partie Navigateur tablette***************************-*/
