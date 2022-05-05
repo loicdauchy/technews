@@ -400,14 +400,18 @@ ul{
     height: auto;
 }
 .h1metier{
+
+    color: white;
+    background: #E49449;
+
     font-size: 3em;
     font-family: Prompt ;
     padding: 2% 0 2% 10%;
-    color: white;
-    background: #E49449;  
+ 
 }
 
 .h2metier{
+    /* icone: */
     font-family: "AverageSans";
     background: #291D11;
     width: 50%;
