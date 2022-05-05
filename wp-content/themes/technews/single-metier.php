@@ -4,10 +4,9 @@
 <div id="singleMetier">
 
   <h1 class="h1metier">Les métiers</h1>
-  <h2 class="icoMetier"><img src="http://localhost/technews/wp-content\themes\technews\assets\images\icons8-informatics-64.png"></h2>
-  <h2 class="h2metier"><?= the_title() ?></h2>
+  <!-- <img src="http://localhost/technews/wp-content\themes\technews\assets\images\icons8-informatics-64.png"> -->
+  <h2 class="h2metier"><img src="http://localhost/technews/wp-content\themes\technews\assets\images\icons8-informatics-64.png"><?= the_title() ?></h2>
   
-
 <h1></h1>
   <div class='metierContent'>
   <?= the_content() ?>
