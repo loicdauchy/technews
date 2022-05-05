@@ -13,7 +13,6 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-  <script src="http://localhost/test/wp-content/themes/technews/assets/js/app.js"></script>
   <title>Technews</title>
 </head>
 
