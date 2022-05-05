@@ -549,6 +549,11 @@ footer>.navFooter>div>ul>li>a {
     margin: 17px 0px 0px 10px;
 }
 
+#navigation {
+    display: flex;
+    justify-content: center;
+}
+
 /*-***************************Media query  chris***********************-*/
 @media screen and (max-width: 1024px) {
     #Nhamburger-content {

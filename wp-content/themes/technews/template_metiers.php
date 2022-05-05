@@ -42,7 +42,9 @@
       
         $GLOBALS['wp_query']->max_num_pages = $the_query->max_num_pages;
         the_posts_pagination( array(
-          'mid_size' => 8,
+          'mid_size' => 0,
+          'end_size' =>0,
+          
           'prev_text' => '<',
           'next_text' => '>',
           'screen_reader_text' => ' '
