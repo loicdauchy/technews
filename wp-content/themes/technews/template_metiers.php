@@ -19,7 +19,6 @@
 <div id="main">
   <p>test</p>
   <h1><?= get_the_title() ?></h1>
-  <?= the_content() ?>
 
   <?php if ($the_query->have_posts()) : ?>
 		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
