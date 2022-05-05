@@ -25,6 +25,7 @@
   </div>
 </div>
 <section class="Nsectiontem">
+  <div class="Nsectiontemtest"></div>
   <?php if ($the_query->have_posts()) : ?>
   <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
   <div class="Ndivtem">
@@ -40,15 +41,15 @@
         <?php
                       if ( get_field('lien_temoignage_video')!= '' ) {
                           ?>
-        <a href="<?php the_field('lien_temoignage_video') ?>" target='_blank' class='temoinOrange'>Témoignage Vidéo</a>
+        <a href="<?php the_field('lien_temoignage_video') ?>" target='_blank' class='Nbutemoin'>Témoignage Vidéo</a>
         <?php
                         }
                       ?>
-        <a href="../metier/<?php the_field('metier_liee') ?>" class='temoinWhite'> Métier associé</a>
+        <a href="../metier/<?php the_field('metier_liee') ?>" class='Nbutmetier'> Métier associé</a>
         <?php
                       if ( get_field('metier_liee_bis')!='' ) {
                       ?>
-        <a href="../metier/<?php the_field('metier_liee_bis') ?>" target='_blank' class='temoinWhite'>Second métier
+        <a href="../metier/<?php the_field('metier_liee_bis') ?>" target='_blank' class='Nbutmetier'>Second métier
           associé</a>
         <?php
                         }
@@ -66,7 +67,8 @@
         the_posts_pagination( array(
           'mid_size' => 8,
           'prev_text' => '<',
-          'next_text' => '>'
+          'next_text' => '>',
+          'screen_reader_text' => ' '
         ));              
 
       ?>
