@@ -1,0 +1,289 @@
+@font-face {
+    font-family: AverageSans;
+    src: url(./assets/fonts/AverageSans/AverageSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Carme;
+    src: url(./assets/fonts/Carme-Regular/Carme-Regular.ttf);
+}
+
+@font-face {
+    font-family: Prompt;
+    src: url(./assets/fonts/Prompt/Prompt-Bold.ttf);
+
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.none {
+    display: none !important;
+}
+
+#Nhamburger,
+#Nhamburger-content {
+    display: inline;
+}
+
+#Nhamburger-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: #fff;
+    padding-right: 50px;
+}
+
+#Nhamburger-content ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+}
+
+#Nhamburger-content ul a {
+    text-decoration: none;
+    list-style: none;
+    color: #291D11;
+    font-family: 'Prompt';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#Nhamburger-content ul a:hover {
+    color: #E49449;
+}
+
+#Nhamburger-content li {
+    list-style: none;
+}
+
+#Nhamburger-content nav {
+    width: 40%;
+}
+
+#Nhamburger-content nav {
+    margin: 0 40px 0 40px;
+}
+
+.NreseauNav1 a {
+    font-size: 20px;
+    padding: 6px;
+    text-decoration: none;
+    color: #291D11;
+    text-align: center;
+}
+
+.NreseauNav1 a:hover {
+    color: #E49449;
+}
+
+#Nhamburger-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #996533;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+#Nhamburger-button-close {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000000000;
+    color: #996533;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+#Nhamburger-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#Nhamburger-sidebar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 200000000000000000000000;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+}
+
+#Nhamburger-sidebar-body span {
+    padding: 0 0 0 100%;
+    border-bottom: 2px solid #291D11;
+}
+
+#Nhamburger-sidebar li {
+    display: block;
+    font-family: 'Prompt';
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#Nhamburger-sidebar ul {
+    margin-bottom: 20%;
+    padding: 0;
+}
+
+#Nhamburger-sidebar ul a {
+    color: #291D11;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+#Nhamburger-sidebar-body {
+    padding: 16px 8px;
+}
+
+.NreseauNav {
+    display: none;
+}
+.Ntemoin {
+    width: 100%;
+    height: 100%;
+    background: #E49449;
+    padding: 1px;
+    padding-top: 60px;
+}
+
+.Ntemoin h1 {
+    color: #fff;
+    font-family: 'AverageSans';
+    font-weight: 600;
+    margin-left: 7.5%;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    #Nhamburger-content {
+        display: none;
+    }
+
+    #Nhamburger-button,
+    #Nhamburger-sidebar,
+    #Nhamburger-button-close,
+    .Nhamburger-activated #Nhamburger-overlay {
+        display: block;
+    }
+
+    #Nhamburger-button,
+    #Nhamburger-sidebar,
+    #Nhamburger-button-close,
+    .Nhamburger-activated,
+    #Nhamburger-overlay>i {
+        display: block;
+    }
+
+    #Nhamburger-button>i {
+        position: relative;
+        display: block;
+        height: 30px;
+    }
+
+    .Nhamburger-activated #Nhamburger-sidebar {
+        transform: translateX(0);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Nhamburger-sidebar-body {
+        width: 60%;
+    }
+
+    #Nhamburger-button {
+        margin: 10px;
+        margin-right: 15px;
+    }
+
+    .NreseauNav1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+    }
+
+    .NreseauNav1 a {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        text-decoration: none;
+        color: #996533;
+    }
+
+    .Ntemoin {
+        background: #291D11;
+        padding-top: 0;
+    }
+
+    .Ntemoin h1 {
+        color: #fff;
+        font-family: 'AverageSans';
+        font-weight: 600;
+        margin-left: 15%;
+        letter-spacing: 2px;
+        margin-top: 0;
+        padding-top: 10px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    #Nhamburger-button {
+        z-index: 5;
+        position: fixed;
+    }
+    .Ntemoin {
+        height: 8%;
+        position: fixed;
+    }
+}
