@@ -408,10 +408,11 @@ ul{
 }
 
 .h2metier{
-    
+    font-family: "AverageSans";
     background: #291D11;
     width: 50%;
-    border-radius: 10%;
+    margin: 5% 10%;
+    border-radius: 10px;
 }
 
 .metierContent{
