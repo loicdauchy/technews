@@ -563,7 +563,7 @@ footer>.navFooter>div>ul>li>a {
     justify-content: center;
 }
 
-/*-***************************Media query  chris***********************-*/
+/*-***************************Media query  Tablette ***********************-*/
 @media screen and (max-width: 1024px) {
     #Nhamburger-content {
         display: none;
