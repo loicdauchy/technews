@@ -1,4 +1,6 @@
 <?php 
+remove_filter('the_excerpt', 'wpautop');
+remove_filter('the_content', 'wpautop');
 
 // on créé une zone pour le menu 
 register_nav_menu( 'menuheader', 'Menu du Header' );
@@ -41,6 +43,31 @@ function actu_register_post_types() {
 	);
 
 	register_post_type( 'actualite', $args );
+};
+
+function job_register_post_types() {
+    // La déclaration de nos Custom Post Types et Taxonomies ira ici
+    // CPT Realisation
+    $labels = array(
+        'name' => 'Métier',
+        'all_items' => 'Tout les Métiers',  // affiché dans le sous menu
+        'singular_name' => 'Métier',
+        'add_new_item' => 'Ajouter un Métier',
+        'edit_item' => 'Modifier le Métier',
+        'menu_name' => 'Métier'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-portfolio',
+	);
+
+	register_post_type( 'metier', $args );
 }
 
 function job_register_post_types() {
@@ -64,7 +91,6 @@ function job_register_post_types() {
         'menu_position' => 5, 
         'menu_icon' => 'dashicons-portfolio',
 	);
-
 	register_post_type( 'metier', $args );
 }
 

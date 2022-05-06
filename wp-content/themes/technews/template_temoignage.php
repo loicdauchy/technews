@@ -1,7 +1,17 @@
 <?php get_header(); ?>
 <?php /* Template Name: page témoignage */ ?>
+<?php 
 
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+  $args = array(
+    'paged'		=> $paged,
+    'post_type' => 'Temoignage'
+    );
+
+  $the_query = new WP_Query($args);
+
+?>
 <?php 
 
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

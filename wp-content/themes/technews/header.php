@@ -59,7 +59,6 @@
 
 <body>
   <header>
-
     <div id="Nhamburger">
       <div id="Nhamburger-content">
         <?php 

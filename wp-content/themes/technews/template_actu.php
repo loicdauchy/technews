@@ -17,25 +17,45 @@
 <?php get_header(); ?>
 
 <div id="actupage">
-  <h1><?= get_the_title() ?></h1>
-  <?= the_content() ?>
-  <?php $actudiv = 0; ?>
+  <div class='actuTitle'>
+    <h1><?= get_the_title() ?></h1>
+  </div>
+
+
   <?php if ($the_query->have_posts()) : ?>
-		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-      <div class="<?php if ( $actudiv == 0 )  {?>leftAlign<?php $actudiv = 1; }else{?>rightAlign<?php $actudiv = 0; } ?>">
-        <?php
-            if ( has_post_thumbnail() ) {
-            the_post_thumbnail('thumbnail', array('class' => 'thumbnailActu'));
-            }
-        ?>
-        <div>
-          <h2><?php the_title(); ?></h2>        
-          <p><?= the_excerpt(); ?></p>
-          <?php $date = the_date('d/m/Y à H:i' , '', '', false); ?>
-          <p>Le <?= str_replace(':', 'h', $date ) ?></p>
-          <a href="<?= get_permalink(get_the_ID()) ?>">voir plus</a>
-        </div>
-      </div>                
+		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>  
+
+
+    <section id="actualite">
+
+    <div class='article'>
+      <div class='articleTitle'>
+        <h2><?php the_title(); ?></h2>
+      </div>
+      <div class='articleDate'>
+        <p>Le <?= get_the_date(); ?> à <?= get_the_time(); ?></p>
+      </div>
+
+      <div class='articleImg'>
+        <?php 
+          if ( has_post_thumbnail() ) {
+            the_post_thumbnail('medium_large');
+        }?>
+      </div>
+
+
+      <div class='articleContent'>
+        <p><?= the_excerpt(); ?></p>
+      </div>
+
+
+      <button class='articleButton'  onclick="window.location.href='<?php echo get_permalink(get_the_ID()) ?>'"> 
+        Voir plus 
+      </button>
+      
+      
+    </div>
+    </section>            
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
       <div id="navigation">
@@ -52,6 +72,7 @@
       ?>
     </div>
     <?php endif; ?>
+    
 
 </div>
 

@@ -843,12 +843,921 @@ footer>.navFooter>div>ul>li>a {
         border-radius: 10px;
         padding: 8px 5px 8px 5px;
     }
-
     .Ntemcontainer p {
         letter-spacing: 2px;
         padding: 5px;
         width: 90%;
         align-items: center;
         margin: 5%;
+    }
+}
+h3{
+    
+    font-family: "AverageSans";
+    font-size: 2em;
+}
+p{
+    font-size: 1em;
+    font-family: "Carme";
+    font-weight: regular;
+   
+}
+
+
+
+/*                     ACCUEIL                       */
+
+#boxHeader{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 50px;
+}
+.boxTitleH{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.boxTitleH > h1{
+    margin: 0px 0px;
+}
+.boxTitleH> p{
+    width: 45%;
+    color: black;
+    margin: 0px 0px;
+}
+#boxButton{
+    width: 100%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+}
+#boxButton >.metier,.temoin{
+    font-family: "Prompt";
+    font-weight: 100;
+    width: 275px;
+    height: 80px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.metier{
+    background-color: #E49449;
+    color: white;
+    border: 2px solid  #E49449;
+}
+
+
+.temoin{
+    background-color: transparent;
+    color: #E49449;
+    border: 2px solid  #E49449;
+    margin-left: 20px;
+}
+.decoHeader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(78% 0, 100% 0, 100% 100%, 47% 100%);
+    background: rgba(228, 148, 73, 0.6);
+    right:0px;
+    top: 0px;
+    z-index: -1;
+}
+
+
+/*BOXACTUALITY */
+
+#boxActuality{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column; 
+    background: radial-gradient(55.65% 55.65% at 50% 44.35%, rgba(21, 16, 11, 0.85) 0%, #15100B 100%);
+}
+
+#boxActuality> h2{
+    color: white;
+    margin: 50px;
+}
+
+
+
+.leftAlign{
+    
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    margin: 10px 0px 50px 50px;
+}
+
+.leftAlign > div > h3{
+    color: white;
+    
+    padding-left: 20px;
+}
+
+.leftAlign > div > p{
+    font-size: 0.8em;
+    padding-left: 20px;
+    color: white;
+}
+
+.leftAlign > div > a{
+    position: relative;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.leftAlign > div > a::before{
+    position: absolute;
+    content: '';
+    width: 70px;
+    border: 1px solid #E49449;
+    margin-left: 10px;
+    margin-top:30px;
+}
+
+
+.rightAlign{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 50px 0px 0px -100px;
+}
+
+.rightAlign > div{
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
+    
+}
+
+.rightAlign > div > h3{
+    text-align: right;
+    margin-top: 0px;
+    color: white;
+    padding-right: 20px;
+    width: 50%;
+ }
+
+ .rightAlign > div > p{
+    color: white;
+    font-size: 0.8em;
+    text-align: right;
+    padding-right: 20px;
+    width: 50%;
+    
+ }
+
+ .rightAlign > div > a{
+    position: relative;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    padding-right: 20px;
+    text-align: end;
+ }
+
+ .rightAlign > div > a::before{
+    position: absolute;
+    content: '';
+    width: 70px;
+    border: 1px solid #E49449;
+    margin: 30px 0px 0px 10px;
+}
+
+.buttonActu{ 
+    background-color: #E49449;
+    color: white;
+    border: 0px;
+    font-family: "Prompt";
+    width: 300px;
+    height: 90px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin: 50px;
+    
+}
+
+
+
+/*METIER*/
+
+#boxMetiers {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 20px 50px;   
+}
+
+#boxMetiers > .metiers > h2{
+    margin: 50px;
+    color: #291D11;
+}
+.boxCardMetier {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.boxCardMetier>.metier1{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.boxCardMetier>.metier1>h3{
+    display: flex;
+    align-items: center;
+    color:white;
+    margin-top: 20px;
+    font-weight: 100;
+}
+.decoBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 100px;
+    background-color: #291D11;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.buttonMetier{
+    background-color: #E49449;
+    color: white;
+    border: 2px solid  #E49449;
+    font-family: "Prompt";
+    width: 250px;
+    height: 70px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.metier1 > img{
+    width: 350px;
+    height: 300px;
+}
+.decoMetier{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    background: #E49449;
+    opacity: 10%;
+    right:0%;
+    left: 0%;
+    bottom: 0%;
+    z-index: -1;
+    
+}
+
+
+/*TEMOIN*/
+
+#boxTemoin{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#boxTemoin > h2{
+    text-align: right;
+    width: 100%;
+    margin: 0px 120px 50px 0px;
+}
+
+
+.temoins{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+}
+
+
+
+.temoins>img{
+    width: 130px;
+    height : 130px;
+    border-radius: 50%;
+    margin-left: 6%;
+    
+}
+.contenair1>p{
+    width: 93%;
+    color: black;
+    text-align: justify;
+    padding-left: 10px;
+    
+}
+
+.contenair1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttonTemoin{
+    border:none;
+    background: #291D11;
+    border-radius: 5px;
+    color: white;
+    font-family: "Prompt";
+    font-weight: 100;
+    width: 278px;
+    height: 9vh;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-top: 45px;
+
+}
+.decoTemoin{ 
+    position: absolute;
+    height: 100%;
+    width: 868px;
+    left: 0px;
+    background: #E49449;
+    clip-path: inset(0 80% 0 0);
+    z-index: -500;
+
+}
+
+.boxBT{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+}
+
+/*                            FIN ACCUEIL                                  */
+
+
+/* PAGE ACTUALITE*/
+
+#actualite{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+    
+}
+
+.actuTitle{
+    width: 100%;
+    background: #291D11;
+    margin-top: 100px;
+
+}
+
+.actuTitle > h1{
+    text-align: center;
+    color: white;
+
+}
+
+.article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+.articleTitle{
+    width: 80%;
+}
+
+
+.articleButton{
+    width: 200px;
+    height: 60px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #E49449;
+    border: 2px solid  #E49449;
+    margin-top: 50px;
+   
+}
+
+.articleDate{
+    width: 80%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.articleContent{
+    margin-top: 50px;
+    width: 70%;
+}
+
+.articleTitle > h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.articleContent > p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/*PAGE SOLO ACTU*/
+
+#titleActuPage {
+    width: 100%;
+    padding: 30px 50px;
+    margin-top: 100px;
+    background-color: #15100B;
+}
+#titleActuPage > h2{
+    color: #fff;
+}
+#mainActuContent{
+    padding: 50px;
+}
+
+#mainActuContent li, #mainActuContent strong, #mainActuContent h6{
+    color: #E49449;
+    list-style-type: none;
+}
+#mainActuContent a{
+    color: #E49449;
+    text-decoration: underline;
+}
+#mainActuContent img{
+    max-width: 80%;
+    margin: 30px 0px;
+    margin-top: 5px;
+}
+#seeMore{
+    padding: 30px 50px;
+}
+#seeMore > h6{
+    padding-left: 20px;
+    border-left: 4px solid #E49449;
+    color: #15100B;
+    font-size: 30px;
+}
+#seeMore > div{
+    display: flex;
+    margin-top: 20px;
+}
+#seeMore > div > div{
+    padding-left: 20px;
+    width: 60%;
+}
+#seeMore > div > div > #tag{
+    font-size: 20px;
+    color: #15100B;
+}
+#mainActuContent > h1{
+    font-size: 60px;
+    width: 80%;
+}
+#mainActuContent p, #mainActuContent h1, #mainActuContent h2, #mainActuContent h3, #mainActuContent h4, #mainActuContent h5, #mainActuContent h6, #mainActuContent strong{
+   width: 80%;
+}
+#mainActuContent p{
+    margin-bottom: 30px;
+}
+#mainActuContent h4{
+    margin-bottom: 30px;
+}
+.actuHours{
+    margin-bottom: 0px;
+}
+
+/* PAGE METIER*/
+.metierPageTitle{
+    width: 100%;
+    background: #e4944972;
+    margin-top: 100px;
+    
+}
+
+.metierPageTitle > h1{
+    margin-left: 50px;
+}
+#metierPage{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+}
+.Ndivmain{
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.Ndivmain > a > img{
+    width: 400px;
+    height: 300px;
+}
+.Ndivmain > a > h2{
+    font-family: 'AverageSans';
+    font-weight: lighter;
+    background: #291D11;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 1024px){
+
+    h2{
+        font-size: 3.5em;
+    }
+
+    h3{
+        font-size: 1.5em;
+    }
+
+    #boxNav{
+        display: none;
+    }
+
+
+   
+    .boxTitleH>h1{
+        font-size: 5em;
+    }
+    .boxTitleH> p{
+        width: 60%;
+        padding-top: 60px;
+        font-size: 0.75em;
+        
+    }
+    #boxButton>.metier,.temoin{
+        margin-top: 20px;
+        margin-right: 0px;
+        height: 60px;
+        
+        width: 170px;
+    }
+
+    .leftAlign> div > h3 {
+        margin-top: -15px;
+        width: 70%;
+        font-size: 1.5em;
+    }
+
+    .leftAlign> div > p{
+        width: 80%;
+       
+    }
+
+    .rightAlign> div > p{
+        width: 80%;   
+        
+    }
+    .rightAlign > div > h3 {
+        margin-top: -5px;
+        width: 70%;
+    }
+    .rightAlign > a {
+        margin-left: 30vw;
+    }
+
+    .rightAlign{
+        margin-left: -50px;
+    }
+
+    /*METIER*/
+    .metier1 > img{
+        width: 300px;
+        height: 200px;
+        margin: 0px 10px;
+    }
+
+    .decoBox{
+        width: 300px;
+        height: 50px;
+        margin: 0px 10px;
+    
+    }
+
+    .decoBox > h3{
+        font-size: 1rem;
+    }
+
+    .boxCardMetier {
+       
+        flex-wrap: wrap;
+    }
+
+
+    .boxCardMetier > a {
+        
+        margin: 25px;
+    }
+
+
+   
+
+    /*TEMOINS*/
+    #boxTemoin > h2 {
+       
+        margin: 0px 100px 50px 0px;
+        font-size: 3.5em;
+    }
+
+    .contenair1>p {
+        width: 80%;
+        font-size: 0.9em;
+        
+    }
+
+    .temoins>img {
+        width: 100px;
+        height: 100px;
+        margin-left: 12%;
+    }
+
+    .decoTemoin{ 
+        height: 100%;
+        width: 100%;
+
+        
+    }
+
+
+
+    /* PAGE ACTUALITE*/
+    
+    .actuTitle > h1{
+        font-size: 4em;
+    }
+
+    .articleTitle > h2{
+        font-size: 2em;
+    }
+
+    .articleImg > img{
+        width: 500px;
+        height: 250px;
+    }
+
+    .articleButton{
+        margin-top: 30px;
+    }
+
+    #mainActuContent > h1{
+        font-size: 30px;
+        width: 100%;
+    }
+    #mainActuContent p, #mainActuContent h1, #mainActuContent h2, #mainActuContent h3, #mainActuContent h4, #mainActuContent h5, #mainActuContent h6, #mainActuContent strong{
+       width: 100%;
+    }
+    #mainActuContent img{
+        max-width: 100%;
+        margin: 30px 0px;
+        margin-top: 5px;
+        height: auto;
+        width: 100%;
+    }
+    #randActu{
+        flex-direction: column;
+    }
+    #randActu > div{
+        padding-left: 0 !important;
+    }
+
+    /*PAGE METIER*/
+
+    .metierPageTitle > h1{
+        text-align: center;
+        margin: 0px;
+        font-size: 5em;
+
+    }
+}
+
+@media screen and (max-width: 650px){
+
+    #boxHeader{
+        padding: 10px 20px;
+    }
+
+    .boxTitleH>h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    #boxButton{
+        flex-direction: column;
+    }
+
+    .temoin{
+        margin-left: 0px;
+    }
+    .leftAlign {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px 0px 50px 0px;
+        
+    }
+    .leftAlign > div > h3{
+        margin-top: 0px;
+    }
+
+    .leftAlign > img{
+        margin-bottom: 30px;
+    }
+
+    .rightAlign {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px;
+        
+        
+    }
+
+    .rightAlign > img{
+        margin-bottom: 30px;
+    }
+
+    .rightAlign > div {
+        text-align: inherit; 
+        flex-direction: column;
+        align-items: start;
+        width: auto;
+        margin-left: 20px;
+    
+    }
+
+    .rightAlign > div > h3{
+        text-align: inherit;
+       
+    }
+
+    .rightAlign> div > p{
+        text-align: inherit;
+    }
+
+    .buttonActu{
+        width: 300px;
+        height: 50px;
+    }
+
+    .temoins{
+        margin: 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .temoins>img{
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+
+    .contenair1{
+        align-items: center;
+    }
+
+    .contenair1>p {
+     width: 80%;
+        font-size: 0.8em;
+    }
+
+    .decoTemoin{
+        display: none;
+    }
+
+    .boxBT{
+        justify-content: center;
+    }
+
+    .buttonTemoin{
+        margin-right: 0px;
+    }
+
+    #boxTemoin > h2{
+        margin: 30px 0px 30px 0px;
+        text-align: center;
+        
+    }
+
+
+    /*PAGE ACTUALITE*/
+
+    #titleActuPage {
+        padding: 30px 10px;
+    }
+    #mainActuContent{
+        padding: 10px;
+    }
+    #seeMore{
+        padding: 30px 10px;
+    }
+    #randActu > div{
+        width: 80% !important;
+    }
+    #randActu > img{
+        max-width: 100%;
+    }
+
+    .actuTitle > h1{
+        font-size: 3em;
+    }
+
+    .articleTitle > h2{
+        font-size: 1.5em;
+    }
+
+    .articleImg > img{
+        width: 300px;
+        height: 250px;
+    }
+
+    .articleDate > p{
+        font-size: 00.75em;
+    }
+
+    .articleContent > p{
+        font-size: 0.8em;
+    }
+
+    .articleButton{
+        margin-top: 30px;
+    }
+
+    
+
+
+    /*PAGE METIER*/
+
+    .metierPageTitle > h1{
+        text-align: center;
+        margin: 0px;
+        font-size: 4em;
+
+    }
+
+    .Ndivmain > a > img{
+        width: 300px;
+        height: 250px;
+    }
+
+    .Ndivmain > a > h2{
+        padding: 15px;
     }
 }
