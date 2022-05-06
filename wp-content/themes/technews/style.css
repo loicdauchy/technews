@@ -65,48 +65,7 @@ p{
    
 }
 
-/*HEADER NAV*/
-header > nav{
-    height: 55px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 15px 50px;
-    z-index: 1;
-    list-style-type: none;
 
-}
-
-header > nav > div{
-    display: flex;
-    list-style-type: none;
-}
-
-.menuheader{
-    display: flex;
-}
-header > nav > div > ul > li > a{
-    margin-right: 25px;
-    text-decoration: none;
-    color: black; 
-    font-size: 1em ;
-    
-
-}
-
-header > nav > div > ul > li > a:hover{
-    color: #E49449;
-
-}
-
-header > nav > div > ul{
-    padding: 0px;
-}
-
-/* FIN HEADER NAV*/
 
 /*                     ACCUEIL                       */
 

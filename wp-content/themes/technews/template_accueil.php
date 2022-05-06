@@ -67,7 +67,7 @@
   <section id="boxActuality">
   <?php $actudiv = 0; ?>
 
-  <h2><?= get_the_title(12); ?></h2>
+  <h2>Les actualités</h2>
 
   <?php if ($the_query2->have_posts()) : ?>
 		<?php while ($the_query2->have_posts()) : $the_query2->the_post(); ?>  
@@ -109,7 +109,7 @@
   <div class="decoMetier"></div>
   <div class="metiers">
 
-    <h2><?= get_the_title(16); ?></h2>
+    <h2>Les métiers</h2>
   </div>
 
     <div class='boxCardMetier'>
@@ -148,7 +148,7 @@
 
   <section id="boxTemoin">
     
-  <h2><?= get_the_title(9); ?></h2>
+  <h2>Témoignages</h2>
 
   <div class="decoTemoin"></div>
 

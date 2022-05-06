@@ -32,7 +32,7 @@
   </div>
 
   <div id="seeMore">
-    <h6>à lire également</h6>
+    <h6>À lire également</h6>
     <div id="randActu">
 
     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
