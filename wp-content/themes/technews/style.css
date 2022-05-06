@@ -107,6 +107,7 @@ figure > img{
 .boxH2Metier{
     display: flex;
     margin: 5% 10%;
+    color: white;
 }
 
 .boxH2Metier > img{
