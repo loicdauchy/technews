@@ -2,6 +2,16 @@
 
 /*
 Theme Name: Technews thème
+*/
+@font-face {
+    font-family: AverageSans;
+    src: url(./assets/font/AverageSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Carme;
+    src: url(./assets/font/Carme-Regular.ttf);
+}
 
 */
 @font-face {
@@ -14,6 +24,7 @@ Theme Name: Technews thème
     src: url(./assets/font/Carme-Regular.ttf);
 }
 
+
 @font-face {
     font-family: Prompt;
     src: url(./assets/font/Prompt-Bold.ttf);
@@ -22,6 +33,11 @@ Theme Name: Technews thème
 body {
     padding: 0;
     margin: 0;
+}
+
+
+#singleMetier {
+    color: black;
 }
 
 * {
@@ -57,7 +73,61 @@ p {
     font-family: "Carme";
     font-weight: regular;
 }
+/* ------------------ ajouts Bernard */
+.wp-block-image {
 
+    display: flex;
+    justify-content: start;
+}
+
+figure > img{
+    width: 60%;
+    height: auto;
+}
+.h1metier{
+
+    color: white;
+    background: #E49449;
+
+    font-size: 3em;
+    font-family: Prompt ;
+    padding: 2% 0 2% 10%;
+ 
+}
+#previewMetier{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10%;
+}
+#previewMetier > img{
+    width: 55%;
+    height: auto;
+}
+#previewMetier > p{
+    width: 40%;
+}
+
+.h2metier{
+    padding: 5px 20px;
+    font-family: "AverageSans";
+    background: #291D11;  
+    border-radius: 10px;
+}
+
+.boxH2Metier{
+    display: flex;
+    margin: 5% 10%;
+}
+
+.boxH2Metier > img{
+    width: 70px;
+    height: 70px;
+}
+
+.metierContent{
+    margin: 10%;
+}
 /*-***********************************Barre de Navigation version pc *******************-*/
 #Nhamburger,
 #Nhamburger-content {

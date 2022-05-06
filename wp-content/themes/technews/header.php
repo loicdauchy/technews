@@ -41,7 +41,6 @@
 
 <!doctype html>
 <html lang="fr">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -94,7 +93,7 @@
             'menu_class' => 'menuheader', // classe CSS pour customiser mon menu
             ) ); 
           ?>
-      
+
         <span></span>
         <div class="NreseauNav1">
           <?php if($GLOBALS['facebook'] !== null) {?>

@@ -106,6 +106,7 @@ function contact_register_post_types() {
         'menu_name' => 'Contact'
     );
 
+
 	$args = array(
         'labels' => $labels,
         'public' => true,

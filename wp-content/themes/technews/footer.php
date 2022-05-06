@@ -1,4 +1,3 @@
-
 <footer>
     <nav class="navFooter"><?php 
       
