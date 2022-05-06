@@ -385,18 +385,11 @@ ul{
 .wp-block-image {
 
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 
-.wp-image-32 {
-    padding: 3%;
-    width: 50%;
-    height: auto;
-}
-
-.wp-image-33 {
-    padding: 2%;
-    width: 80%;
+figure > img{
+    width: 60%;
     height: auto;
 }
 .h1metier{
@@ -409,24 +402,35 @@ ul{
     padding: 2% 0 2% 10%;
  
 }
-/* #singleMetier>img{    a revoir         
-    margin-bottom: -20px;
-} */
-.h2metier{
-
+#previewMetier{
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    margin-left: 10%;
-    
+    margin: 10%;
+}
+#previewMetier > img{
+    width: 55%;
+    height: auto;
+}
+#previewMetier > p{
+    width: 40%;
+}
+
+.h2metier{
+    padding: 5px 20px;
     font-family: "AverageSans";
-    background: #291D11;
-    width: 50%;
-    margin: 5% 10%;
+    background: #291D11;  
     border-radius: 10px;
+}
 
+.boxH2Metier{
+    display: flex;
+    margin: 5% 10%;
+}
 
+.boxH2Metier > img{
+    width: 70px;
+    height: 70px;
 }
 
 .metierContent{
@@ -726,6 +730,26 @@ footer>.navFooter>a:nth-child(1){
     height: 2vh;
     margin: 17px 0px 0px 10px;
 }
+.boxActu1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.boxActu>div>img {
+    width: 200px;
+    height: 200px;
+}
+
+.boxActu2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
 /*-***************************Media query  chris***********************-*/
 @media screen and (max-width: 1024px) {
 
@@ -796,7 +820,16 @@ footer>.navFooter>a:nth-child(1){
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    #previewMetier{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    #previewMetier > p{
+        width: 80%;
+    }
+    #previewMetier > img{
+        width: 80%;
+    }
     .decoBox {
         display: flex;
         width: 54%;
@@ -926,6 +959,15 @@ footer>.navFooter>a:nth-child(1){
         display: block;
     }
 
+    .boxH2Metier{
+        font-size: 0.6em;
+    }
+    
+    .boxH2Metier > img{
+        width: 50px;
+        height: 50px;
+    }
+
     #boxNav>.reseauNav {
         display: flex;
         align-items: center;
@@ -975,59 +1017,10 @@ footer>.navFooter>a:nth-child(1){
     #boxActuality>.boxActu1>img:nth-child(1) {
         padding: 0;
     }
+    #previewMetier > p{
+        width: 100%;
+    }
+    #previewMetier > img{
+        width: 100%;
+    }
 }
-
-.boxActu1 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
-
-}
-
-.boxActu>div>img {
-    width: 200px;
-    height: 200px;
-
-}
-
-.boxActu2 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
-
-}
-
-
-/*-***************************Section Les métiers mobile************************************************-*/
-/*.decoMetier{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(0 0, 0% 100%, 100% 100%);
-    background: #E49449;
-    opacity: 8%;
-    right:0%;
-    left: 0%;
-    top: 200%;
-    bottom: 0%;
-    z-index: -1;
-}*/
-/*-****************************Section Témoignages mobile***************************-*/
-/*.decoTemoin{ 
-    position: absolute;
-    height: 100%;
-    width: 868px;
-    left: 0px;
-    background: #E49449;
-    clip-path: inset(0 80% 0 0);
-    z-index: -500;
-}*/
-/*-*******************************Footer mobile************************************-*/
-
-/*.reseauFooter{
-        width: 75%;
-    }*/

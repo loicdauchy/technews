@@ -5,10 +5,19 @@
 
   <h1 class="h1metier">Les métiers</h1>
   <div class='boxH2Metier'>
-  <img src="http://localhost/technews/wp-content\themes\technews\assets\images\icons8-informatics-64.png" alt="icon">
-  <h2 class="h2metier"><?= the_title() ?></h2>
+    <img src="http://localhost/technews/wp-content\themes\technews\assets\images\icons8-informatics-64.png" alt="icon">
+    <h2 class="h2metier"><?= the_title() ?></h2>
   </div>
-<h1></h1>
+
+  <div id="previewMetier">
+    <p><?= get_field('courte_description') ?></p>
+    <?php
+      if ( has_post_thumbnail() ) { // Vérifies qu'une miniature est associée à l'article.
+        the_post_thumbnail('large', array('class' => 'test'));
+      }
+    ?>
+  </div>
+
   <div class='metierContent'>
   <?= the_content() ?>
   </div>
