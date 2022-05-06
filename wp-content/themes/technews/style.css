@@ -13,17 +13,6 @@ Theme Name: Technews thème
     src: url(./assets/font/Carme-Regular.ttf);
 }
 
-*/
-@font-face {
-    font-family: AverageSans;
-    src: url(./assets/font/AverageSans-Regular.ttf);
-}
-
-@font-face {
-    font-family: Carme;
-    src: url(./assets/font/Carme-Regular.ttf);
-}
-
 
 @font-face {
     font-family: Prompt;
