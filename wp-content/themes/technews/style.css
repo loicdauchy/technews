@@ -33,6 +33,7 @@ body {
 
 a {
     font-family: "Prompt";
+    text-decoration: none;
 }
 
 h1 {
@@ -46,8 +47,9 @@ h2 {
     font-family: "AverageSans";
 }
 
-h3 {
+h3{
     font-family: "AverageSans";
+    font-size: 1.9em;
 }
 
 p {
@@ -851,17 +853,7 @@ footer>.navFooter>div>ul>li>a {
         margin: 5%;
     }
 }
-h3{
-    
-    font-family: "AverageSans";
-    font-size: 2em;
-}
-p{
-    font-size: 1em;
-    font-family: "Carme";
-    font-weight: regular;
-   
-}
+
 
 
 
@@ -1083,7 +1075,6 @@ p{
     justify-content: space-evenly;
 }
 .boxCardMetier>.metier1{
-    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1101,12 +1092,15 @@ p{
     justify-content: center;
     color: white;
     width: 100%;
-    height: 100px;
+    min-height: 100px;
     background-color: #291D11;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
+    padding: 10px 40px;
+}
+.decoBox > h3 {
+    text-align: center;
 }
 .buttonMetier{
     background-color: #E49449;
@@ -1119,10 +1113,12 @@ p{
     border-radius: 5px;
     margin-top: 50px;
 }
-
+.metier1{
+    width:350px ;
+}
 .metier1 > img{
-    width: 350px;
-    height: 300px;
+    width: 100%;
+    height: auto;
 }
 .decoMetier{
     position: absolute;
@@ -1135,7 +1131,6 @@ p{
     left: 0%;
     bottom: 0%;
     z-index: -1;
-    
 }
 
 
@@ -1392,10 +1387,13 @@ p{
     display: flex;
     flex-direction: column;
 }
-
-.Ndivmain > a > img{
+.Ndivmain > a {
     width: 400px;
-    height: 300px;
+    text-decoration: none;
+}
+.Ndivmain > a > img{
+    width: 100%;
+    height: auto;
 }
 .Ndivmain > a > h2{
     font-family: 'AverageSans';
@@ -1476,14 +1474,17 @@ p{
     }
 
     /*METIER*/
-    .metier1 > img{
+    .metier1{
         width: 300px;
-        height: 200px;
+    }
+    .metier1 > img{
+        width: 100%;
+        height: auto;
         margin: 0px 10px;
     }
 
     .decoBox{
-        width: 300px;
+        width: 100%;
         height: 50px;
         margin: 0px 10px;
     
@@ -1491,6 +1492,8 @@ p{
 
     .decoBox > h3{
         font-size: 1rem;
+        width: 100%;
+        line-break: strict;
     }
 
     .boxCardMetier {
@@ -1751,10 +1754,12 @@ p{
         font-size: 4em;
 
     }
-
-    .Ndivmain > a > img{
+    .Ndivmain > a {
         width: 300px;
-        height: 250px;
+    }
+    .Ndivmain > a > img{
+        width: 100%;
+        height: auto;
     }
 
     .Ndivmain > a > h2{

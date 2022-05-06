@@ -94,7 +94,7 @@
     <?php endif; ?>
    
     
-    <button class='buttonActu'  onclick="window.location.href='<?php echo get_permalink(12) ; ?>'"> 
+    <button class='buttonActu'  onclick="window.location.href='les-actualites/'"> 
       Voir plus d'actualités
     </button>
 
@@ -134,7 +134,7 @@
 
   
      <div class=''></div>
-        <button class='buttonMetier'  onclick="window.location.href='<?php echo get_permalink(16) ; ?>'"> 
+        <button class='buttonMetier'  onclick="window.location.href='les-metiers/'"> 
           Voir plus des métiers
         </button>
      
@@ -173,7 +173,7 @@
 
 
     <div class='boxBT'>
-      <button class='buttonTemoin'  onclick="window.location.href='<?php echo get_permalink(9) ; ?>'"> 
+      <button class='buttonTemoin'  onclick="window.location.href='les-temoignages/'"> 
         Voir plus de témoignages
       </button>
     </div>
