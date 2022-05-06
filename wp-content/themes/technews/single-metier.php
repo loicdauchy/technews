@@ -3,8 +3,9 @@
 <?php get_header(); ?>
 
 <div id="main">
-  <h1><?= get_the_title() ?></h1>
-  <?= the_content() ?>
+  <h2 id="h2metier"><?= the_title() ?></h2>
+  <p><?= the_content() ?></p>
+  <a href="<?php the_field('lien_fiche_metier') ?>" target="_blank">Lien vers la fiche métier</a>
 </div>
 
 <?php get_footer(); ?>

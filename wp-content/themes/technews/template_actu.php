@@ -6,7 +6,8 @@
 
   $args = array(
     'paged'		=> $paged,
-    'post_type' => 'actualite'
+    'post_type' => 'actualite',
+    'posts_per_page' => 6
     );
 
   $the_query = new WP_Query($args);
@@ -57,8 +58,22 @@
     </section>            
 		<?php endwhile; ?>
 	    <?php wp_reset_postdata(); ?>
+      <div id="navigation">
+      <?php 
+      
+        $GLOBALS['wp_query']->max_num_pages = $the_query->max_num_pages;
+        the_posts_pagination( array(
+          'mid_size' => 8,
+          'prev_text' => '<',
+          'next_text' => '>',
+          'screen_reader_text' => ' '
+        ));              
+
+      ?>
+    </div>
     <?php endif; ?>
     
+
 </div>
 
 <?php get_footer(); ?>

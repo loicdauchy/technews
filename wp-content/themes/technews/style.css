@@ -1,57 +1,855 @@
 @charset "UTF-8";
+
 /*
 Theme Name: Technews thème
 
-
 */
-
-
 @font-face {
     font-family: AverageSans;
-    src: url(assets/font/AverageSans-Regular.ttf);
-}
-@font-face {
-    font-family: Carme;
-    src: url(assets/font/Carme-Regular.ttf);
-} 
-@font-face {
-    font-family: Prompt;
-    src:  url(assets/font/Prompt-Bold.ttf);
-         
+    src: url(./assets/font/AverageSans-Regular.ttf);
 }
 
-/* GLOBAL*/
-body{
+@font-face {
+    font-family: Carme;
+    src: url(./assets/font/Carme-Regular.ttf);
+}
+
+@font-face {
+    font-family: Prompt;
+    src: url(./assets/font/Prompt-Bold.ttf);
+}
+
+body {
     padding: 0;
     margin: 0;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-a{
-    
-    text-decoration: none;
+.none {
+    display: none !important;
 }
 
-ul{
-    list-style-type: none;
-
+a {
+    font-family: "Prompt";
 }
 
-h1{
+h1 {
     font-size: 6em;
     color: #291D11;
     font-family: "AverageSans";
 }
 
-a{
+h2 {
+    font-size: 3em;
+    font-family: "AverageSans";
+}
+
+h3 {
+    font-family: "AverageSans";
+}
+
+p {
+    font-size: 1em;
+    font-family: "Carme";
+    font-weight: regular;
+}
+
+/*-***********************************Barre de Navigation version pc *******************-*/
+#Nhamburger,
+#Nhamburger-content {
+    display: inline;
+}
+
+#Nhamburger-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding: 20px 50px;
+    z-index:1000;
+}
+
+#Nhamburger-content ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    margin:0;
+}
+
+#Nhamburger-content ul a {
+    text-decoration: none;
+    list-style: none;
+    color: #291D11;
+    font-family: 'Prompt';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#Nhamburger-content ul a:hover {
+    color: #E49449;
+}
+
+#Nhamburger-content li {
+    list-style: none;
+    margin:0 10px;
+}
+
+#Nhamburger-content nav {
+    width: 40%;
+}
+
+#Nhamburger-content nav {
+    margin: 0 40px 0 40px;
+}
+
+.NreseauNav1 a {
+    font-size: 20px;
+    padding: 6px;
+    text-decoration: none;
+    color: #291D11;
+    text-align: center;
+}
+
+.NreseauNav1 a:hover {
+    color: #E49449;
+}
+
+#Nhamburger-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #996533;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+#Nhamburger-button-close {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000000000;
+    color: #996533;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+#Nhamburger-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#Nhamburger-sidebar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 200000000000000000000000;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+}
+
+#Nhamburger-sidebar-body span {
+    padding: 0 0 0 100%;
+    border-bottom: 2px solid #291D11;
+}
+
+#Nhamburger-sidebar li {
+    display: block;
+    font-family: 'Prompt';
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#Nhamburger-sidebar ul {
+    margin-bottom: 20%;
+    padding: 0;
+}
+
+#Nhamburger-sidebar ul a {
+    color: #291D11;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+#Nhamburger-sidebar-body {
+    padding: 16px 8px;
+}
+
+.NreseauNav {
+    display: none;
+}
+/* **********************************Témoignages PC************************************** */
+.Ntemoin {
+    width: 100%;
+    height: 100%;
+    background: #E49449;
+    padding: 1px;
+    padding-top: 60px;
+}
+
+.Ntemoin h1 {
+    color: #fff;
+    font-family: 'AverageSans';
+    font-weight: 600;
+    margin-left: 7.5%;
+    letter-spacing: 2px;
+}
+
+.Nsectiontem {
+    width: 100%;
+    min-height: 10vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+}
+
+.Nsectiontemtest {
+    content: '';
+    background: #E49449;
+    /* clip-path: inset(0 92% 0 0); */
+    width: 10%;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.Ntemcontainer p {
+    font-family: 'Carme';
+    margin: 0;
+    font-size: 16px;
+}
+.Ntemcontainer{
+    width: 100%;
+}
+.Ntemcontainer h2 {
+    font-family: 'AverageSans';
+    margin: 0;
+    font-size: 40px;
+}
+
+.Ntemcontainer button {
     font-family: 'Prompt';
 }
 
-h2{
-    font-size: 5em;
-    font-family: "AverageSans";
-    
+.Ndivtem {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-left: 4.5%;
+    margin-top: 50px;
+}
+
+.Ndivtem img {
+    width: 130px;
+    height: 130px;
+    margin-right: 2%;
+}
+
+.Nbutton {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5%;
+}
+
+.Nbutemoin {
+    font-family: 'Prompt';
+    font-weight: lighter;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: #fff;
+    background: #E49449;
+    border-radius: 10px;
+    padding: 8px 40px 8px 40px;
+    border: none;
+}
+
+.Nbutemoin:hover {
+    background: #291D11;
+}
+
+.Nbutmetier {
+    font-family: 'Prompt';
+    font-weight: lighter;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: #E49449;
+    background: #fff;
+    border: 1px solid #E49449;
+    border-radius: 10px;
+    padding: 8px 40px 8px 40px;
+}
+
+.Nbutmetier:hover {
+    color: #fff;
+    background: #291D11;
+    border: 1px solid #291D11;
+}
+
+.Nbutton1 {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    margin: 5%;
+}
+
+.Nbutton1 .Nbutmetier {
+    padding: 8px 80px 8px 80px;
+}
+
+.page-numbers {
+    display: none;
+}
+.next, .prev, .current{
+    display: block;
+}
+.nav-links {
+    display: flex;
+}
+/*-*******************************Footer pc************************************-*/
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+}
+
+/*Nav footer*/
+footer>.navFooter {
+    width: 100%;
+    min-height: 7vh;
+    background-color: #291D11;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.menu-menu-footer-container {
+    width: 100%;
+}
+
+.menuFooter {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+footer>.navFooter>div>ul>li,
+footer>.navFooter>div>ul>li>a {
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    list-style: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Prompt';
+}
+
+/*partie TechNews-contact*/
+#boxtechNews {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#boxtechNews>.techTitle>h2 {
+    color: white;
+    margin-top: 0px;
+}
+
+.contactTech {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactTech>p {
+    width: 132%;
+    color: white;
+}
+
+.contactTech>a {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    padding-left: 3px;
+    font-family: 'AverageSans';
+    margin: 85px 0px 0px 0px;
+}
+
+.contactTech>a>i {
+    color: #E49449;
+}
+
+/*partie Suivez-nous*/
+.suivezFooter {
+    width: 60%;
+    height: 37vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.suivezFooter>h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: white;
+}
+
+.politique {
+    color: white;
+    text-decoration: none;
+    font-family: 'AverageSans';
+    margin-top: 20px;
+
+}
+
+.reseauFooter {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 20px 40px;
+}
+
+.reseauFooter>.roundFooter {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: 1px solid #E49449;
+    border-radius: 50%;
+    padding-left: 10px;
+}
+
+.roundFooter {
+    display: flex;
+    justify-content: center;
+}
+
+.roundFooter>a {
+    color: #E49449;
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 11px;
+    margin-left: -12px;
+}
+
+.roundHeader>a {
+    color: #291D11;
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 11px;
+}
+
+.ligneFooter {
+    border: 1px solid white;
+    height: 22vh;
+    margin-top: 10vh;
+    margin-left: 22vw;
+    opacity: 45%;
+}
+
+/*partie base footer mention*/
+.mentionFooter {
+    min-height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.mentionFooter>h4 {
+    /* padding-left: 30vw; */
+    color: white;
+    font-family: 'AverageSans';
+    font-weight: 300;
+}
+
+.mentionFooter>a {
+    /* padding-left: 27.5vw; */
+    color: white;
+    text-decoration: none;
+    font-family: 'AverageSans';
+    font-weight: 300;
+}
+
+#footerContent {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.boxDesigne {
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxDesigne>p>i {
+    color: #E49449;
+}
+
+/* .boxDesigne>.designe{
+    margin-left: 50px;
+} */
+.boxDesigne>p {
+    color: white;
+    font-family: 'AverageSans';
+    font-weight: 300;
+    /* margin-left: 10px; */
+}
+
+.boxDesigne>img {
+    width: 1vw;
+    height: 2vh;
+    margin: 17px 0px 0px 10px;
+}
+
+#navigation {
+    display: flex;
+    justify-content: center;
+}
+
+/*-***************************Media query  Tablette ***********************-*/
+@media screen and (max-width: 1024px) {
+    #Nhamburger-content {
+        display: none;
+    }
+
+    #Nhamburger-button,
+    #Nhamburger-sidebar,
+    #Nhamburger-button-close,
+    .Nhamburger-activated #Nhamburger-overlay {
+        display: block;
+    }
+
+    #Nhamburger-button,
+    #Nhamburger-sidebar,
+    #Nhamburger-button-close,
+    .Nhamburger-activated,
+    #Nhamburger-overlay>i {
+        display: block;
+    }
+
+    #Nhamburger-button>i {
+        position: relative;
+        display: block;
+        height: 30px;
+    }
+
+    .Nhamburger-activated #Nhamburger-sidebar {
+        transform: translateX(0);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Nhamburger-sidebar-body {
+        width: 60%;
+    }
+
+    #Nhamburger-button {
+        margin: 10px;
+        margin-right: 15px;
+    }
+
+    .NreseauNav1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+    }
+
+    .NreseauNav1 a {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        text-decoration: none;
+        color: #996533;
+    }
+
+    /* ************************************** Témoignages Tablette */
+
+    .Ntemoin {
+        background: #291D11;
+        padding-top: 0;
+    }
+
+    .Ntemoin h1 {
+        font-size:2em;
+        color: #fff;
+        font-family: 'AverageSans';
+        font-weight: 600;
+        margin-left: 15%;
+        letter-spacing: 2px;
+        margin-top: 0;
+        padding-top: 10px;
+    }
+
+    .Ntemcontainer p {
+        font-family: 'Carme';
+        font-size: 14px;
+    }
+
+    .Ntemcontainer h2 {
+        font-family: 'AverageSans';
+        font-size: 20px;
+    }
+
+    .Ndivtem {
+        width: 80%;
+        margin-left: 7%;
+        margin-top: 20%;
+    }
+
+    .Ndivtem:first-child {
+        display: none;
+    }
+
+    .Nbutemoin {
+        font-family: 'Prompt';
+        font-weight: lighter;
+        letter-spacing: 2px;
+        font-size: 15px;
+        color: #fff;
+        background: #E49449;
+        border-radius: 10px;
+        padding: 8px 20px 8px 20px;
+        border: none;
+    }
+
+    .Nsectiontem {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .Nbutton {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Nbutmetier{
+        width: 50%;
+        font-size: 13px;
+        padding: 8px 30px 8px 30px;
+        margin: 10px 0 ;
+        text-align: center;
+    }
+    .Nbutemoin{
+        width: 50%;
+        font-size: 13px;
+        padding: 8px 30px 8px 30px;
+        text-align: center;
+    }
+    /*-**************************************partie Footer tablette******************************-*/
+    .techTitle>div>p>br{
+        display: none;
+    }
+    .contactTech>p {
+        width: 100%;
+        font-size: 1em;
+    }
+    .contactTech>a {
+        margin: 0px 0px 0px 0px;
+    }
+    .suivezFooter{
+        width: 100%;
+    }
+    .suivezFooter>h3 {
+        font-size: 1.3em;
+        color: white;
+    } 
+    .reseauFooter{
+        width: 325px;
+    }
+    .menu-menu-footer-container{
+        display: none;
+    }
+    .mentionFooter>h4{
+        font-size:1em;
+    }
+
+}
+
+@media screen and (max-width:750px){
+    #boxtechNews{
+        flex-direction:column;
+    }
+    .ligneFooter{
+        display: none;
+    }
+    footer>.navFooter{
+        display: none;
+    }
+    #boxtechNews {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .reseauFooter>.roundFooter{
+        margin: 10px 0px;
+    }
+    .contactTech>a{
+        text-align: center;
+    }
+    .mentionFooter{
+        flex-direction: column;
+    }
+    #boxtechNews>.techTitle>h2{
+        text-align: center;
+    }
+    .contactTech>p{
+        text-align: center;
+    }
+    .reseauFooter{
+        width: 200px;
+        flex-wrap: wrap;
+    }
+    .ligneFooter{
+        display: none;
+    }
+    .suivezFooter{
+        width: 100%;
+    }
+    .contactTech>p{
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width:500px) {
+    #Nhamburger-button {
+        z-index: 5;
+        position: fixed;
+    }
+
+    .Ntemoin {
+        height: 8%;
+        position: fixed;
+    }
+
+    .Ndivtem {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 50px;
+        padding-top: 90px;
+    }
+    .Ndivtem img {
+        width: 120px;
+        height: 120px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .Nsectiontem::after {
+        display: none;
+    }
+
+    .Nbutton {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .Nbutemoin {
+        font-family: 'Prompt';
+        font-weight: lighter;
+        letter-spacing: 2px;
+        font-size: 14px;
+        color: #fff;
+        background: #E49449;
+        border-radius: 10px;
+        padding: 8px 10px 8px 10px;
+        border: none;
+    }
+
+    .Nbutmetier {
+        font-family: 'Prompt';
+        font-weight: lighter;
+        letter-spacing: 2px;
+        font-size: 14px;
+        color: #E49449;
+        background: #fff;
+        border: 1px solid #E49449;
+        border-radius: 10px;
+        padding: 8px 5px 8px 5px;
+    }
+    .Ntemcontainer p {
+        letter-spacing: 2px;
+        padding: 5px;
+        width: 90%;
+        align-items: center;
+        margin: 5%;
+    }
 }
 h3{
     

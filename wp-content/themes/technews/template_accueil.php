@@ -37,13 +37,9 @@
  
 
 ?>
-
-
-
 <?php get_header(); ?>
 
 <div id="main">
-
 
   <div id= 'boxHeader'>
     <div class='boxTitleH'>
@@ -183,8 +179,6 @@
     </div>
   
   </section>
-  
-  
 </div>
 
 <?php get_footer(); ?>
