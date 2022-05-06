@@ -6,7 +6,7 @@
 
   <h1 class="h1metier">Les métiers</h1>
   <div class='boxH2Metier'>
-    <img src="http://localhost/technews/wp-content\themes\technews\assets\images\icons8-informatics-64.png" alt="icon">
+    <img src="http://localhost/test/wp-content\themes\technews\assets\images\icons8-informatics-64.png" alt="icon">
     <h2 class="h2metier"><?= the_title() ?></h2>
   </div>
 
@@ -21,6 +21,10 @@
 
   <div class='metierContent'>
   <?= the_content() ?>
+  <?php if (get_field('lien_fiche_metier')) { ?>
+  <p>Fiche Métier:</p>
+  <a href="<?php the_field('lien_fiche_metier') ?>"> <?php the_field('lien_fiche_metier') ?></a>
+<?php  } ?>
   </div>
 
   <!-- <a href="<?php the_field('lien_fiche_metier') ?>" target="_blank">Lien vers la fiche métier</a> -->
