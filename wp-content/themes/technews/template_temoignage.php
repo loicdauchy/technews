@@ -58,9 +58,7 @@
     </div>
   </div>
   <?php endwhile; ?>
-
-</section>
-<div id="navigation">
+  <div id="navigation">
   <?php 
       
         $GLOBALS['wp_query']->max_num_pages = $the_query->max_num_pages;
@@ -76,6 +74,8 @@
 
       ?>
 </div>
+</section>
+
 <?php wp_reset_postdata(); ?>
 <?php endif; ?>
 <?php get_footer(); ?>
