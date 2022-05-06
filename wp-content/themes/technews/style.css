@@ -409,14 +409,24 @@ ul{
     padding: 2% 0 2% 10%;
  
 }
-
+/* #singleMetier>img{    a revoir         
+    margin-bottom: -20px;
+} */
 .h2metier{
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10%;
     
     font-family: "AverageSans";
     background: #291D11;
     width: 50%;
     margin: 5% 10%;
     border-radius: 10px;
+
+
 }
 
 .metierContent{
