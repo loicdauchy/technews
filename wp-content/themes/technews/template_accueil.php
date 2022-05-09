@@ -44,9 +44,9 @@
   <div id= 'boxHeader'>
     <div class='boxTitleH'>
       <h1><?= get_the_title() ?></h1>
-      <p>Click (Generate) to create a new font pairing, (Lock) to lock fonts that you want to keep,
-                  and (Edit) to choose a font manually.The text is editable, try replacing it with your company name
-                  or other copy.</p>
+      <p>
+        TechNews le blog qui vous parlera des actualitées, de la découverte des métiers en rapport avec les technologies du numérique ainsi que des témoignages de professionnels...
+      </p>
       <?= the_content() ?>
     </div>
 
@@ -182,3 +182,44 @@
 </div>
 
 <?php get_footer(); ?>
+
+
+<script>
+
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    document.getElementById('Nhamburger').style.width = "100%";
+    document.getElementById('Nhamburger').style.position = "fixed";
+    document.getElementById('Nhamburger').style.top = "0";
+    document.getElementById('Nhamburger').style.left = "0";
+    document.getElementById('Nhamburger').style.height = "65px";
+    document.getElementById('Nhamburger').style.zIndex = "1000";
+    document.getElementById('Nhamburger-button').style.color = "#000";
+    document.getElementById('Nhamburger-button').style.zIndex = "1001";
+  }else{
+    document.getElementById('Nhamburger-content').style.background = "transparent";
+    document.getElementById('Nhamburger-content').style.transition = "all 0.2s ease-in-out";
+  }
+
+  window.onscroll = () => {
+      if (window.scrollY > 200) {
+          if (window.matchMedia("(max-width: 1024px)").matches) {
+            document.getElementById('Nhamburger').style.background = "#fff";
+            document.getElementById('Nhamburger').style.boxShadow = "-2px 2px 29px 0px rgba(0,0,0,0.75)";
+          }else{
+            document.getElementById('Nhamburger-content').style.background = "#fff";
+            document.getElementById('Nhamburger-content').style.boxShadow = "-2px 2px 29px 0px rgba(0,0,0,0.75)";
+          }
+         
+      }else{
+          if (window.matchMedia("(max-width: 1024px)").matches) {
+            document.getElementById('Nhamburger').style.background = "transparent";
+            document.getElementById('Nhamburger').style.boxShadow = "inherit";
+          }else{
+            document.getElementById('Nhamburger-content').style.background = "transparent";
+            document.getElementById('Nhamburger-content').style.boxShadow = "inherit";
+          }
+      }
+      
+  }
+
+</script>

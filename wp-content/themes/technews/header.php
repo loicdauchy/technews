@@ -83,7 +83,7 @@
           <?php } ?>
         </div>
       </div>
-      <button id="Nhamburger-button" class="fa-solid fa-bars"></button>
+      <i id="Nhamburger-button" class="fa-solid fa-bars"></i>
       <div id="Nhamburger-sidebar">
         <div id="Nhamburger-sidebar-header"></div>
         <div id="Nhamburger-sidebar-body" class="none">
@@ -110,7 +110,7 @@
           <?php } ?>
         </div>
         </div>
-        <button id="Nhamburger-button-close" class="fa-solid fa-xmark"></button>
+        <i id="Nhamburger-button-close" class="fa-solid fa-xmark"></i>
       </div>
       <div id="Nhamburger-overlay"></div>
     </div>

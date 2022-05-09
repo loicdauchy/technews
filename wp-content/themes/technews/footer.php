@@ -14,8 +14,7 @@
                 <h2>Technews</h2>
                 
                 <div class="contactTech">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s</p>
+                    <p>TechNews le blog qui vous parlera des actualitées, <br>de la découverte des métiers en rapport avec les technologies du numérique ainsi que des témoignages de professionnels...</p>
                     <a href="mailto:<?= $GLOBALS['mail'] ?>"><i class="fa-solid fa-envelope"></i><?= $GLOBALS['mail'] ?></a>
                 </div>
             </div>
@@ -65,5 +64,5 @@
 </footer>
 </div>
 </body>
-<script src="http://localhost/test/wp-content/themes/technews/assets/js/app.js"></script>
+<script src="https://antoinep.promo-146.codeur.online/technews/wp-content/themes/technews/assets/js/app.js"></script>
 </html>
