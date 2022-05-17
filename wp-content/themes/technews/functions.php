@@ -1,7 +1,4 @@
 <?php 
-remove_filter('the_excerpt', 'wpautop');
-remove_filter('the_content', 'wpautop');
-
 // on créé une zone pour le menu 
 register_nav_menu( 'menuheader', 'Menu du Header' );
 register_nav_menu( 'menufooter', 'Menu du Footer' );
